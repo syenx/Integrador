@@ -1,0 +1,42 @@
+﻿@model Nullable<int>
+@{
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+    ViewBag.Title = "Alterar Senha";
+}
+
+@section scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/waitmodal.js"></script>
+    <script src="~/Scripts/login.js"></script>
+}
+
+@Html.Hidden("IdUsuario", Model)
+
+<fieldset>
+    <legend>Alterar Senha</legend>
+    <form class="form-horizontal" id="formAlterarSenha" action="@Url.Action("AlterarSenha","Login")" method="post">
+        <!--NOVA SENHA-->
+        <div class="form-group">
+            <label for="NovaSenha" class="control-label col-sm-2">Nova Senha:</label>
+            <div class="col-md-10">
+                <input type="password" id="NovaSenha" name="NovaSenha" class="form-control width250" maxlength="10" />
+            </div>
+        </div>
+        <!--CONFIRMAR SENHA-->
+        <div class="form-group">
+            <label for="ConfirmarSenha" class="control-label col-sm-2">Confirmar Senha:</label>
+            <div class="col-md-10">
+                <input type="password" id="ConfirmarSenha" name="ConfirmarSenha" class="form-control width250" maxlength="10" />
+            </div>
+        </div>
+        <!--BUTTONS-->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="#" id="alterarSenha" class="btn btn-info btn-lg" onclick="AlterarSenha();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+                <a href="@Url.Action("Index","Login")" id="cancelarAlterarSenha" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+            </div>
+        </div>
+    </form>
+</fieldset>
+
+

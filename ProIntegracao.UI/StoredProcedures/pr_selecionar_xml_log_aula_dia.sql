@@ -1,0 +1,46 @@
+﻿USE ProSimulador
+GO
+
+/****** Object:  StoredProcedure [dbo].[pr_selecionar_xml_log_aula_dia]    Script Date: 27/04/2016 09:52:32 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- ==============================================================
+-- AUTHOR:		Fernando Parmezani
+-- CREATE DATE: 2016/04/31
+-- DESCRIPTION:	Selecionar XML Log AULA - DIA
+-- ==============================================================
+ALTER PROCEDURE [dbo].[pr_selecionar_xml_log_aula_dia]
+	@DETALHES			VARCHAR(255)
+	, @PSA				VARCHAR(15)
+	, @ACAO				INT = 0
+AS 
+BEGIN
+
+SET NOCOUNT ON;
+
+	SELECT 
+		 U.SIGLA [UF],
+		 WSLOG.ID_EMPRESA,
+		 EM.CODIGO,	 
+		 EM.RAZAO_SOCIAL,
+		 EM.NOME_FANTASIA,
+		 WSLOG.DATA_CADASTRO,
+		 WS.NOME AS [ACAO],	 
+		 WSLOG.DETALHES,
+		 WSLOG.IP,
+		 WSLOG.XML_ENTRADA,
+		 WSLOG.XML_SAIDA
+	FROM TB_WS_LOG WSLOG			WITH(NOLOCK) 
+		INNER JOIN TB_WS WS			WITH(NOLOCK) ON WS.ID_WS = WSLOG.ID_WS
+		INNER JOIN TB_EMPRESA EM	WITH(NOLOCK) ON EM.ID_EMPRESA = WSLOG.ID_EMPRESA
+		INNER JOIN TB_ENDERECO EN	WITH(NOLOCK) ON EN.ID_ENDERECO = EM.ID_ENDERECO
+		INNER JOIN TB_MUNICIPIO M	WITH(NOLOCK) ON M.ID_MUNICIPIO = EN.ID_MUNICIPIO
+		INNER JOIN TB_UF U			WITH(NOLOCK) ON U.ID_UF = M.ID_UF
+	WHERE 1 = 1
+		AND DETALHES LIKE '%'+ @DETALHES +'%' 
+		AND (@ACAO = 0 OR WSLOG.ID_WS = @ACAO)
+		AND (@PSA IS NULL OR (DETALHES LIKE '%'+ @PSA +'%'))
+END

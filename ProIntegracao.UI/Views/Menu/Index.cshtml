@@ -1,0 +1,33 @@
+﻿@model ProIntegracao.UI.ViewModel.MenuViewModel
+@section style {
+    <link href="@Url.Content("~/Content/nestable-jquery.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery-nested-customize.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/jquery.nestable.js")"></script>
+    <script src="@Url.Content("~/Scripts/ui-nestable-list.js")"></script>
+    <script src="@Url.Content("~/Scripts/menu.js")"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Menu")">Menu</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    <div class="col-sm-6">
+        <a href="#" class="btn btn-info btn-md" onclick="NovoMenu();"><i class="fa fa-file-text-o fa-fw"></i> Novo Menu</a>
+        <a href="#" class="btn btn-success btn-md" onclick="AtualizarMenu();"><i class="fa fa-file-text-o fa-fw"></i> Salvar Menu</a>
+        <img src="~/Content/images/legenda.png" />
+    </div>
+    <br /><br /><br /><br />
+    <div id="listamenu">
+        @Html.Raw(Model.RetornaMenuList())
+    </div>
+</fieldset>
+
+

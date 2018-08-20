@@ -1,0 +1,12 @@
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\NHibernate.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Release\NHibernate.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Release\ProIntegracao.Data.Properties.Resources.resources
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Release\ProIntegracao.Data.csproj.GenerateResource.Cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Release\ProIntegracao.Data.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Release\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Release\ProIntegracao.Data.pdb

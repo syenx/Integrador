@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.Agenda>
+
+<table class="table table-hover table-condensed" id="tabeladeagendas">
+    <thead>
+        <tr>
+            <th>ID MATRICULA</th>
+            <th>ID_AGENDA</th>
+            <th>SEQUÊNCIA</th>
+            <th>HORARIO AULA</th>
+            <th>PSA</th>
+            <th>SMC</th>
+            <th>CPF INSTRUTOR</th>
+            <th>NOME INSTRUTOR</th>
+            <th>MODELO DE AULA</th>
+            <th>STATUS</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdMatricula</td>
+                <td>@item.IdAgenda</td>
+                <td>@item.Sequencia</td>
+                <td>@item.HorarioAula</td>
+                <td>@item.PSA</td>
+                <td>@item.SMC</td>
+                <td>@item.CPFInstrutor</td>
+                <td>@item.NomeInstrutor</td>
+                <td>@item.ModeloAula</td>
+                <td>@item.Status</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

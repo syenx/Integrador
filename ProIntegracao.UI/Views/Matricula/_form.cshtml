@@ -1,0 +1,72 @@
+﻿@model ProIntegracao.UI.ViewModel.MatriculaViewModel
+
+@Html.HiddenFor(m => m.Id)
+@Html.HiddenFor(m => m.DtCadastro)
+@Html.HiddenFor(m => m.DtExclusao)
+@Html.HiddenFor(m => m.IdAluno)
+
+<!-- CPF -->
+<div class="form-group">
+    <label for="CpfAluno" class="control-label col-md-3">CPF :</label>
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.Cpf, new { @class = "form-control width250 cpf"})
+    </div>
+</div>
+
+<!-- ALUNO -->
+<div class="form-group">
+    <label for="Aluno" class="control-label col-md-3">Aluno :</label>
+    <div class="col-md-9">
+        @Html.TextBoxFor(model =>model.NomeAluno, new {@class="form-control width250", @readonly="readonly" })
+    </div>
+</div>
+
+<!-- QUANTIDADE DE AULA -->
+<div class="form-group">
+    @Html.LabelFor(model => model.CodigoCfc, new { @class = "control-label col-md-3", })
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.CodigoCfc, new { @class = "form-control width250" , onkeypress = "return soNum(event);" })
+    </div>
+</div>
+
+<!-- ESTADO -->
+<div class="form-group">
+    @Html.LabelFor(model => model.IdEstado, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.DropDownListFor(model => model.IdEstado, new SelectList(Model.ListaEstado, "Value", "Text", Model.IdEstado), new { @class = "form-control width250" })
+    </div>
+</div>
+
+<!-- QUANTIDADE DE AULA -->
+<div class="form-group">
+    @Html.LabelFor(model => model.QtdAula, new { @class = "control-label col-md-3", })
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.QtdAula, new { @class = "form-control width250", maxlength = "2", onkeypress = "return soNum(event) "})
+    </div>
+</div>
+
+<!-- HORA AULA -->
+<div class="form-group">
+    @Html.LabelFor(model => model.HoraAula,new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBox("HoraAula", String.Format("{0:hh:mm:ss}",Model.HoraAula), new { @class = "form-control hora width250", maxlength = "5", onBlur= "valida_horas(this);" })
+    </div>
+</div>
+
+<!-- PSA -->
+<div class="form-group">
+    @Html.LabelFor(model => model.PSA, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.PSA, new { @class = "form-control uppercase width250", maxlength = "13" })
+    </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="salvarMatricula" class="btn btn-info btn-lg" onclick="SalvarMatricula();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarMatricula" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.StatusSituacaoAula>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="status">
+    <thead>
+        <tr>
+            <th class="text-left">IDENTIFICADOR</th>
+            <th class="text-left">NOME</th>
+            <th class="text-left">ESTADO</th>
+            <th class="text-center">ATIVO</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var ico = (item.DtExclusao == null) ? "fa fa-check" : "fa fa-times";
+            <tr>
+                <td class="text-left">@item.Identificador</td>
+                <td class="text-left">@item.Nome</td>
+                <td class="text-left">@item.Estado.Nome</td>
+                <td class="text-center"><i class="@ico"></i></td>
+                <td>
+                    <a href="#" onclick="EditarStatus(@item.Id);"title="Editar registro">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                    |
+                    <a href="#" onclick="AbrirModalExcluir(@item.Id, 'statussituacaoaula');" title="Excluir registro">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

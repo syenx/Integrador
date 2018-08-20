@@ -1,0 +1,58 @@
+﻿@model ProIntegracao.UI.ViewModel.AulaRealizadaViewModel
+
+@{Layout = "~/Views/Shared/_LayoutFluid.cshtml";}
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/AulaRealizada/aularealizada.js")"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","AulaRealizada")">Consulta de Aulas Realizadas</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    
+    <!-- PESQUISA -->
+    <div class="form-horizontal well well-lg">
+        <div class="form-group">
+            
+                <div class="col-sm-2">
+                    <label for="dtInicio">Data Início :</label>
+                    <input name="dtInicio" id="dtInicio" type="text" class="form-control datepicker data" />
+                </div>
+
+                <div class="col-sm-2">
+                    <label for="dtFim">Data Fim :</label>
+                    <input name="dtFim" id="dtFim" type="text" class="form-control datepicker data" />
+                </div>
+
+                <div class="col-sm-2">
+                    <label for="busca">Estado :</label>
+                    @Html.DropDownListFor(model => model.idEstado, Model.ListaEstados, "Selecione", new { @class = "form-control" })
+                </div>
+
+
+                <div class="col-sm-offset-9 form-inline" style="margin-top:22px!important;">
+                    <a href="#" id="buscaAulaRealizada" name="buscaAulaRealizada" title="Buscar Aula Realizada" class="btn btn-default btn-md" disabled="disabled"><i class="fa fa-search"></i> Buscar</a>
+                    <a href="#" onclick="Exportar();" id="exportarAulaRealizada" name="exportarAulaRealizada" title="Exportar Aula Realizada" class="btn btn-warning btn-md"><i class="fa fa-file-excel-o"></i> Gerar Excel</a>
+                    <a href="#" id="limpaAulaRealizada" name="limpaAulaRealizada" title="Limpar Pesquisa" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <!--Lista Situacao Aula-->
+    <div id="listaaularealizada"></div>
+
+</fieldset>
+
+
+

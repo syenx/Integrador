@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.Matricula>
+<table class="table table-hover table-condensed" id="tabeladeMatriculas">
+    <thead>
+        <tr>
+            <th>ID MATRICULA</th>
+            <th>COD MATRÍCULA</th>
+            <th>QTD AULAS</th>
+            <th>DATA MATRÍCULA</th>
+            <th>USUÁRIO</th>
+            <th>ID EMPRESA</th>
+            <th>COD CFC</th>
+            <th>CFC ORIGEM</th>
+            <th>CNPJ</th>
+            <th>STATUS</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="#" onclick="ListarAgendas(@item.IdMatricula)">
+                        @item.IdMatricula
+                    </a>
+                </td>
+                <td>@item.CodigoMatricula</td>
+                <td>@item.QtdAulas</td>
+                <td>@item.DataMatricula.ToShortDateString()</td>
+                <td>@item.Usuario</td>
+                <td>@item.IdEmpresa</td>
+                <td>@item.CodigoCFC</td>
+                <td title="@item.CFCOrigem">@item.CFCOrigem.Substring(0,15)</td>
+                <td>@item.CNPJ</td>
+                <td>@item.Status</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

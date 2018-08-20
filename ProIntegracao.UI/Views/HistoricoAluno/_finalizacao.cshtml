@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.FinalizarAula>
+@{
+    Layout = "~/Views/Shared/_LayoutFluid.cshtml";
+}
+<h3>Finalização de aula integrando com o DETRAN, USAR COM CUIDADO</h3>
+<p>Para conclusão é obrigatório selecionar a(s) aula(s).</p>
+<p>Só é possível finalizar a última aula e quando a mesma estiver com status PENDENTE.</p>
+
+
+@section scripts{
+    <script src="~/Scripts/HistoricoAluno/finalizacao.js"></script>
+}
+
+@{
+    var i = 0;
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dados do Aluno
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <strong>CPF DO  ALUNO :</strong><span id="cpf"> @Model.First().CPF</span><br>
+                                <strong>NOME :</strong><span id="nome"> @Model.First().NOME</span><br>
+                                <strong>MATRÍCULA :</strong> <span id="matricula"> @Model.First().ID_MATRICULA</span><br>
+                                <strong>UF :</strong> <span id="uf">@Model.First().ESTADO</span><br>
+                                <strong>CFC :</strong> <span id="cfc">@String.Format("{0} - {1}", Model.First().ID_CFC, Model.First().NOME_FANTASIA) </span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <input type="checkbox" id="selectall" name="selectall"/>Selecionar Todos
+        <br />
+        <br/>
+       
+        @foreach (var item in Model.ToList())
+        {
+            i++;
+            var check = string.Format("c-{0}-{1}",item.ID_MODELO, item.ID_AULA);
+            var distancia = "distancia" + i;
+            var tempo = "tempo" + i;
+            var velMaxima = "velmaxima" + i;
+            var velMedia = "velmedia" + i;
+            var collapse = "collapse" + i;
+
+            
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <input type="checkbox" id="@check" name="@check" class="selectall"/>
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#@collapse" aria-expanded="true" aria-controls="collapseOne">
+                                   @item.MODELO
+                                </a>
+                                <input type="hidden" id="ID_AGENDA" value="@item.ID_AGENDA" />
+                            </h4>
+                        </div>
+                        <div id="@collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                @{Html.RenderAction("ListarEventos", "HistoricoAluno", new {@idAula = item.ID_AULA, @idModelo = item.ID_MODELO, @collapse = @collapse});}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        }
+
+        <a href="javascript:void(0);" class="btn btn-success" onclick="EnviarFinalizacao();">Enviar</a>
+        <a href="" onclick="history.go(-1); return false;" class="btn btn-danger">Cancelar</a>
+    </div>
+</div>

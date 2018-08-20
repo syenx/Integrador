@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.Aula>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="aulas">
+    <thead>
+        <tr>
+            <th class="text-left" style="padding-left: 10px;">NOME DO ALUNO</th>
+            <th class="text-left" style="padding-left: 10px;">CFC</th>
+            <th class="text-left" style="padding-left: 10px;">IDENTIFICADOR</th>
+            <th class="text-left" style="padding-left: 10px;">CPF ALUNO</th>
+            <th class="text-left" style="padding-left: 10px;">CPF INSTRUTOR</th>
+            <th class="text-left" style="padding-left: 10px;">DATA INÍCIO</th>
+            <th class="text-left" style="padding-left: 10px;">DATA FIM</th>
+            <th class="text-center" style="padding-left: 10px;">STATUS</th>
+            <th class="text-left" style="padding-left: 10px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var ico = (item.DtExclusao == null) ? "fa fa-check" : "fa fa-times";
+
+            long cpf = (string.IsNullOrEmpty(item.Matricula.Aluno.CpfAluno)) ? 0 : Convert.ToInt64(item.Matricula.Aluno.CpfAluno);
+            var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf);
+
+            long cpfi = (string.IsNullOrEmpty(item.CpfInstrutor)) ? 0 : Convert.ToInt64(item.CpfInstrutor);
+            var docCpfi = String.Format(@"{0:000\.000\.000\-00}", cpfi);
+            
+            <tr>
+                <td>@item.Matricula.Aluno.Nome</td>
+                <td>@item.CodigoCfc</td>
+                <td>@item.IdentificadorAula</td>
+                <td>@docCpf</td>
+                <td>@docCpfi</td>
+                <td>@item.DataInicioAula</td>
+                <td>@item.DataFimAula</td>
+                <td class="text-center">@{
+                    if (item.StatusSituacaoAula != null) {
+                        @item.StatusSituacaoAula.Nome
+                    }
+                }</td>
+
+  <td>
+
+      <a href="#" onclick="EditarAula(@item.Id);"title="Editar registro">
+
+          <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                    |
+                    <a href="#" onclick="AbrirModalExcluir(@item.Id, 'Aula');" title="Excluir registro">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

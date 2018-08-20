@@ -1,0 +1,144 @@
+﻿@model ProIntegracao.Data.EntidadeProSimulador.HistoricoAluno
+@{
+    Layout = "~/Views/Shared/_LayoutFluid.cshtml";
+}
+
+
+@section style{
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="~/Scripts/bootstrap-tooltip.js"></script>
+    <script src="~/Scripts/bootstrap-confirmation.js"></script>
+    <script src="~/Scripts/toastr.js"></script>
+    <script src="~/Scripts/HistoricoAluno/consulta.js"></script>
+}
+
+@Html.HiddenFor(model => model.IdAluno)
+
+<a href="/HistoricoAluno" class="btn btn-success">
+    << VOLTAR
+</a>
+
+<br /> <br />
+
+
+@{ 
+    var cep = "";
+    if (Model.CEP != "")
+    {
+        cep = Convert.ToUInt64(Model.CEP).ToString(@"00000\-000");
+    }
+}
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Dados do Aluno
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <strong>NOME:</strong><span id="nome"> @Model.Nome.ToUpper()</span><br>
+                                <strong>DATA NASCIMENTO:</strong><span id="dtNascimento"> @String.Format("{0:d}",Model.DataNascimento)</span><br>
+                                <strong>CPF:</strong> <span id="renach"> @Model.Renach</span><br>
+                                <strong>BIOMETRIA:</strong> <span id="biometria">@Model.Biometria.ToUpper()</span><br>
+                                <strong>STATUS:</strong> <span id="status">@Model.Status.ToUpper()</span><br>
+                                <strong>CATEGORIA: <span id="curso"></span>@Model.Curso</strong><br>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <strong>CEP:</strong> <span id="cep">@cep</span><br>
+                                <strong>ENDEREÇO:</strong> <span id="endereco">@Model.Endereco</span><br>
+                                <strong>BAIRRO:</strong> <span id="bairro">@Model.Bairro</span><br>
+                                <strong>MUNICÍPIO / UF:</strong> <span id="cidade">@Model.Cidade</span>/<span id="estado">@Model.Estado</span><br>
+                                <strong>TELEFONE:</strong> <span id="telefone">@Model.Telefone</span><br>
+                                <strong>CELULAR:</strong> <span id="celular">@Model.Celular</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            Matrículas
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="row" id="tablematricula" style="display:none;">
+                            <div class="col-xs-12 col-md-12 col-lg-12 pull-left">
+                                <div id="listaMatriculas"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            Agendas
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+
+                        <div class="row" id="tableagenda" style="display:none;">
+                            <div class="col-xs-12 col-md-12 col-lg-12 pull-left">
+                                <div id="listaAgendas"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                            Histórico de Aulas
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+
+                        <div class="row" id="tablehistorico" style="display:none;">
+                            <div class="col-xs-12 col-md-12 col-lg-12 pull-left">
+                                <div id="listaHistoricoAulas"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

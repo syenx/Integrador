@@ -1,0 +1,73 @@
+﻿@model ProIntegracao.UI.ViewModel.SituacaoLogAulaViewModel
+
+@{Layout = "~/Views/Shared/_LayoutFluid.cshtml";}
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/situacaologaula.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/situacaologaula.js")"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","SituacaoLogAula")">Situação Log Aula</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+
+        <label for="cpf">CPF :</label>
+        <input name="cpf" id="cpf" type="text" class="form-control width250 cpf" />
+
+        <label for="psa">PSA :</label>
+        <input name="psa" id="psa" type="text" class="form-control width250 psa" />
+
+        <label for="dtInicio">Data Início :</label>
+        <input name="dtInicio" id="dtInicio" type="text" class="form-control width100 datepicker data" maxlength="10" />
+        
+        <label for="dtFim">Data Fim :</label>
+        <input name="dtFim" id="dtFim" type="text" class="form-control width100 datepicker data" maxlength="10" />
+        
+        <a href="#" id="buscaLogAula" name="buscaLogAula" title="Buscar Log Aula" class="btn btn-info btn-md col-sm-offset-1 form-control"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparLogAula" name="limparLogAula" title="Limpar Log Aula" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    
+    </div>
+
+    <br /><br />
+    <!--Lista Situacao Aula-->
+    <div id="situacaologaula"></div>
+
+</fieldset>
+
+ <!--Modal para Detalhes de XML-->
+<div class="modal modal-wide fade" tabindex="-2" role="dialog" id="xml">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-number="1" onclick="FecharModalXML();" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Detalhe XML</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-6" id="XmlBodyEntrada">
+                </div>
+                <div class="col-sm-6" id="XmlBodySaida">
+                    <br />
+                    <br />
+                    <h4>XML Saída</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" onclick="FecharModalXML();">Fechar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

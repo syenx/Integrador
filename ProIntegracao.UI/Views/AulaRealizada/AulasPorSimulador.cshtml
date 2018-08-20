@@ -1,0 +1,59 @@
+﻿@model ProIntegracao.UI.ViewModel.AulaRealizadaViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutFluid.cshtml";
+}
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+}
+
+@section scripts{
+
+    <script src="@Url.Content("~/Scripts/AulaRealizada/aulasporsimulador.js")"></script>
+}
+
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("AulasPorSimulador","AulaRealizada")">Média de Aulas Por Simulador Ativo</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-horizontal well well-lg">
+        <div class="form-group">
+
+            <div class="col-sm-2">
+                <label for="dtInicio">Mês Início :</label>
+                <input name="dtInicio" id="dtInicio" type="text" class="form-control mesano" />
+            </div>
+
+            <div class="col-sm-2">
+                <label for="dtFim">Mês Fim :</label>
+                <input name="dtFim" id="dtFim" type="text" class="form-control mesano" />
+            </div>
+
+            <div class="col-sm-3">
+                <label for="busca">Estado :</label>
+                @Html.DropDownListFor(model => model.idEstado, Model.ListaEstados, "Selecione", new { @class = "form-control" })
+            </div>
+
+
+            <div class="col-sm-offset-9 form-inline" style="margin-top:22px!important;">
+                <a href="#" id="buscaAulasPorSimulador"     name="buscaAulasPorSimulador"       title="Buscar Aulas Por Simulador Ativo"    class="btn btn-info btn-md"><i class="fa fa-search"></i> Buscar</a>
+                <a href="#" id="exportarAulasPorSimulador"  name="exportarAulasPorSimulador"    title="Exportar Aulas Por Simulador"        class="btn btn-warning btn-md"  onclick="ExportarAulasPorSimulador();"><i class="fa fa-file-excel-o"></i> Gerar Excel</a>
+                <a href="#" id="limpaAulasPorSimulador"     name="limpaAulasPorSimulador"       title="Limpar Pesquisa"                     class="btn btn-danger btn-md"   onclick="LimparAulasPorSimulador();"><i class="fa fa-trash"></i> Limpar</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Lista Situacao Aula-->
+    <div id="listasimuladoresativos"></div>
+
+</fieldset>
+
+

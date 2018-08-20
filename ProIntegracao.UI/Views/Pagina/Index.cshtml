@@ -1,0 +1,46 @@
+﻿@model ProIntegracao.UI.ViewModel.PaginaViewModel
+@section style{
+    <link href="@Url.Content("~/Content/pagina.css")" rel="stylesheet" />
+}
+@section scripts{
+    <script src="@Url.Content("~/Scripts/pagina.js")"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Pagina")">Página</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+
+        <!--MENU-->
+        <label for="busca">Menu :</label>
+        @Html.DropDownListFor(model => model.IdMenu, Model.listaMenus, "--", new { @class = "form-control width250" })
+
+        <!--PAGINA-->
+        <label for="busca">Página :</label>
+        <input name="termo" id="termo" type="text" class="form-control width400" maxlength="50" />
+
+        <!--ATIVO-->
+        <input type="radio" name="ativolistar" id="ativolistar" value="true" checked="checked">ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativolistar" id="inativolistar" value="false"> INATIVO
+
+        <a href="#" id="buscaPagina" name="buscaPagina" title="Buscar Páginas" class="btn btn-info btn-md col-sm-offset-1"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparPagina" name="limparPagina" title="Limpar Página" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+
+    </div>
+
+    <!--Nova Matrícula-->
+    <a href="#" class="btn btn-info btn-md spacebutton" onclick="NovaPagina();"><i class="fa fa-book fa-fw"></i> Nova Página</a>
+    
+    <!--Partial View Lista de Paginas -->
+    <div id="listaPagina"></div>
+
+</fieldset>

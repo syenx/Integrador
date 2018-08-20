@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Accordion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    DADOS DO ALUNO   
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <strong>Nome:</strong><span id="nome">@Model.Nome</span><br>
+                        <strong>Data Nascimento:</strong><span id="dtNascimento">@Model.DataNascimento.ToShortDateString()</span><br>
+                        <strong>CPF:</strong> <span id="renach">@Model.Renach</span><br>
+                        <strong>Biometria:</strong> <span id="biometria">@Model.Biometria</span><br>
+                        <strong>Status:</strong> <span id="status">@Model.Status</span><br>
+                        <strong>Categoria: <span id="curso"></span>@Model.Curso</strong><br>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <strong>Cep:</strong> <span id="cep">@Model.CEP</span><br>
+                        <strong>Endereço:</strong> <span id="endereco">@Model.Endereco</span><br>
+                        <strong>Bairro:</strong> <span id="bairro">@Model.Bairro</span><br>
+                        <strong>Município / UF:</strong> <span id="cidade">@Model.Cidade</span>/<span id="estado">@Model.Estado</span><br>
+                        <strong>Telefone:</strong> <span id="telefone">@Model.Telefone</span><br>
+                        <strong>Celular:</strong> <span id="celular">@Model.Celular</span><br>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    
+</div>
+

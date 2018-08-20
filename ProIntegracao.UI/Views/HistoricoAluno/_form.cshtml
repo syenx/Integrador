@@ -1,0 +1,228 @@
+﻿@model ProIntegracao.Data.EntidadeProSimulador.Aluno
+<div class="container">
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <h6>Verifique abaixo o detalhamento da aula selecionada</h6>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Dados</div>
+            <div class="panel-body">
+                <div class="col-xs-6">
+
+                    <strong>CFC :</strong><span>@Model.CFC</span><br>
+                    <strong>Aluno :</strong><span>@Model.Nome</span><br>
+                    <strong>Renach :</strong> <span>@Model.Renach</span><br>
+                </div>
+                <div class="col-xs-6">
+
+                    <strong>Instrutor :</strong><span>@Model.Instrutor</span><br>
+                    <strong>CPF :</strong> <span></span>@Model.CPFInstrutor<br>
+                    <strong>Modelo : <span></span></strong>@Model.Modelo<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sx-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                            Histórico
+                        </a>
+                    </h4>
+
+
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+                    <div class="panel-body">
+
+
+                        <table class="table table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Histórico Percurso</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Registro de sesseoes de Simulador</td>
+                                    <td>@Model.Session_ID</td>
+                                </tr>
+                                <tr>
+                                    <td>Velocidade Média</td>
+                                    <td>@Model.VelocidadeMedia km/h</td>
+                                </tr>
+                                <tr>
+                                    <td>Tempo de Trajeto</td>
+                                    <td>@Model.TempoTrajeto</td>
+                                </tr>
+                                <tr>
+                                    <td>Horário de Início</td>
+                                    <td>@Model.HorarioInicio</td>
+                                </tr>
+                                <tr>
+                                    <td>Horário Final</td>
+                                    <td>@Model.HorarioFinal</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sx-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                            Infrações
+                        </a>
+                    </h4>
+
+
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.Erros != null)
+                                {
+                                    foreach (var item in Model.Erros)
+                                    {
+                                        if (item.TipoErro == 1)
+                                        {
+                                            <tr>
+                                                <td>@item.DescricaoErro</td>
+                                                <td>@item.Quantidade</td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sx-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                            Erros
+                        </a>
+                    </h4>
+                </div>
+
+                <div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+                    <div class="panel-body">
+
+
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tbody>
+                                @if (Model.Erros != null)
+                                {
+                                    foreach (var item in Model.Erros)
+                                    {
+                                        if (item.TipoErro == 2)
+                                        {
+                                            <tr>
+                                                <td>@item.DescricaoErro</td>
+                                                <td>@item.Quantidade</td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sx-12">
+            <h4></h4>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+                            Erros de Indicações
+                        </a>
+                    </h4>
+
+
+                </div>
+
+                <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+
+
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tbody>
+                                @if (Model.Erros != null)
+                                {
+                                    foreach (var item in Model.Erros)
+                                    {
+                                        if (item.TipoErro == 3)
+                                        {
+                                            <tr>
+                                                <td>@item.DescricaoErro</td>
+                                                <td>@item.Quantidade</td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

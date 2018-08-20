@@ -1,0 +1,35 @@
+﻿@model ProIntegracao.UI.ViewModel.SituacaoAulaViewModel
+@section style{
+    <link href="@Url.Content("~/Content/alunoduplicado.css")" rel="stylesheet" />
+}
+@section scripts{
+    <script src="~/Scripts/alunoduplicado.js"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Duplicado","Aluno")">Aluno</a></li>
+    <li><a href="#">Consulta Aluno Duplicados</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+
+        <label for="busca">CPF :</label>
+        <input name="cpf" id="cpf" type="text" class="form-control cpf"/>
+
+        <label for="Renach">Renach :</label>
+        <input name="Renach" id="Renach" type="text" class="form-control width250" maxlength="150" />
+
+        <label for="busca">Nome :</label>
+        <input name="Nome" id="Nome" type="text" class="form-control width400" maxlength="150" />
+
+        <a href="#" id="buscaAluno" name="buscaAluno" title="Buscar Aluno" class="btn btn-info btn-md form-control"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparAluno" name="limparAluno" title="Limpar Aluno" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    </div>
+
+    <!--Lista Alunos Duplicados-->
+    <div id="listarAlunoDuplicado"></div>
+</fieldset>

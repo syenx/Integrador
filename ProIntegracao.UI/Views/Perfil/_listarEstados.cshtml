@@ -1,0 +1,29 @@
+﻿@model List<SelectListItem>
+
+@{
+    var count = 1;
+}
+
+@foreach (var item in Model)
+{
+    if (count == 1)
+    {
+        @:<div class="col-sm-4">
+    }
+
+    @:<div class="checkbox"><label><input type="checkbox" class="chkEstado" id="@item.Value" name="@item.Value" @if (item.Selected) {
+            @:checked="checked"
+    } value="@item.Value">@item.Text</label></div>
+
+    if (count < 10)
+    {       
+        count++;
+    }
+    else
+    {
+        @:</div>
+        count = 1;
+    }
+}
+
+</div>

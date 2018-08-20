@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SimuladorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProIntegracao.WCF" />
+      <xsd:import schemaLocation="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISimuladorService_abrirAula_InputMessage">
+    <wsdl:part name="parameters" element="tns:abrirAula" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_abrirAula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:abrirAulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_fecharAula_InputMessage">
+    <wsdl:part name="parameters" element="tns:fecharAula" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_fecharAula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fecharAulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_InserirMatricula_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserirMatricula" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_InserirMatricula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserirMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarDadosAgendamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarDadosAgendamento" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarDadosAgendamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarDadosAgendamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarAula_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarAula" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarAula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarAulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarAulaCancelada_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarAulaCancelada" />
+  </wsdl:message>
+  <wsdl:message name="ISimuladorService_consultarAulaCancelada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarAulaCanceladaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISimuladorService">
+    <wsdl:operation name="abrirAula">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/abrirAula" message="tns:ISimuladorService_abrirAula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/abrirAulaResponse" message="tns:ISimuladorService_abrirAula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fecharAula">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/fecharAula" message="tns:ISimuladorService_fecharAula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/fecharAulaResponse" message="tns:ISimuladorService_fecharAula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserirMatricula">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/InserirMatricula" message="tns:ISimuladorService_InserirMatricula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/InserirMatriculaResponse" message="tns:ISimuladorService_InserirMatricula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDadosAgendamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/consultarDadosAgendamento" message="tns:ISimuladorService_consultarDadosAgendamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/consultarDadosAgendamentoResponse" message="tns:ISimuladorService_consultarDadosAgendamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarAula">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/consultarAula" message="tns:ISimuladorService_consultarAula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/consultarAulaResponse" message="tns:ISimuladorService_consultarAula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarAulaCancelada">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISimuladorService/consultarAulaCancelada" message="tns:ISimuladorService_consultarAulaCancelada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISimuladorService/consultarAulaCanceladaResponse" message="tns:ISimuladorService_consultarAulaCancelada_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISimuladorService" type="tns:ISimuladorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="abrirAula">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/abrirAula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fecharAula">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/fecharAula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserirMatricula">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/InserirMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDadosAgendamento">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/consultarDadosAgendamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarAula">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/consultarAula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarAulaCancelada">
+      <soap:operation soapAction="http://tempuri.org/ISimuladorService/consultarAulaCancelada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SimuladorService">
+    <wsdl:port name="BasicHttpBinding_ISimuladorService" binding="tns:BasicHttpBinding_ISimuladorService">
+      <soap:address location="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

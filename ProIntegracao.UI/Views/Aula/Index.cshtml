@@ -1,0 +1,59 @@
+﻿@model ProIntegracao.UI.ViewModel.AulaViewModel
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+    <style>
+
+        .modal:nth-of-type(even) {
+            z-index: 1042 !important;
+        }
+            .modal-backdrop.in:nth-of-type(even) {
+            z-index: 1041 !important;
+        }
+
+    </style>
+
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/jquery-ui.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/aula.js")"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Aula")">Aula</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+        <!--Matrículas-->
+        <label for="busca">Nome do Aluno :</label>
+        <input type="text" id="nomeAluno" name="nomeAluno" class="form-control width400 ui-autocomplete-input" autocomplete="off" />
+
+        <!--PAGINA-->
+        <label for="busca">CPF :</label>
+        <input name="cpf" id="cpf" type="text" class="form-control width250 cpf" />
+
+        <!--ATIVO-->
+        <input type="radio" name="ativolistar" id="ativolistar" value="true" checked="checked">ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativolistar" id="inativolistar" value="false"> INATIVO
+
+        <a href="#" id="buscaAula" name="buscaAula" title="Buscar Aulas" class="btn btn-info btn-md col-sm-offset-1"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparAula" name="limparAula" title="Limpar Aula" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+
+    </div>
+
+    <!--Nova Matrícula-->
+    <a href="#" class="btn btn-info btn-md spacebutton" onclick="DefinirEstadoConsulta('NovaAula');">
+        <i class="fa fa-car fa-fw"></i> Nova Aula
+    </a>
+    
+    <!--Partial View Lista de Aulas -->
+    <div id="listaAula"></div>
+
+</fieldset>

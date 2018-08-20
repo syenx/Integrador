@@ -1,0 +1,78 @@
+﻿@model ProIntegracao.UI.ViewModel.UsuarioViewModel
+
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.DtCadastro)
+@Html.HiddenFor(model => model.DtExclusao)
+
+<!-- LOGIN -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Login, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.Login, new { @class = "form-control width250 caracterespecial", maxlength = "10" })
+    </div>
+</div>
+
+<!--EMAIL-->
+<div class="form-group">
+    @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.TextBoxFor(model => model.Email, new { type = "email", @class = "form-control width250", maxlength = "50" })
+    </div>
+</div>
+
+<!--PERFIL-->
+<div class="form-group">
+    @Html.LabelFor(model => model.IdPerfil, new { @class = "control-label col-md-3" })
+    <div class="col-md-9">
+        @Html.DropDownListFor(model => model.IdPerfil, new SelectList(Model.listaPerfis, "Value", "Text", Model.IdPerfil), new { @class = "form-control width250" })
+    </div>
+</div>
+
+@if (Model.Edicao)
+{
+    <!-- BLOQUEADO-->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Bloqueado, new { @class = "control-label col-md-3" })
+        <div class="col-md-9">
+            <div class="col-md-9" style="margin-top: 5px;padding-left: 0px;">
+                <!--ATIVO-->
+                <input type="radio" name="bloqueado" id="bloqueado" value="true" @if (Model.Bloqueado) { @: checked="checked"
+                                                                                                                               }>SIM
+
+                <!--INATIVO-->
+                <input type="radio" name="bloqueado" id="desbloqueado" value="false" @if (!Model.Bloqueado) { @: checked="checked"
+                                                                                                                               }> NÃO
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ATIVO -->
+    <div class="form-group">
+        <div>
+            <label for="PerfilId" class="control-label col-sm-3"></label>
+        </div>
+        
+        <div class="col-md-9" style="margin-top: 5px;">
+            <!--ATIVO-->
+            <input type="radio" name="ativo" id="ativo" value="true" @if (Model.DtExclusao == null) { @: checked="checked"
+                                                                                                        }>ATIVO
+
+            <!--INATIVO-->
+            <input type="radio" name="ativo" id="inativo" value="false" @if (Model.DtExclusao != null) { @: checked="checked"
+                                                                                                        }> INATIVO
+        </div>
+    </div>
+}
+else
+{
+    @Html.HiddenFor(model => model.Bloqueado)
+    @Html.HiddenFor(model => model.Edicao)
+}
+
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="salvarUsuario" class="btn btn-info btn-lg" onclick="SalvarUsuario();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarUsuario" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>

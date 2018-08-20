@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ProIntegracao</title>
+    
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <link href="~/Content/DataTable/buttons.dataTables.css" rel="stylesheet" />
+    <link href="~/Content/Choosen/chosen.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/fluid.css" rel="stylesheet" />
+
+    @RenderSection("style", false)
+
+</head>
+<body>
+
+    <div class="row" style="background-image: url('../../Content/images/background.jpg'); background-repeat: no-repeat;">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-8">
+            @{Html.RenderAction("ListarMenuAdm", "Menu"); }
+        </div>
+    </div>
+    
+    <div id="wrap">
+        
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a href="/Home/Index"><img class="img-responsive" src="~/img/logo (1).png" alt=""></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                @{Html.RenderAction("ListarMenu", "Menu"); }
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div id="message"></div>
+            <div class="container" id="loading" style="display:none;">
+                <div class="row">
+                    <h3>Processando......Aguarde</h3>
+                    <div class="progress progress-striped active page-progress-bar">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+        <div id="push"></div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <p class="muted credit">&copy; @DateTime.Now.Year - PROINTEGRAÇÃO</p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- MODAL DIALOG EXCLUIR -->
+    <div class="modal fade" id="myModal" tabindex="10" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ModalTitle"></h4>
+                </div>
+                <div class="modal-body" id="ModalContent">
+                    <h3>Deseja excluir o registro?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnExcluir">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DIALOG -->
+    <div class="modal fade" id="myModalContent" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" data-number="2" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ModalTitleContent"></h4>
+                </div>
+                <div class="modal-body" id="ModalBodyContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tallModal" class="modal modal-wide fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modalTallTitle"></h4>
+                </div>
+                <div class="modal-body" id="ModalBodyFont">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- MODAL ESTADOS -->
+    <div class="modal fade" id="myModalEstados" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="ModalTitleContent">Estado</h4>
+                </div>
+                <div class="modal-body" id="ModalBodyContent">
+                    <form class="form-inline" id="formEstado">
+                        <div class="form-group">
+                            @{Html.RenderAction("ListarEstados", "Estado");}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Hidden("IdEstadoConsulta")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DataTable/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DataTable/buttons.html5.js"></script>
+    <script src="~/Scripts/DataTable/buttons.print.js"></script>
+    <script src="~/Scripts/DataTable/dataTables.buttons.js"></script>
+    <script src="~/Scripts/DataTable/jszip.js"></script>
+    <script src="~/Scripts/DataTable/pdfmake.js"></script>
+    <script src="~/Scripts/DataTable/vfs_fonts.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/Choosen/chosen.jquery.js"></script>
+    <script src="~/Scripts/waitmodal.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

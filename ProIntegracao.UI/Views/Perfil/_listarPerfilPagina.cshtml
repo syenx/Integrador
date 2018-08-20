@@ -1,0 +1,56 @@
+﻿@model ProIntegracao.UI.ViewModel.PerfilViewModel
+<table class="table table-hover" cellspacing="0" id="paginas">
+    <thead>
+        <tr>
+            <th style="display:none;"></th>
+            <th class="col-sm-2">ESTADOS</th>
+            <th>PÁGINA</th>
+            <th>URL</th>
+            <th>INSERIR</th>
+            <th>ATUALIZAR</th>
+            <th>EXCLUIR</th>
+            <th>CONSULTAR</th>
+        </tr>
+    </thead>
+    <tbody id="tbPerfilPagina">
+        @if (Model.ListaPerfilPaginas.Count() > 0)
+        {
+
+            foreach (var item in Model.ListaPerfilPaginas)
+            {
+                var chkInserir = "chkIns" + item.Id;
+                var chkAtualizar = "chkAtu" + item.Id;
+                var chkExcluir = "chkExc" + item.Id;
+                var chkConsultar = "chkCon" + item.Id;
+                var trId = "trId" + item.Id;
+
+                <tr id="@trId">
+                    <td style="display:none;">@string.Format("{0},{1},{2},{3}",item.Id,item.Perfil.Id, item.Pagina.Id, item.Pagina.IdEstado)</td>
+                    <td>@item.Pagina.IdEstado</td>
+                    <td>@item.Pagina.Nome</td>
+                    <td>@item.Pagina.Url</td>
+                    <td class="text-center"><input type="checkbox" class="chkInserir" id="@chkInserir" name="@chkInserir" @if (item.Inserir)
+                        {
+                            @:checked="checked"
+                        }>
+                    </td>
+                    <td class="text-center"><input type="checkbox" class="chkAtualizar" id="@chkAtualizar" name="@chkAtualizar" @if (item.Atualizar)
+                        {
+                            @: checked="checked" 
+                        }>
+                    </td>
+                    <td class="text-center"><input type="checkbox" class="chkExcluir" id="@chkExcluir" name="@chkExcluir" @if (item.Excluir)
+                        {
+                            @: checked="checked"
+                        }>
+                    </td>
+                    <td class="text-center"><input type="checkbox" class="chkConsultar" id="@chkConsultar" name="@chkConsultar" @if (item.Consultar)
+                        {
+                            @: checked="checked" 
+                        }>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

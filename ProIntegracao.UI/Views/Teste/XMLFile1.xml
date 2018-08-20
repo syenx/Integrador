@@ -1,0 +1,43 @@
+﻿<simulador3ED xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cod_cfc>CHC00330</cod_cfc>
+  <cod_operador_sca>3058285622</cod_operador_sca>
+  <cod_sala>0</cod_sala>
+  <cod_simulador>0</cod_simulador>
+  <cpf_aluno>676768040</cpf_aluno>
+  <credencial>AKDE@6W76#13</credencial>
+  <distancia_percorrida>12000</distancia_percorrida>
+  <doc_ident_interprete />
+  <hora_fim_aula>2016-02-29 06:37:13</hora_fim_aula>
+  <hora_inicio_aula>2016-02-29 06:06:29</hora_inicio_aula>
+  <lista_eventos>
+    <cod_evento>299999</cod_evento>
+    <descr_evento>Colisão - 2 vez(es)</descr_evento>
+    <hora_evento>2016-02-29 06:06:29</hora_evento>
+  </lista_eventos>
+  <lista_eventos>
+    <cod_evento>399999</cod_evento>
+    <descr_evento>Você não pisou até o final na embreagem ao mudar a marcha - 2 vez(es)</descr_evento>
+    <hora_evento>2016-02-29 06:06:29</hora_evento>
+  </lista_eventos>
+  <lista_eventos>
+    <cod_evento>399999</cod_evento>
+    <descr_evento>Você não respeitou a sequencia de marchas - 2 vez(es)</descr_evento>
+    <hora_evento>2016-02-29 06:06:29</hora_evento>
+  </lista_eventos>
+  <lista_eventos>
+    <cod_evento>399999</cod_evento>
+    <descr_evento>Você bloqueou uma ou mais rodas - 2 vez(es)</descr_evento>
+    <hora_evento>2016-02-29 06:06:29</hora_evento>
+  </lista_eventos>
+  <lista_eventos>
+    <cod_evento>399999</cod_evento>
+    <descr_evento>Você mudou para a primeira marcha enquanto o veículo estava em movimento - 1 vez(es)</descr_evento>
+    <hora_evento>2016-02-29 06:06:29</hora_evento>
+  </lista_eventos>
+  <renach>RS177733942</renach>
+  <tempo_circulacao>24</tempo_circulacao>
+  <ticket>5H4ZEHN25VE0</ticket>
+  <uf_ident_interprete />
+  <velocidade_maxima>118</velocidade_maxima>
+  <velocidade_media>8</velocidade_media>
+</simulador3ED>

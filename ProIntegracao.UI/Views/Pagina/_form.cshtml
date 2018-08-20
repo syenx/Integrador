@@ -1,0 +1,80 @@
+﻿@model ProIntegracao.UI.ViewModel.PaginaViewModel
+
+<link href="@Url.Content("~/Content/Choosen/chosen.css")" rel="stylesheet" />
+
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.DtCadastro)
+@Html.HiddenFor(model => model.DtExclusao)
+
+<!-- NOME -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control width250 ", maxlength = "255" })
+    </div>
+</div>
+
+<!-- URL -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Url, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Url, new { @class = "form-control width250 ", maxlength = "255" })
+    </div>
+</div>
+
+<!-- ICONE -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Icone, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Icone, new { @class = "form-control width250 ", maxlength = "255" })
+        <i>Você pode encontrar o Icone neste <a href="http://fontawesome.io/3.2.1/cheatsheet/" target="_blank">link</a></i><br />
+        <i>Exemplo "fa fa-user"</i>
+    </div>
+</div>
+
+<!-- MENU -->
+<div class="form-group">
+    <label for="IdMenu" class="control-label col-md-2">Menu :</label>
+    <div class="col-md-10">
+        @Html.DropDownList("Menus", new SelectList(Model.listaMenus, "Value", "Text", Model.IdMenu), new { @class = "form-control width250" })
+    </div>
+</div>
+
+<!-- ORDEM -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Ordem, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Ordem, new { @class = "form-control width250 ", maxlength = "255" })
+    </div>
+</div>
+
+<!-- ESTADOS -->
+<div class="form-group">
+    <label for="IdMenu" class="control-label col-md-2">Estado :</label>
+    <div class="col-md-10">
+        @Html.ListBoxFor(m => m.IdEstado, (Model.listaEstados), new {@class = "form-control width250 required chosen-select", @multiple = "multiple", @placeholder = "Selecione um Estado", id="IdEstado", name="IdEstado" })
+        <input type="checkbox" id="todosEstados" name="todosEstado" onclick="SelecionaTodos();"/> Todos
+    </div>
+</div>
+
+
+<!-- ATIVO -->
+<div class="form-group">
+    <label for="PerfilId" class="control-label col-md-2"></label>
+    <div class="col-md-10" style="margin-top: 5px;">
+        <!--ATIVO-->
+        <input type="radio" name="ativo" id="ativop" value="true" @if (Model.DtExclusao == null) { @: checked="checked"
+                                                                                     }>ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativo" id="inativop" value="false" @if (Model.DtExclusao != null) { @: checked="checked"
+                                                                                     }> INATIVO
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="salvarPagina" class="btn btn-info btn-lg" onclick="SalvarPagina();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarPagina" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>

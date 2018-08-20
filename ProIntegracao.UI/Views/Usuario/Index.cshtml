@@ -1,0 +1,39 @@
+﻿@section scripts{
+    <script src="@Url.Content("~/Scripts/usuario.js")"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Usuario")">Usuário</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+    
+        <label for="busca">Busca :</label>
+        <input name="termo" id="termo" type="text" class="form-control width400" maxlength="50" />
+        
+        <!--ATIVO-->
+        <input type="radio" name="ativolistar" id="ativolistar" value="true" checked="checked">ATIVO
+        
+        <!--INATIVO-->
+        <input type="radio" name="ativolistar" id="inativolistar" value="false"> INATIVO
+       
+        <a href="#" id="buscaUsuario" name="buscaUsuario" title="Buscar Usuários" class="btn btn-info btn-md col-sm-offset-4"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparUsuario" name="limparUsuario" title="Limpar Usuários" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    
+    </div>
+    
+    <!--Nova Matrícula-->
+    <a href="#" class="btn btn-info btn-md spacebutton" onclick="NovoUsuario();"><i class="fa fa-users fa-fw"></i> Novo Usuário</a>
+
+    <!--Partial View Lista de Matriculas -->
+    <div id="listaUsuario"></div>
+
+</fieldset>
+

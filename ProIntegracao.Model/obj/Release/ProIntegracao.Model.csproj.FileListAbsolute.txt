@@ -1,0 +1,16 @@
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\ProIntegracao.Model.dll.config
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\NHibernate.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\System.Net.Http.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\NHibernate.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Release\System.Net.Http.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Release\ProIntegracao.Model.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Release\ProIntegracao.Model.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Release\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Release\ProIntegracao.Model.pdb

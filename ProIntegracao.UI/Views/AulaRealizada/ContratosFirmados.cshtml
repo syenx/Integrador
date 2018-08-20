@@ -1,0 +1,51 @@
+﻿@model ProIntegracao.UI.ViewModel.AulaRealizadaViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutFluid.cshtml";
+ }
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.12/sorting/datetime-moment.js"></script>
+    <script src="@Url.Content("~/Scripts/AulaRealizada/contratofirmado.js")"></script>
+}
+
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("ContratoFirmado", "AulaRealizada")">Contratos Firmados</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-horizontal well well-lg">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="dtInicio">Contratos Firmados Até :</label>
+                <input name="dtInicio" id="dtInicio" type="text" class="form-control datepicker data" />
+            </div>
+            <div class="col-sm-3">
+                <label for="busca">Estado :</label>
+                @Html.DropDownListFor(model => model.idEstado, Model.ListaEstados, "Selecione", new { @class = "form-control" })
+            </div>
+            <div class="col-sm-offset-9 form-inline" style="margin-top:22px!important;">
+                <a href="#" id="buscaContratosFirmados" name="buscaContratosFirmados" title="Buscar Contratos Firmados" class="btn btn-info btn-md"><i class="fa fa-search"></i> Buscar</a>
+                <a href="#" id="exportarContratosFirmados" name="exportarContratosFirmados" title="Exportar Contratos Firmados" class="btn btn-warning btn-md" onclick="ExportarContratosFirmados();"><i class="fa fa-file-excel-o"></i> Gerar Excel</a>
+                <a href="#" id="limpaContratosFirmados" name="limpaContratosFirmados" title="Limpar Pesquisa" class="btn btn-danger btn-md" onclick="LimparContratosFirmados();"><i class="fa fa-trash"></i> Limpar</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Lista Situacao Aula-->
+    <div id="listacontratosfirmados"></div>
+
+</fieldset>
+
+

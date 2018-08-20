@@ -1,0 +1,26 @@
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\NHibernate.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.Properties.Resources.resources
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.GenerateResource.Cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\bin\Debug\NHibernate.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\NHibernate.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\bin\Debug\NHibernate.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.Properties.Resources.resources
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.GenerateResource.Cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.pdb

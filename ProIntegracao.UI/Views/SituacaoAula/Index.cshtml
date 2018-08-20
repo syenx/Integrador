@@ -1,0 +1,76 @@
+﻿@model ProIntegracao.UI.ViewModel.SituacaoAulaViewModel
+@{Layout = "~/Views/Shared/_LayoutFluid.cshtml";}
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/situacaoaula.css")" rel="stylesheet" /> 
+}
+@section scripts{
+    <script src="@Url.Content("~/Scripts/situacaoaula.js")"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","SituacaoAula")">Situação Aula</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+
+    <legend>@ViewBag.Title</legend>
+    
+    <!-- PESQUISA -->
+    <div class="form-horizontal well well-lg">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="busca">CPF :</label>
+                <input name="cpf" id="cpf" type="text" class="form-control cpf"/>
+            </div>
+
+            <div class="col-sm-2">
+                <label for="busca">Renach :</label>
+                <input name="Renach" id="Renach" type="text" class="form-control" maxlength="15" />
+            </div>
+
+            <div class="col-sm-1">
+                <label for="dtInicio">Data Início :</label>
+                <input name="dtInicio" id="dtInicio" type="text" class="form-control datepicker data" maxlength="10" />
+            </div>
+
+            <div class="col-sm-1">
+                <label for="dtFim">Data Fim :</label>
+                <input name="dtFim" id="dtFim" type="text" class="form-control datepicker data" maxlength="10" />
+            </div>
+
+            <div class="col-sm-1">
+                <!--RENACH-->
+                <label for="busca">Estado :</label>
+                @Html.DropDownListFor(model => model.IdUF, Model.ListaEstados, "--", new { @class = "form-control" })
+            </div>
+
+            <div class="col-sm-2">
+                <!--MENU-->
+                <label for="busca">Status :</label>
+                @Html.DropDownListFor(model => model.IdStatus, Model.ListaStatus, "--", new { @class = "form-control" })
+            </div>
+
+            <div class="col-sm-1">
+                <!--MENU-->
+                <label for="busca">Curso :</label>
+                @Html.DropDownListFor(model => model.IdTipoCurso, Model.ListaCursos, "--", new { @class = "form-control" })
+            </div>
+
+            <br /><br />
+            <div class="col-sm-2 form-inline" style="margin-top:-15px!important;">
+                <a href="#" id="buscaSituacaoAula" name="buscaSituacaoAula" title="Buscar Situação Aula" class="btn btn-info btn-md"><i class="fa fa-search"></i> Buscar</a>
+                <a href="#" id="limpaSituacaoAula" name="limpaSituacaoAula" title="Limpar Pesquisa" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Lista Situacao Aula-->
+    <div id="situacaoaula"></div>
+
+</fieldset>
+
+
+

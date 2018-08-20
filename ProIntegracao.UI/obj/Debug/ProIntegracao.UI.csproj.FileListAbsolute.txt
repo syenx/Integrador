@@ -1,0 +1,192 @@
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.UI.XML
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ApplicationInsights.config
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\csc.exe
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\vbc.exe
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.UI.dll.config
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.UI.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.UI.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Antlr3.Runtime.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\EntityFramework.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.Web.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Newtonsoft.Json.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Owin.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Helpers.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Mvc.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Optimization.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Razor.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\WebActivatorEx.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\WebGrease.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\NHibernate.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\ProIntegracao.Model.dll.config
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.Web.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Helpers.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Mvc.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Optimization.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.Razor.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Antlr3.Runtime.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Newtonsoft.Json.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\EntityFramework.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\NHibernate.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.dll
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ApplicationInsights.config
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\csc.exe
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\vbc.exe
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.UI.dll.config
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.UI.XML
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.UI.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.UI.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Antlr3.Runtime.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\EntityFramework.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.Web.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Newtonsoft.Json.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Owin.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Helpers.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Mvc.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Optimization.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Razor.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\WebActivatorEx.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\WebGrease.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\NHibernate.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\ProIntegracao.Model.dll.config
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.Web.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Helpers.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Mvc.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Optimization.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.Razor.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Antlr3.Runtime.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Newtonsoft.Json.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\EntityFramework.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\NHibernate.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.UI\obj\Debug\ProIntegracao.UI.pdb

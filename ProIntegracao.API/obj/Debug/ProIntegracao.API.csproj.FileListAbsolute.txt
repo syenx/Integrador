@@ -1,0 +1,2 @@
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.API\obj\Debug\ProIntegracao.API.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Nova pasta\ProIntegracao.API\obj\Debug\ProIntegracao.API.csproj.CoreCompileInputs.cache

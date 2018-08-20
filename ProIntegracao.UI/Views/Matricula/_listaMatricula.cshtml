@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.Matricula>
+<table class="table table-hover" id="matriculas">
+    <thead>
+        <tr>
+            <th>MATRÍCULA</th>
+            <th class="col-sm-2">CPF</th>
+            <th>CFC</th>
+            <th>UF</th>
+            <th style="padding-left:5px !important;">DATA CADASTRO</th>
+            <th style="padding-left:5px !important;">QTD</th>
+            <th style="padding-left:5px !important;">HORA AULA</th>
+            <th>PSA</th>
+            <th class="col-sm-1"></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("pt-BR");
+                var data = item.HoraAula;
+                var dataCadastro = item.DtCadastro.ToString("dd/MM/yyyy", culture);
+                var sexoNome = item.Aluno.Sexo.Nome.ToUpper().Substring(0,1);
+                var estadoNome = item.Estado.Uf.ToUpper();
+                var nome = (!string.IsNullOrEmpty(item.Aluno.Nome)) ? item.Aluno.Nome.ToUpper() : "";
+                long cpf = (string.IsNullOrEmpty(item.Aluno.CpfAluno)) ? 0 : Convert.ToInt64(item.Aluno.CpfAluno);
+                var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf);
+
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@docCpf.ToString()</td>
+                    <td>@item.CodigoCfc</td>
+                    <td>@estadoNome</td>
+                    <td>@dataCadastro </td>
+                    <td>@item.QtdAula</td>
+                    <td>@data</td>
+                    <td>@item.Psa</td>
+                    <td class="col-sm-1 text-center">
+                        <a href="#" onclick="EditarMatricula(@item.Id);" title="Editar registro">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        |
+                        <a href="#" onclick="AbrirModalExcluir(@item.Id, 'Matricula');" title="Excluir registro">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>

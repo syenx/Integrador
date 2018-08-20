@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<div class="form-bottom">
+    
+    @using (Html.BeginForm("SigIn","Login", FormMethod.Post, new { @class = "login-form" , role="form" }))
+    {
+        <div class="form-group">
+            <label class="sr-only" for="username">Login</label>
+            <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="username">
+        </div>
+    
+        <div class="form-group">
+            <label class="sr-only" for="password">Senha : </label>
+            <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
+        </div>
+        
+        <div id="message"></div>
+        <a href="#" class="btn" id="acesso" name="acesso">ACESSO!</a>
+        <br/>
+        <a href="@Url.Action("EsqueciMinhaSenha", "Login")">Esqueci Minha Senha</a>
+    }
+</div>

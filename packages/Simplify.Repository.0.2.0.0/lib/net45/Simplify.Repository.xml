@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simplify.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:Simplify.Repository.ITransactUnitOfWork">
+            <summary>
+            Represent unit of work with auto-open transaction
+            </summary>
+        </member>
+        <member name="M:Simplify.Repository.ITransactUnitOfWork.Commit">
+            <summary>
+            Commits transaction.
+            </summary>
+        </member>
+        <member name="M:Simplify.Repository.ITransactUnitOfWork.Rollback">
+            <summary>
+            Rollbacks transaction.
+            </summary>
+        </member>
+        <member name="T:Simplify.Repository.IUnitOfWork">
+            <summary>
+            Represent unit of work without explicit transaction
+            </summary>
+        </member>
+        <member name="T:Simplify.Repository.IHideObjectMembers">
+            <summary>
+            Helper interface used to hide the base <see cref="T:System.Object" />
+            members from the fluent API to make it much cleaner
+            in Visual Studio intellisense.
+            </summary>
+        </member>
+        <member name="M:Simplify.Repository.IHideObjectMembers.GetType">
+            <summary>
+            Gets the type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.Repository.IHideObjectMembers.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Simplify.Repository.IHideObjectMembers.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Simplify.Repository.IHideObjectMembers.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Simplify.Repository.IBeginTransactUnitOfWork">
+            <summary>
+            Represent unit of work with manual open transaction
+            </summary>
+        </member>
+        <member name="M:Simplify.Repository.IBeginTransactUnitOfWork.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Begins the transaction.
+            </summary>
+            <param name="isolationLevel">The isolation level.</param>
+        </member>
+        <member name="T:Simplify.Repository.Model.IIdentityObject">
+            <summary>
+            Represent object with identifier
+            </summary>
+        </member>
+        <member name="P:Simplify.Repository.Model.IIdentityObject.ID">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="T:Simplify.Repository.Model.INamedObject">
+            <summary>
+            Represent object with name
+            </summary>
+        </member>
+        <member name="P:Simplify.Repository.Model.INamedObject.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+    </members>
+</doc>

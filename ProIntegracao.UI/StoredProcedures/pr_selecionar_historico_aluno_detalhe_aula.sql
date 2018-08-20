@@ -1,0 +1,75 @@
+USE [ProSimulador]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_selecionar_historico_aluno_individual]    
+Script Date: 16/05/2016 09:01:36 
+******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- ==============================================================
+-- AUTHOR:		Fernando Parmezani
+-- CREATE DATE: 2016/04/31
+-- DESCRIPTION:	Selecionar Historico Aluno
+-- ==============================================================
+--exec pr_selecionar_historico_aluno_detalhe_aula 691008,2665242
+
+CREATE PROCEDURE [dbo].[pr_selecionar_historico_aluno_detalhe_aula]
+	@ID_ALUNO		INT
+	,@ID_AULA		INT
+AS BEGIN
+SET NOCOUNT OFF;
+
+	--DECLARE 
+	--		@ID_ALUNO	INT	= 691008
+	--,     @ID_AULA	INT	= 2665242
+
+	SELECT TOP 1
+		E.CODIGO [CODIGO_CFC]
+		,P.NOME [NOME]
+		, A.NUMERO_HABILITACAO [RENACH]
+		, P2.NOME [NOME_INSTRUTOR]
+		, P2.CPF [CPF_INSTRUTOR]
+		, MO.NOME [MODELO]
+		, AU.SESSION_ID
+		, AU.VELOCIDADE_MEDIA
+		, AU.TEMPO_TRAJETO
+		, AU.HORARIO_INICIO
+		, AU.HORARIO_FIM
+	FROM TB_ALUNO A (NOLOCK)
+		INNER JOIN TB_MATRICULA M	(NOLOCK) ON A.ID_ALUNO = M.ID_ALUNO
+		INNER JOIN TB_AGENDA AG		(NOLOCK) ON M.ID_MATRICULA = AG.ID_MATRICULA
+		INNER JOIN TB_EMPRESA E		(NOLOCK) ON E.ID_EMPRESA = AG.ID_CFC  
+		INNER JOIN TB_PESSOA P		(NOLOCK) ON A.ID_ALUNO = P.ID_PESSOA  
+		INNER JOIN TB_PESSOA P2		(NOLOCK) ON AG.ID_INSTRUTOR = P2.ID_PESSOA 
+		INNER JOIN TB_MODELO MO		(NOLOCK) ON AG.EXERCICE_BLOCK = MO.ID_MODELO 
+		INNER JOIN TB_AULA AU		(NOLOCK) ON AG.ID_AGENDA = AU.ID_CLIENTE_AGENDA
+	WHERE 
+		A.ID_ALUNO = @ID_ALUNO
+	AND 
+		AU.ID_AULA = @ID_AULA
+
+	SELECT I.DESCRICAO, R.QTD_INFRACAO, R.ERRO from TB_RESULTADO R
+	INNER JOIN TB_INFRACOES I ON R.CODIGO_INFRACAO = I.CODIGO
+	WHERE R.ID_AULA = @ID_AULA
+	ORDER BY R.ERRO
+
+	-- Tipo de Erro, 1 = Infrações, 2 = Erros, 3 = Indicações
+
+END
+	-- SELECT top 10 * FROM TB_EVENTOS_POR_AULA EA (NOLOCK) WHERE EA.  = @ID_AULA
+
+	--SELECT 
+	--	A.SESSION_ID 
+	--	, A.VELOCIDADE_MEDIA
+	--	, A.TEMPO_TRAJETO
+	--	, A.HORARIO_INICIO
+	--	, A.HORARIO_FIM
+	--FROM 
+	--	TB_AULA A (NOLOCK) 
+	--WHERE 
+	--	A.ID_AULA  = @ID_AULA
+
+	--select top 100 * from TB_INFRACOES  I
+	-- Tipo de Erro, 1 = Infrações, 2 = Erros, 3 = Indicações

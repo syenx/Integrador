@@ -1,0 +1,114 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.HistoricoAula>
+<table class="table table-hover table-condensed" id="tabeladehistorico">
+    <thead>
+        <tr>
+            <th>ID AULA</th>
+            <th>ID AGENDA</th>
+            <th>HORARIO INICIO</th>
+            <th>HORARIO FIM</th>
+            <th>SESSION ID</th>
+            <th>STATUS</th>
+            <th>MODELO DE AULA</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var td          = "tdst" + item.IdAula;
+            var tdmodelo    = "tdmd" + item.IdAula;
+            var lb          = "lbst" + item.IdAula;
+            var lbmd        = "lbmd" + item.IdAula;
+            var lnkSave     = "lnkSave" + item.IdAula;
+            var lnkPencil   = "lnkPencil" + item.IdAula;
+            var lnkCancel   = "lnkCancel" + item.IdAula;
+            var lnkInfo     = "lnkInfo" + item.IdAula;
+            var lnkSearch   = "lnkSearch" + item.IdAula;
+            var lnkDetail   = "lnkDetail" + item.IdAula;
+            var lnkTrash    = "lnkTrash" + item.IdAula;
+            var lnkSend     = "lnkSend" + item.IdAula;
+            var lnkFinaliza = "lnkFinaliza" + item.IdAula;
+
+            <tr>
+                <td>@item.IdAula</td>
+                <td>@item.IdAgenda</td>
+                <td>@item.HorarioInicio</td>
+                <td>@item.HorarioFim</td>
+                <td>@item.SessionId</td>
+                <td id="@td">
+                    <span id="@lb">@item.Status</span>
+                </td>
+                <td id="@tdmodelo">
+                    <span id="@lbmd">@item.ModelodeAula</span>
+                </td>
+                <td style="white-space: nowrap">
+
+                    @if (item.PodeAtualizar)
+                    {
+                        @:<a href="javascript:void(0);" id="@lnkPencil" onclick="AlterarStatus(@item.IdAula, @item.IdStatus, @item.IdModelo, @item.IdSimulador);"><i class="fa fa-pencil fa-2x"></i></a>&nbsp;
+                        <a href="javascript:void(0);" onclick="SalvarStatus(@item.IdAula);" style="display:none;" id="@lnkSave"><i class="fa fa-save fa-2x"></i></a>
+                        <a href="javascript:void(0);" onclick="CancelarAlteracao(@item.IdAula);" style="display:none;" id="@lnkCancel"><i class="fa fa-times fa-2x"></i></a>
+                    }
+
+
+                    @if (!string.IsNullOrEmpty(item.Info))
+                    {
+                        @:<a href="javascript:void(0);" id="@lnkInfo" class="info" data-placement="left" rel="popover" data-content="@item.Info" data-original-title="Informação"><i class="fa fa-info-circle fa-2x"></i></a>
+                    }
+
+                    @if (item.PodeConsultar)
+                    {
+                        @:<a href="#" id="@lnkSearch" onclick="DetalheHistorico(@item.IdAula);"><i class="fa fa-search fa-2x"></i></a>&nbsp;
+                    }
+
+                    @if (item.PodeCancelar)
+                    {
+                        @:<a href="#" id="@lnkTrash" onclick="AbrirModalCancelarAula(@item.IdAgenda, @item.IdAula);" ><i class="fa fa-trash fa-2x"></i></a>&nbsp;
+                    }
+                    
+                    @if (item.PodeReenviar)
+                    {
+                        if (item.Status.ToUpper() == "PENDENTE"  && item.HorarioFim == null)
+                        {
+                            @:<a href="@Url.Action("Finalizar","HistoricoAluno", new { @idMatricula = item.IdMatricula})" id="@lnkFinaliza"><i class="fa fa-check-circle-o fa-2x"></i></a>
+                        }
+                        else
+                        {
+                            <a href="#" id="@lnkSend" onclick="EnviarAula(@item.IdAgenda, @item.IdAula);"><i class="fa fa-send fa-2x"></i></a>
+                        }
+                    }
+
+                    @if (item.ConsultarAulaDetran)
+                    {
+                        @:<a href="#" id="@lnkDetail" onclick="ConsultaDetran('@item.CPF',@item.IdentificadorAula);"><i class="fa fa-home fa-2x"></i></a>&nbsp;
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal Cancelar Aula-->
+<div class="modal fade" id="myModalCancelarAula" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Cancelamento de aula</h4>
+            </div>
+            
+            <div class="modal-body">
+                Tem certeza que deseja cancelar esta aula?
+                <input type="hidden" id="idAulaCancelar">
+                <input type="hidden" id="idAgendaCancelar">
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success" onclick="CancelarAula();">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>

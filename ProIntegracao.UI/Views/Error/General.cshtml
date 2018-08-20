@@ -1,0 +1,18 @@
+﻿@model string
+@{
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+}
+
+@{
+    ViewBag.Title = "Erro Geral";
+}
+
+<fieldset>
+    <legend>ERRO GERAL</legend>
+    <div class="jumbotron">
+        <h3>Ops...  Aconteceu algum problema inesperado</h3>
+        <p>Tente novamente a operação e caso ocorra novamente o erro, avise nosso departamento técnico</p>
+        <p>Descrição do Erro : @Model</p>
+    </div>
+    <a href="@Url.Action("Index","Home")" class="btn btn-info btn-lg">Voltar</a>
+</fieldset>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b40e5a50-0c19-4d8e-8af4-615b7ada7124" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55499/ReenvioAulaAutomatico.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReenvioAulaAutomatico.xsd" MetadataType="Schema" ID="34aec37a-e8ed-4872-9b31-5b5b3691fe76" SourceId="1" SourceUrl="http://localhost:55499/ReenvioAulaAutomatico.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReenvioAulaAutomatico1.xsd" MetadataType="Schema" ID="bd9dae36-86ef-4d8b-9682-8024a9e62c4a" SourceId="1" SourceUrl="http://localhost:55499/ReenvioAulaAutomatico.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReenvioAulaAutomatico.disco" MetadataType="Disco" ID="c4adb18a-ad98-4b36-b742-aae01fab2526" SourceId="1" SourceUrl="http://localhost:55499/ReenvioAulaAutomatico.svc?disco" />
+    <MetadataFile FileName="ReenvioAulaAutomatico.wsdl" MetadataType="Wsdl" ID="3840ab75-2c9d-44f5-b0ec-56a1b5095a03" SourceId="1" SourceUrl="http://localhost:55499/ReenvioAulaAutomatico.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

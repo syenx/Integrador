@@ -1,0 +1,106 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.AulasPorSimulador>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="aulasporsimulador">
+    <thead>
+        <tr>
+            <th>
+                MÊS
+            </th>
+            <th class="text-center" ">
+                ESTADO
+            </th>
+            <th class="text-center">
+                NÚMERO MÉDIO DE AULAS
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var last = "";
+            var subtotalaulas = 0;
+            var subtotalsimulador = 0;
+            var totalaulas = 0M;
+            var totalmes = 0M;
+            var mes = "";
+
+            foreach (var item in Model)
+            {
+                if (mes == "" || mes != item.Mes.Substring(0,2)) {
+                    mes = item.Mes.Substring(0, 2);
+                    totalmes++;
+                }
+
+                if (last == item.Mes || last == "")
+                {
+                    subtotalaulas += item.NrMedioAulas;
+                    subtotalsimulador += item.NrSimuladores;
+                    
+                    <tr>
+                        <td>
+                            @item.Mes
+                        </td>
+                        <td class="text-center">
+                            @item.Estado
+                        </td>
+                        <td class="text-center">
+                            @item.Media
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr style="font-weight:bold; background-color:#E5F7FD;">
+                        <td>SUBTOTAL MÉDIO DE AULAS</td>
+                        <td></td>
+                        <td class="text-center">
+                            @string.Format("{0:N2}", (Convert.ToDecimal(subtotalaulas)) / (Convert.ToDecimal(subtotalsimulador)))
+                        </td>
+                    
+                    </tr>
+
+                            <tr>
+                                <td>
+                                    @item.Mes
+                                </td>
+                                <td class="text-center">
+                                    @item.Estado
+                                </td>
+                                <td class="text-center">
+                                    @item.Media
+                                </td>
+                            </tr>
+                    
+                    totalaulas += (Convert.ToDecimal(subtotalaulas)) / (Convert.ToDecimal(subtotalsimulador));
+
+                    subtotalaulas = item.NrMedioAulas;
+                    subtotalsimulador = item.NrSimuladores;
+
+                }
+
+                last = item.Mes;
+
+            }
+
+
+            <tr style="font-weight:bold; background-color:#E5F7FD;">
+                <td>SUBTOTAL MÉDIO DE AULAS</td>
+                <td class="text-center"></td>
+                <td class="text-center">
+                    @string.Format("{0:N2}", (Convert.ToDecimal(subtotalaulas)) / (Convert.ToDecimal(subtotalsimulador)))
+                </td>
+
+            </tr>
+
+            totalaulas += (Convert.ToDecimal(subtotalaulas)) / (Convert.ToDecimal(subtotalsimulador));
+
+            <tr  style="font-weight:bold; background-color:#808080;color:#fff;">
+                <td>
+                    TOTAL
+                </td>
+                <td class="text-center"></td>
+                <td class="text-center">
+                    @string.Format("{0:N2}", (Convert.ToDecimal(totalaulas)) / (Convert.ToDecimal(totalmes)))
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+}
+
+@{
+    ViewBag.Title = "Não Autorizado";
+}
+
+<fieldset>
+    <legend>ACESSO NEGADO</legend>
+    <div class="jumbotron">
+        <h3>Desculpe, você não tem autorização para acessar esta página</h3>
+    </div>
+    <a href="@Url.Action("Index","Login")" class="btn btn-info btn-lg">Voltar</a>
+</fieldset>

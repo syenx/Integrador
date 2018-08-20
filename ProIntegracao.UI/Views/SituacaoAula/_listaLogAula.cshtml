@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.LogAula>
+<fieldset>
+    <div class="col-sm-12">
+        <table class="table table-hover dt-responsive wrap" cellspacing="0" width="200px">
+            <thead>
+                <tr>
+                    <th>XML Entrada</th>
+                    <th>XML Saída</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var entrada = (item.XmlEntrada.Length > 50) ? item.XmlEntrada.Substring(0, 50) : item.XmlEntrada;
+                    var saida = (item.XmlSaida.Length > 50) ? item.XmlSaida.Substring(0, 50) : item.XmlSaida;
+                    <tr>
+                        <td>
+                            <a href="#" onclick="AbreXMLDetalhe('@item.XmlEntrada');">
+                                @Html.Raw(Html.Encode(entrada))
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="AbreXMLDetalhe('@item.XmlSaida');">
+                                @Html.Raw(Html.Encode(saida))
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="form-group">
+            <div class="col-md-offset-8 col-md-10">
+                <a href="#" id="cancelarLogAula" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal para Detalhes de XML-->
+    <div class="modal fade" tabindex="-2" role="dialog" id="xml">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-number="1" onclick="FecharModalXML();" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Detalhe XML</h4>
+                </div>
+                <div class="modal-body" id="XmlBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="FecharModalXML();">Fechar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</fieldset>
+
+
+

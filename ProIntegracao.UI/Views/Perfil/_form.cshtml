@@ -1,0 +1,71 @@
+﻿@model ProIntegracao.UI.ViewModel.PerfilViewModel
+@Html.HiddenFor(m => m.DtCadastro)
+@Html.HiddenFor(m => m.DtExclusao)
+@Html.HiddenFor(m => m.Id)
+
+<form class="form-horizontal" id="formPerfil">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2 " })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control width500 ", maxlength = "255" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Admin, new { @class = "control-label col-md-2 " })
+        <div class="col-md-10" style="margin-top: 5px;">
+            @Html.CheckBoxFor(model => model.Admin)
+        </div>
+    </div>
+
+    <!--ATIVO-->
+    <div class="form-group">
+        <label for="PerfilId" class="control-label col-md-2"></label>
+        <div class="col-md-10" style="margin-top: 5px;">
+            <!--ATIVO-->
+            <input type="radio" name="ativo" id="ativo" value="true" @if (Model.DtExclusao == null) { @: checked="checked"
+                                                                      }>ATIVO
+
+            <!--INATIVO-->
+            <input type="radio" name="ativo" id="inativo" value="false" @if (Model.DtExclusao != null) { @: checked="checked"
+                                                                      }> INATIVO
+        </div>
+    </div>
+</form>
+
+<form class="form-horizontal" id="formPerfilEstados">
+    
+    <ul class="nav nav-tabs">
+        <li class="active" id="tabEstados">
+            <a data-toggle="tab" href="#estados">Estados</a></li>
+        <li id="tabPermissoes">
+            <a data-toggle="tab" href="#permissoes" onclick="ListarPaginasPerfilPorEstado();">Permissões</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="estados" class="tab-pane fade in active">
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="BR" name="BR"><strong>BRASIL</strong>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                @{Html.RenderPartial("~/Views/Perfil/_listarEstados.cshtml", Model.ListaEstados);}
+            </div>
+        </div>
+        <div id="permissoes" class="tab-pane fade">
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="Pages" name="Pages"><strong>Selecionar Todas</strong>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

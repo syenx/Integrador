@@ -1,0 +1,19 @@
+﻿@model ProIntegracao.UI.ViewModel.PerfilViewModel
+
+@section scripts{
+    <script src="~/Scripts/perfil.js"></script>
+}
+
+<filedset>
+   
+     <legend>Novo Perfil</legend>
+
+    @{Html.RenderPartial("~/Views/Perfil/_form.cshtml", Model);}
+
+    <div class="form-group">
+        <div class="col-md-offset-7 col-md-10">
+            <a href="#" id="salvarPerfil" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+            <a href="@Url.Action("Index","Perfil")" id="cancelarPagina" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+        </div>
+    </div>
+</filedset>

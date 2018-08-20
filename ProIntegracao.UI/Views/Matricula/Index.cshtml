@@ -1,0 +1,25 @@
+﻿@section scripts{
+    <script src="@Url.Content("~/Scripts/matricula.js")"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Usuario")">Usuario</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    
+    <div class="form-inline well">
+        <label for="doc">CPF :</label>
+        <input name="doc" id="doc" type="text" class="form-control width250 cpf" />
+        <a href="#" id="buscaMatricula" name="buscaMatricula" title="Buscar Matrícula" class="btn btn-info btn-md col-sm-offset-7"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparMatricula" name="limparMatricula" title="Limpar Matrícula" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    </div>
+    
+    <!--Nova Matrícula-->
+    <a href="#" onclick="NovaMatricula();" class="btn btn-info btn-md spacebutton"><i class="fa fa-pencil fa-fw"></i> Nova Matrícula</a>
+    
+    <!--Partial View Lista de Matriculas -->
+    <div id="listaMatricula"></div>
+</fieldset>

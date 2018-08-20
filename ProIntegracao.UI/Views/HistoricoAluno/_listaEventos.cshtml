@@ -1,0 +1,59 @@
+﻿@model IEnumerable <ProIntegracao.Data.EntidadeProSimulador.EventosFinalizacao>
+
+@{ 
+    var table = string.Format("resultado{0}",ViewBag.IdModelo.ToString());
+    var tbody = string.Format("tbody{0}", ViewBag.IdModelo);
+    var distancia = string.Format("distancia{0}", ViewBag.IdModelo);
+    var tempo = string.Format("tempo{0}", ViewBag.IdModelo);
+    var velmaxima = string.Format("velmaxima{0}", ViewBag.IdModelo);
+    var velmedia = string.Format("velmedia{0}", ViewBag.IdModelo);
+
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <strong>DISTÂNCIA PERCORRIDA :</strong><span id="@distancia">@Model.First().DISTANCIA</span><br>
+        <strong>TEMPO DE CIRCULAÇÃO :</strong> <span id="@tempo">@Model.First().TEMPOCIRCULACAO</span><br>
+        <strong>VELOCIDADE MÁXIMA :</strong> <span id="@velmaxima">@Model.First().VELOCIDADEMAXIMA</span><br>
+        <strong>VELOCIDADE MÉDIA :</strong> <span id="@velmedia">@Model.First().VELOCIDADEMEDIA</span><br>
+    </div>
+</div>
+
+<div class="row">
+    <table class="table table-bordered" id="@table">
+        <thead>
+            <tr>
+                <th>Selecionar</th>
+                <th style="display:none;"></th>
+                <th style="display:none;"></th>
+                <th>Descrição do Evento</th>
+                <th>Quantidade Sugerida</th>
+                
+            </tr>
+        </thead>
+        <tbody id="@tbody">
+            @{
+                var i = 1;
+                foreach (var item in Model)
+                {
+
+                    var check       = string.Format("c-{0}-{1}", ViewBag.IdAula, ViewBag.IdModelo);
+                    var idevento    = string.Format("m-{0}-{1}", ViewBag.IdAula, ViewBag.IdModelo);
+                    var descricao   = string.Format("d-{0}-{1}", ViewBag.IdAula, ViewBag.IdModelo);
+                    var valor       = string.Format("v-{0}-{1}", ViewBag.IdAula, ViewBag.IdModelo);
+                    var tipoevento  = string.Format("t-{0}-{1}", ViewBag.IdAula, ViewBag.IdModelo);
+
+                    <tr>
+                        <td><input type="checkbox" id="@check" checked="checked" disabled="disabled" /></td>
+                        <td id="@idevento" style="display:none;">@item.ID_EVENTO</td>
+                        <td id="@tipoevento" style="display:none;">@item.TIPO_EVENTO</td>
+                        <td id="@descricao">@item.DESCRICAO</td>
+                        <td id="@valor">@item.EVENTO</td>
+                        
+                    </tr>
+                    i++;
+                }
+            }
+        </tbody>
+    </table>
+</div>

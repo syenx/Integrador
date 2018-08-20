@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.Usuario>
+<table class="table table-hover" cellspacing="0" id="usuarios">
+    <thead>
+        <tr>
+            <th>LOGIN</th>
+            <th>E-MAIL</th>
+            <th class="text-left">PERFIL</th>
+            <th class="text-left">DATA CADASTRO</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Login</td>
+                <td>@item.Email</td>
+                <td>@item.Perfil.Nome</td>
+                <td class="text-left">@item.DtCadastro.ToShortDateString()</td>
+                <td class="text-left">
+                    <a href="#" onclick="EditarUsuario(@item.Id);" title="Editar registro">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                    <span id="buttonExcluir">|<a href="#" onclick="AbrirModalExcluir(@item.Id, 'Usuario');" title="Excluir registro">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

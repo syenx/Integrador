@@ -1,0 +1,50 @@
+﻿@section style{
+    <link href="@Url.Content("~/Content/alunoduplicado.css")" rel="stylesheet" />
+    <style>
+        .modal.modal-wide .modal-dialog {width: 95%;}
+        #myModalFont .modal-body p { margin-bottom: 1200px !important; }
+    </style>
+}
+
+@section scripts{
+    <script src="~/Scripts/HistoricoAluno/historicoaluno.js"></script>
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","HistoricoAluno")">Aluno</a></li>
+    <li><a href="#">Consulta Histórico Aluno</a></li>
+</ol>
+
+<fieldset>
+
+    <legend>@ViewBag.Title</legend>
+    
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+
+        <label for="busca">CPF :</label>
+        <input name="cpf" id="cpf" type="text" class="form-control cpf" />
+
+        <label for="Renach">Renach :</label>
+        <input name="Renach" id="Renach" type="text" class="form-control width250" maxlength="150" />
+
+        <label for="busca">Nome :</label>
+        <input name="Nome" id="Nome" type="text" class="form-control width250" maxlength="150" />
+
+        <!--ATIVO-->
+        <input type="radio" name="ativolistar" id="ativolistar" value="true" checked="checked">ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativolistar" id="inativolistar" value="false"> INATIVO
+
+
+
+        <a href="#" id="buscaHistoricoAluno" name="buscaHistoricoAluno" title="Buscar Historico Aluno" class="btn btn-info btn-md form-control"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparHistoricoAluno" name="limparHistoricoAluno" title="Limpar Historico Aluno" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    </div>
+
+    <!--Lista Historico Aluno-->
+    <div id="listarHistoricoAluno"></div>
+
+</fieldset>

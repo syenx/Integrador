@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.ContratosFirmados>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="contratosfirmados">
+    <thead>
+        <tr>
+            <th>
+                DATA CONTRATO
+            </th>
+            <th>
+                ESTADO
+            </th>
+            <th>
+                NR. CONTRATOS
+            </th>
+            <th>
+                NR. SIMULADORES CONTRATADOS
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @{ 
+
+            var totalcontratos = 0;
+            var totalsimualdores = 0;
+
+            foreach (var item in Model)
+            {
+                totalcontratos += item.NrContratos;
+                totalsimualdores += item.NrSimuladoresContratados;
+
+                <tr>
+                    <td>
+                        @item.Data.ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @item.Estado
+                    </td>
+                    <td>
+                        @item.NrContratos
+                    </td>
+                    <td>
+                        @item.NrSimuladoresContratados
+                    </td>
+                </tr>
+           }
+        }
+        <tr style="font-weight:bold; background-color:#808080;color:#fff;">
+            <td>
+                TOTAL
+            </td>
+            <td></td>
+            <td>@totalcontratos</td>
+            <td>
+                @totalsimualdores
+            </td>
+        </tr>
+
+    </tbody>
+</table>

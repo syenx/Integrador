@@ -1,0 +1,24 @@
+﻿@model ProIntegracao.UI.ViewModel.SimularErroViewModel
+@section scripts{
+    <script src="@Url.Content("~/Scripts/simularerro.js")"></script>
+}
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+        <!--PAGINA-->
+        <label for="busca">CPF :</label>
+        <input name="termo" id="termo" type="text" class="form-control width400 cpf" />
+        
+        <a href="#" id="buscaSimularErro" name="buscaSimularErro" title="Buscar Erro" class="btn btn-info btn-md col-sm-offset-5"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparSimulacao" name="limparSimulacao" title="Limpar Simulacao" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+    </div>
+    
+    <!--Nova Matrícula-->
+    <a href="#" class="btn btn-info btn-md spacebutton" onclick="NovoSimularErro();"><i class="fa fa-exclamation-triangle fa-fw"></i> Novo Erro</a>
+    
+    <!--Partial View Lista de Paginas -->
+    <div id="listaSimularErro"></div>
+
+</fieldset>

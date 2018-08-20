@@ -1,0 +1,37 @@
+﻿@model ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel
+@section scripts{
+    <script src="@Url.Content("~/Scripts/statussituacaoaula.js")"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","StatusSituacaoAula")">Status</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+
+    <legend>@ViewBag.Title</legend>
+
+    <!-- PESQUISA -->
+    <div class="form-inline well">
+        <!--Matrículas-->
+        <label for="busca">Estado :</label>
+        @Html.DropDownList("Estados", Model.ListaEstado, "--", new { @class = "form-control width250" })
+        <!--PAGINA-->
+        <label for="busca">Nome :</label>
+        <input name="termo" id="termo" type="text" class="form-control width400" maxlength="100" />
+        <!--ATIVO-->
+        <input type="radio" name="ativolistar" id="ativolistar" value="true" checked="checked">ATIVO
+        <!--INATIVO-->
+        <input type="radio" name="ativolistar" id="inativolistar" value="false"> INATIVO
+        <a href="#" id="buscaStatus" name="buscaStatus" title="Buscar Status" class="btn btn-info btn-md col-sm-offset-1"><i class="fa fa-search"></i> Buscar</a>
+        <a href="#" id="limparStatus" name="limparStatus" title="Limpar Status" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+
+    </div>
+
+    <!--Novo Status-->
+    <a href="#" class="btn btn-info btn-md spacebutton" onclick="NovoStatus();"><i class="fa fa-flag fa-fw"></i> Novo Status</a>
+    
+    <!--Partial View Lista de Status -->
+    <div id="listaStatus"></div>
+</fieldset>

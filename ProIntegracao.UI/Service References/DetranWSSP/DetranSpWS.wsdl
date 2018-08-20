@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="abrirAula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cpfAluno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="abrirAulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="abrirAulaResult" type="tns:aberturaAula" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="aberturaAula">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codCfc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpfAluno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codCiretran" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpfInstrutor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="erroCod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idAula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomeCandidato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroSerie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="qtdAulasAberta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="renash" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="fecharAulas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ticket" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Renach" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ModelosAula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listErros" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="listInfracoes" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fecharAulasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecharAulasResult" type="tns:fecharAula" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="fecharAula">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="numeroSerie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpfInstrutor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpfAluno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idAula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="erroCod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InserirMatricula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Renachs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataNascimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Uf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraAula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PSA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InserirMatriculaResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="abrirAulaSoapIn">
+    <wsdl:part name="parameters" element="tns:abrirAula" />
+  </wsdl:message>
+  <wsdl:message name="abrirAulaSoapOut">
+    <wsdl:part name="parameters" element="tns:abrirAulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="fecharAulasSoapIn">
+    <wsdl:part name="parameters" element="tns:fecharAulas" />
+  </wsdl:message>
+  <wsdl:message name="fecharAulasSoapOut">
+    <wsdl:part name="parameters" element="tns:fecharAulasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InserirMatriculaSoapIn">
+    <wsdl:part name="parameters" element="tns:InserirMatricula" />
+  </wsdl:message>
+  <wsdl:message name="InserirMatriculaSoapOut">
+    <wsdl:part name="parameters" element="tns:InserirMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DetranSpWSSoap">
+    <wsdl:operation name="abrirAula">
+      <wsdl:input message="tns:abrirAulaSoapIn" />
+      <wsdl:output message="tns:abrirAulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fecharAulas">
+      <wsdl:input message="tns:fecharAulasSoapIn" />
+      <wsdl:output message="tns:fecharAulasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InserirMatricula">
+      <wsdl:input message="tns:InserirMatriculaSoapIn" />
+      <wsdl:output message="tns:InserirMatriculaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DetranSpWSSoap" type="tns:DetranSpWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="abrirAula">
+      <soap:operation soapAction="http://tempuri.org/abrirAula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fecharAulas">
+      <soap:operation soapAction="http://tempuri.org/fecharAulas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserirMatricula">
+      <soap:operation soapAction="http://tempuri.org/InserirMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DetranSpWSSoap12" type="tns:DetranSpWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="abrirAula">
+      <soap12:operation soapAction="http://tempuri.org/abrirAula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fecharAulas">
+      <soap12:operation soapAction="http://tempuri.org/fecharAulas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserirMatricula">
+      <soap12:operation soapAction="http://tempuri.org/InserirMatricula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DetranSpWS">
+    <wsdl:port name="DetranSpWSSoap" binding="tns:DetranSpWSSoap">
+      <soap:address location="http://localhost:53629/SeviceDetran/DetransWSSP/DetranSpWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DetranSpWSSoap12" binding="tns:DetranSpWSSoap12">
+      <soap12:address location="http://localhost:53629/SeviceDetran/DetransWSSP/DetranSpWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

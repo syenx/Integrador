@@ -1,0 +1,2702 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProIntegracao.UI</name>
+    </assembly>
+    <members>
+        <member name="T:ProIntegracao.UI.BundleConfig">
+            <summary> Bundle Config
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Register Bundles
+            For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+            </summary>
+            <param name="bundles">Bundle Collections</param>
+        </member>
+        <member name="T:ProIntegracao.UI.FilterConfig">
+            <summary>Register Filter Config
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary> Register Global Filters
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:ProIntegracao.UI.RouteConfig">
+            <summary>
+            RouteConfig
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Register Routes
+            </summary>
+            <param name="routes">RouteCollection</param>
+        </member>
+        <member name="T:ProIntegracao.UI.Attribute.CheckSessionTimeOutAttribute">
+            <summary>
+            CheckSessionTimeOutAttribute
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Attribute.CheckSessionTimeOutAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:ProIntegracao.UI.Attribute.PermissionAttribute">
+            <summary>
+            Permission Attribute
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Attribute.PermissionAttribute.#ctor(ProIntegracao.UI.Enum.Permissoes)">
+            <summary>
+            Permission Attribute
+            </summary>
+            <param name="requerido">Permissões</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Attribute.PermissionAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            On ActionExecuting
+            </summary>
+            <param name="filterContext">ActionExecutingContext</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Attribute.PermissionAttribute.PermiteAcessoEstadoPorPagina(System.String)">
+            <summary>
+            Lista de Estados por Pagina
+            </summary>
+            <param name="controllername">Nome do Controller</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Attribute.PermissionAttribute.AjusteArrayEstados(System.Collections.Generic.List{System.String})">
+            <summary>
+            Ajuste Array Estados
+            </summary>
+            <param name="estados">Lista string de Estados</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.AlunoController">
+            <summary> Aluno Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Duplicado">
+            <summary>
+            INDEX - > Listagem 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.ListarAlunosDuplicados(System.String,System.String,System.String)">
+            <summary> Listar Alunos Duplicados
+            </summary>
+            <param name="cpf">cpf</param>
+            <param name="nome">nome</param>
+            <param name="renach">renach</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Index">
+            <summary>Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.ListarAlunos(System.String)">
+            <summary>
+            Listar Alunos
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Create">
+            <summary>
+            Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Create(ProIntegracao.UI.ViewModel.AlunoViewModel)">
+            <summary>
+            
+            </summary>
+            <param name="AlunoViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Edit(System.Int32)">
+            <summary>
+            Edit
+            </summary>
+            <param name="Id">Id Aula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Edit(ProIntegracao.UI.ViewModel.AlunoViewModel)">
+            <summary>
+            Edit
+            </summary>
+            <param name="AlunoViewModel">Aula View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.Excluir(System.Int32)">
+            <summary>
+            Excluir Registro 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.RetornaLista(System.String,System.String,System.String)">
+            <summary>
+            Retorna Lista
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="nome">Nome</param>
+            <param name="renach">Renach</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.RetornaListaIntegrados(System.String)">
+            <summary> Retorna Lista Integrados
+            </summary>
+            <param name="cpf">Cpf Aluno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AlunoController.RetornaNomePorCpf(System.String)">
+            <summary>
+            Retorna Nome por CPF
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.AulaController">
+            <summary>
+            Aula Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Create(System.Int32)">
+            <summary>
+             Create
+            </summary>
+            <param name="idEstado">Id do Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Create(ProIntegracao.UI.ViewModel.AulaViewModel)">
+            <summary>
+            Create
+            </summary>
+            <param name="AulaViewModel">Aula View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Edit(System.Int32)">
+            <summary>
+            Edit
+            </summary>
+            <param name="idAula">Id Aula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Edit(ProIntegracao.UI.ViewModel.AulaViewModel)">
+            <summary>
+            Edit
+            </summary>
+            <param name="AulaViewModel">Aula View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.Excluir(System.Int32)">
+            <summary>
+            Excluir
+            </summary>
+            <param name="id">Id Aula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.ListarAulas(System.String,System.String,System.Boolean)">
+            <summary> Listar Aulas
+            </summary>
+            <param name="cpf">Termo de Busca</param>
+            <param name="nomeAluno">Nome Matricula</param>
+            <param name="ativo">ativo</param>
+            <returns>PartialView</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.RetornaLista(System.String,System.String,System.Boolean)">
+            <summary>Retorna Lista de Páginas
+            </summary>
+            <param name="cpf">Cpf do Aluno</param>
+            <param name="nomeAluno">Nome Aluno</param>
+            <param name="ativo">Ativo</param>
+            <returns>List Aulas </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.RetornaCPF(System.Int32,System.Int32)">
+            <summary>Retorna CPF por Id Matricula para Facilitar Complemento de Formulário
+            </summary>
+            <param name="idMatricula">Id Matricula</param>
+            <param name="IdAula">Id Aula</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaController.VerificaMatriculaPorHorario(System.Int32,System.String,System.Int32)">
+            <summary> Verifica Matricula Por Horario
+            </summary>
+            <param name="idMatricula">Id Matricula</param>
+            <param name="DataInicioAula">Hora Aula</param>
+            <param name="idAula">Id Aula</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.AulaRealizadaController">
+            <summary>
+            Aula Realizada Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.Index">
+            <summary>
+            INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ContratosFirmados">
+            <summary>
+            Contratos Firmados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.SimuladoresAtivos">
+            <summary>Simuladores Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.AulasPorSimulador">
+            <summary>
+            Aulas Por Simulador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ListarMetodos(System.String,System.String,System.String)">
+            <summary>
+            Listar Aula Realizada
+            </summary>
+            <param name="dtInicio">DtInicio</param>
+            <param name="dtFim">DtFim</param>
+            <param name="idEstado">Id Estado</param>
+            <param name="PSA">PSA</param>
+            <param name="SMC">SMC</param>
+            <param name="CNPJ">CNPJ</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ListarContratosFirmados(System.String,System.String)">
+            <summary>
+            Listar Contratos Firmados
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="idEstado">Id Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ListarSimuladoresAtivos(System.String,System.String,System.String)">
+            <summary>
+            Listar Simuladores Ativos
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="idEstado">Id Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ListarAulasPorSimulador(System.String,System.String,System.String)">
+            <summary>
+            Listar Aulas POr Simulador
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="idEstado">Id do Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ConvertToDataTable``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Converter Lista para DataTable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.Exportar(System.String,System.String,System.String)">
+            <summary>
+             Listar Aulas Por Simulador JSON
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data FIM</param>
+            <param name="idEstado">ID Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ExportarAulasPorSimulador(System.String,System.String,System.String)">
+            <summary>
+            Exportar Aulas Por Simulador
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="idEstado">Id Estado</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ExportarSimuladoresAtivos(System.String,System.String,System.String)">
+            <summary>
+            Exportar Simuladores Ativos
+            </summary>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="idEstado">Id Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ExportarResultado(System.Web.HttpResponseBase,System.Collections.Generic.List{ProIntegracao.Data.EntidadeProSimulador.AulaRealizada})">
+            <summary>
+            Exportar Resultado
+            </summary>
+            <param name="Response"></param>
+            <param name="clientsList"></param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.AulaRealizadaController.ExportarResultadoAulaPorSimulador(System.Web.HttpResponseBase,System.Collections.Generic.List{ProIntegracao.Data.EntidadeProSimulador.AulasPorSimulador})">
+            <summary>
+            Exportar Resultado Aula PorSimulador
+            </summary>
+            <param name="response">Http Reponse Base</param>
+            <param name="lista">Lista Aulas por Simulador</param>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.BaseController">
+            <summary>
+            Base Controller
+            </summary>
+        </member>
+        <member name="F:ProIntegracao.UI.Controllers.BaseController._repoPagina">
+            <summary>
+            Repósitorio Página
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Controllers.BaseController.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Controllers.BaseController.Menu">
+            <summary> Menu
+            Lista de Paginas do Menu
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Controllers.BaseController.User">
+            <summary>Usuario Custom Principal
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.BaseController.RetornaNomePagina(System.String)">
+            <summary>
+            Retorna o Nome da Págna Cdastrado
+            </summary>
+            <param name="controllerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.BaseController.RedirecToAlterarSenha(System.Web.Mvc.ActionExecutingContext)">
+            <summary>Redirecionar para Alterar Senha
+            </summary>
+            <param name="context">ActionExecutingContext</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.BaseController.RedirecToLogin(System.Web.Mvc.ActionExecutingContext)">
+            <summary> Redirecionamento To LoGin
+            </summary>
+            <param name="context">ActionExecutingContext</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.BaseController.EnviarMail(System.String,System.String,System.String)">
+            <summary>Envio de Mensagem Básico
+            </summary>
+            <param name="para">Destinatário</param>
+            <param name="assunto">Assunto E-mail</param>
+            <param name="mensagem">Mensagem</param>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.ConfiguracaoController">
+            <summary>
+            Configuração Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Index">
+            <summary>INDEX
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Create">
+            <summary> Configuracao - CREATE 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Create(ProIntegracao.UI.ViewModel.ConfiguracaoViewModel)">
+            <summary> Configuracao - CREATE - POST
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Edit(System.Int32)">
+            <summary> Configuracao - Edit 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Edit(ProIntegracao.UI.ViewModel.ConfiguracaoViewModel)">
+            <summary> Configuracao - EDIT - POST
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.Excluir(System.Int32)">
+            <summary> Excluir Configuração
+            </summary>
+            <param name="id">Id da Configuracao</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.ListarConfiguracao(System.String,System.Boolean)">
+            <summary>Listar Configuração
+            </summary>
+            <returns>html</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ConfiguracaoController.ObterConfiguracaoExistente(System.String,System.Int32)">
+            <summary>Obter Configuracao Existente
+            </summary>
+            <param name="nome">Descricao</param>
+            <param name="id">Id da Configuração</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.ErrorController">
+            <summary>Error Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ErrorController.NaoAutorizado">
+            <summary>Não Autorizado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ErrorController.HttpError404(System.String)">
+            <summary>Http Error 404
+            </summary>
+            <param name="message">Mensagem de Erro</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ErrorController.HttpError500(System.String)">
+            <summary>Http Erro 500
+            </summary>
+            <param name="message">Mensagem</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.ErrorController.General(System.String)">
+            <summary>Error General
+            </summary>
+            <param name="message">Mensagem</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.EstadoController">
+            <summary>Estado Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.EstadoController.ListarEstados">
+            <summary>Listar Estados por Usuario
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.HistoricoAlunoController">
+            <summary> Historico de Alunos
+            
+            </summary>
+        </member>
+        <member name="F:ProIntegracao.UI.Controllers.HistoricoAlunoController._repo">
+            <summary>Repositorio Historico Aluno
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.Index">
+            <summary>INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.Consulta(System.Int32)">
+            <summary> Consulta Aluno Individual
+            </summary>
+            <param name="idAluno"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.Finalizar(System.Int32)">
+            <summary>Finalizar Aula
+            </summary>
+            <param name="idMatricula">Id MAtricula Aluno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaAluno(System.Int32)">
+            <summary> Retorna Aluno Individual
+            </summary>
+            <param name="idAluno"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.DetalheAluno">
+            <summary>Detalhe do ALUNO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ListarHistorico(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="cpf">CPF aluno</param>
+            <param name="renach">RENACH</param>
+            <param name="nome">Nome ALUNO</param>
+            <param name="ativo">Aluno ATIVO?</param>
+            <returns>HTML</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaLista(System.String,System.String,System.String,System.Boolean)">
+            <summary>Retorna Lista
+            
+            </summary>
+            <param name="cpf">CPF aluno</param>
+            <param name="renach">RENACH</param>
+            <param name="nome">Nome ALUNO</param>
+            <param name="ativo">Aluno ATIVO?</param>
+            <returns>Lista Historicos</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaDetalhe(System.Int32,System.Int32)">
+            <summary>Retorna Detalhe
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ListarMatriculas(System.Int32)">
+            <summary> LIstar Matriculas
+            </summary>
+            <param name="idAluno">Id Aluno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ListarAgenda(System.Int32)">
+            <summary>Listar Agenda
+            </summary>
+            <param name="idMatricula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ListarHistoricoAula(System.Int32)">
+            <summary>Listar Historico Aula
+            </summary>
+            <param name="idMatricula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaMatriculas(System.Int32)">
+            <summary> Retorna Matriculas
+            </summary>
+            <param name="idAluno">IdAluno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaAgenda(System.Int32)">
+            <summary>Retorna Agenda
+            </summary>
+            <param name="idMatricula">Id Matricula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaHistorico(System.Int32)">
+            <summary>Retorna Historico
+            </summary>
+            <param name="idMatricula">Id Matricula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaDetalheAluno(System.Int32,System.Int32)">
+            <summary>Retorna Detalhe Aluno
+            </summary>
+            <param name="idAluno">id ALuno</param>
+            <param name="idAula">id Aula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaStatusAulaPro">
+            <summary>Retorna Status Aula PRO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.RetornaListaModeloPro(System.Int32)">
+            <summary>Retorna Lista Modelo PRO'
+            </summary>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.EnviarAula(System.Int32)">
+            <summary>Inserir Aula Reenvio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.CancelarAula(System.Int32)">
+            <summary>Cancelar Aula
+            </summary>
+            <param name="idAgenda">Id Agenda</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.AlterarStatusModeloAula(System.Int32,System.Int32,System.Int32)">
+            <summary>Alterar Status Modelo Aula
+            
+            </summary>
+            <param name="idAula">Id Aula</param>
+            <param name="novoIdStatus">Id Status</param>
+            <param name="novoIdModelo">Id Modelo</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ConsultaDetran(System.String,System.String,System.Int64)">
+            <summary> Consulta DETRAN
+            
+            </summary>
+            <param name="nome">Nome do Aluno</param>
+            <param name="cpf">CPF do Aluno</param>
+            <param name="identificadoraula">Identificador da AULA</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.ListarEventos(System.Int32,System.Int32,System.String)">
+            <summary>
+            Listar Eventos
+            </summary>
+            <param name="idAula">Id Aula</param>
+            <param name="idModelo">Id Modelo</param>
+            <param name="collapse">Collapse</param>
+            <returns>Partial View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.FinalizarAulaModelo(System.Collections.Generic.List{ProIntegracao.Data.EntidadeProSimulador.FinalizarAula})">
+            <summary>
+            Finalizar Aula Modelo
+            </summary>
+            <param name="listAulas">Lista de Historico Aula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HistoricoAlunoController.AtualizaFinalizacaodeAula(System.Collections.Generic.List{ProIntegracao.Data.EntidadeProSimulador.FinalizarAula})">
+            <summary>
+            Atualizar Finalização de Aula
+            </summary>
+            <param name="listaAulas">Lista de Aulas</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.HomeController">
+            <summary>Home Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HomeController.Index(System.String)">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HomeController.CheatSheet">
+            <summary>Lista Atalho de Icones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.HomeController.RetornaPaginasUnicas(ProIntegracao.Data.Entidade.Menu)">
+            <summary>Retorno Paginas Unicas
+            </summary>
+            <returns>List Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.LoginController">
+            <summary>Login Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.Index">
+            <summary>Index
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.SigIn(System.String,System.String)">
+            <summary>
+            SigIN
+            </summary>
+            <param name="username">User Name</param>
+            <param name="password">PassWord</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.SignOut">
+            <summary>
+            Sign OUt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.RedirectToLocal(System.String)">
+            <summary>
+            Redirect To Local
+            </summary>
+            <param name="returnUrl">ReturnUrl</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.EnviarEmailEsqueciMinhaSenha(System.String,System.String)">
+            <summary>Enviar Email Esqueci Minha Senha
+            
+            </summary>
+            <param name="email">Email de Envio</param>
+            <param name="usuario">Nome Usuario</param>
+            <param name="hash">Hash de Verificação</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.EsqueciMinhaSenha">
+            <summary>
+            Esqueci minha Senha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.EsqueciMinhaSenha(System.String)">
+            <summary>
+            Esqueci Minha Senha
+            </summary>
+            <param name="Email">Email para Envio</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.AlterarSenha(System.String)">
+            <summary>Alterar Senha
+            </summary>
+            <param name="hash">Código de Verificação HASH</param>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.LoginController.AlterarSenha(System.Int32,System.String)">
+            <summary> Alterar Senha
+            </summary>
+            <param name="IdUsuario">Id Usuario</param>
+            <param name="novaSenha">Nova Senha</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.MatriculaController">
+            <summary>Matricula Controlller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Index">
+            <summary> Index
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Create">
+            <summary> CREATE Matricula - GET
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Create(ProIntegracao.UI.ViewModel.MatriculaViewModel)">
+            <summary>Create Matricula - POST
+            </summary>
+            <param name="model">Matricula View Model</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Edit(System.Int32)">
+            <summary> EDIT Matricula - GET
+            </summary>
+            <param name="Id">Matricula ID</param>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Edit(ProIntegracao.UI.ViewModel.MatriculaViewModel)">
+            <summary> EDIT Matricula - POST
+            </summary>
+            <param name="model">Matricula View Model</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.Excluir(System.Int32)">
+            <summary> DELETE Matricula
+            
+            </summary>
+            <param name="id">ID Matricula</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.ListarMatriculas(System.String)">
+            <summary>Listar Matriculas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.RetornaLista(System.String)">
+            <summary>Retorna Lista Com Parâmetos
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <returns>IList Matricula </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.CadastrarAulas(ProIntegracao.UI.ViewModel.MatriculaViewModel)">
+            <summary> Cadastrar Aulas
+            QUANDO O ESTADO FOR SAO PAULO. 
+            CADASTRA DE A CORDO COM A QUANTIDADE DE AULA INFORMADO EM MATRICULA 
+            </summary>
+            <param name="matricula">Matricula View Model</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.RetornaListaJson(System.String)">
+            <summary>
+            Retorna Lista Json
+            </summary>
+            <param name="termo">Termo Busca</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.ValidaCpfExistente(System.String,System.Int32)">
+            <summary>
+            Retorna Lista Json
+            </summary>
+            <param name="cpf">Termo Busca</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MatriculaController.ValidaEstadoPossuiMatriculas(System.Int32)">
+            <summary>Valida Estado Possui Matriculas
+            </summary>
+            <param name="idEstado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.MenuController">
+            <summary>
+            Menu Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Index">
+            <summary>
+             INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.ListarMenu">
+            <summary>
+            Listar Menu
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.ListarMenuAdm">
+            <summary>
+            Listar Menu
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.ListarMenuEdicao">
+            <summary>
+            Listar Menu Edição
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Create">
+            <summary>
+            Create
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Create(ProIntegracao.UI.ViewModel.MenuViewModel)">
+            <summary>
+            Create 
+            </summary>
+            <param name="model">Menu View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Edit(System.Int32)">
+            <summary>
+            Edit - GET
+            </summary>
+            <param name="idMenu">Id do Menu</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Edit(ProIntegracao.UI.ViewModel.MenuViewModel)">
+            <summary>
+            Edit 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Update(ProIntegracao.UI.ViewModel.MenuViewModel)">
+            <summary>
+            Update
+            </summary>
+            <param name="model">model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.MenuController.Excluir(System.Int32)">
+            <summary>Excluir
+            </summary>
+            <param name="id">Excluir</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.PaginaController">
+            <summary>
+            Pagina Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Index">
+            <summary>INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Create">
+            <summary> Nova Página - GET
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Create(ProIntegracao.UI.ViewModel.PaginaViewModel)">
+            <summary>Nova Página - POST
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Edit(System.Int32)">
+            <summary>Edit Página
+            </summary>
+            <param name="idPerfil">Id da Página</param>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Edit(ProIntegracao.UI.ViewModel.PaginaViewModel)">
+            <summary>Edit Página - POST
+            </summary>
+            <param name="model">pagina View Model</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.Excluir(System.Int32)">
+            <summary>Excluir/ Atualizar Pagina
+            </summary>
+            <param name="id">Id da Página</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.ListarPaginas(System.String,System.Int32,System.Boolean)">
+            <summary> Listar Paginas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="menu">Id Menu</param>
+            <param name="ativo">Ativo</param>
+            <returns>PartialView</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PaginaController.RetornaLista(System.String,System.Int32,System.Boolean)">
+            <summary>Retorna Lista de Páginas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="menu">Id Menu</param>
+            <param name="ativo">Ativo</param>
+            <returns>IList Pagina </returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.PerfilController">
+            <summary>
+            Perfil Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Index">
+            <summary>INDEX
+            </summary>
+            <returns>VIEW</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Create">
+            <summary> Create Perfil - GET
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Create(ProIntegracao.UI.ViewModel.PerfilViewModel)">
+            <summary>Create - Perfil - POST
+            </summary>
+            <param name="model">PerfilViewModel</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Edit(System.Int32)">
+            <summary>Edit Perfil
+            </summary>
+            <param name="idPerfil"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Edit(ProIntegracao.UI.ViewModel.PerfilViewModel)">
+            <summary>Perfil View Model - Edit
+            </summary>
+            <param name="model">PerfilViewModel</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.Excluir(System.Int32)">
+            <summary>Excluir/ Atualizar Perfil Pagina
+            </summary>
+            <param name="id">Id do Perfil</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.RetornaLista(System.String,System.Boolean)">
+            <summary>Retorna Lista de Páginas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="ativo">Perfil Ativo</param>
+            <returns>List PerfilViewModel</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.ListarPerfil(System.String,System.Boolean)">
+            <summary>Listar Perfil
+            
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="ativo">Perfil Ativo</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.ListarPaginaPerfilPorEstado(System.String[])">
+            <summary>Listar Pagina Perfil Por Estado
+            </summary>
+            <param name="IdEstado">int[] Id Estado</param>
+            <returns>html</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.ListarPaginaPerfilPorIdPerfil(System.Int32,System.String[])">
+            <summary>Listar Pagina Perfil Por IdPerfil
+            </summary>
+            <param name="idPerfil">Id Perfil</param>
+            <param name="IdEstado">Id do Estado</param>
+            <returns>html</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.PerfilController.ListarPaginaPerfilPorEstadoEdicao(System.Int32)">
+            <summary>Listar Pagina Perfil Por Estado Edicao
+            </summary>
+            <param name="idPerfil">Id Perfil</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.SimularErroController">
+            <summary>
+            Simular Erro Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.Index">
+            <summary>INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.Details(System.Int32)">
+            <summary> Details
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.Create">
+            <summary>Forçar Erro - GET
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.Create(ProIntegracao.UI.ViewModel.SimularErroViewModel)">
+            <summary> CREATE
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.Excluir(System.Int32)">
+            <summary>Excluir Forcar Erro
+            </summary>
+            <param name="id">Id Simulador de Erro</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.ListarSimularErro(System.String)">
+            <summary> Listar Paginas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <returns>PartialView</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.RetornaLista(System.String)">
+            <summary>Retorna Lista de Páginas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <returns>IList Pagina </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SimularErroController.CPFNaoCadastrado(System.String,System.Int32)">
+            <summary>CPF Não Cadastrado
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="id">Id do Erro</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.SituacaoAulaController">
+            <summary>
+            Situacao Aula Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoAulaController.Index">
+            <summary> Consulta Situação Aula
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoAulaController.ListarSituacaoAula(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Listar Situacao Aula
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="idEstado">Id Estado</param>
+            <param name="dtInicio">Dt Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="renach">Renach</param>
+            <param name="status">Status</param>
+            <param name="curso">Curso</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoAulaController.RetornaLista(System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna Lista
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="idEstado">Id Estado</param>
+            <param name="dtInicio">Dt Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="renach">Renach</param>
+            <param name="status">Status</param>
+            <param name="curso">Curso</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.SituacaoLogAulaController">
+            <summary> Situacao Log Aula
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoLogAulaController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.SituacaoLogSimuladorController">
+            <summary>
+            Situacao Log Simulador
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoLogSimuladorController.Index">
+            <summary>
+            Index - GET
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoLogSimuladorController.ListarSituacao(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Listar Situação
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="psa">PSA</param>
+            <param name="acao">Acao do Simulador</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.SituacaoLogSimuladorController.RetornaLista(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Retorna Lista de Log Simulador
+            </summary>
+            <param name="cpf">Cpf</param>
+            <param name="dtInicio">Data Inicio</param>
+            <param name="dtFim">Data Fim</param>
+            <param name="psa">PSA</param>
+            <param name="acao">Acao do Simulador</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.StatusSituacaoAulaController">
+            <summary>
+            Status Situacação Aula Controller
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Create">
+            <summary>
+            Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Create(ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel)">
+            <summary>
+            Create
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.VerificaRegistroExistente(ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel)">
+            <summary>
+            Verifica Registro Existente Antes de salver o registro
+            </summary>
+            <param name="model">StatusSituacaoAulaViewModel object</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Edit(System.Int32)">
+            <summary>
+            Edit
+            </summary>
+            <param name="idStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Edit(ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel)">
+            <summary>
+            Edit
+            </summary>
+            <param name="model">StatusSituacaoAulaViewModel</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.Excluir(System.Int32)">
+            <summary>
+            Excluir
+            </summary>
+            <param name="id">Id Status</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.ListarStatus(System.String,System.Int32,System.Boolean)">
+            <summary> Listar Aulas
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="idEstado">Id do Estado</param>
+            <param name="ativo">Ativo</param>
+            <returns>PartialView</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.StatusSituacaoAulaController.RetornaLista(System.String,System.Int32,System.Boolean)">
+            <summary>Retorna Lista de Status
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="idEstado">IdEstado</param>
+            <param name="ativo">Ativo</param>
+            <returns>List StatusSituacaoAula </returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.TesteController">
+            <summary>Teste
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.TesteController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.TesteController.CheatSheet">
+            <summary>Lista Atalho de Icones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.TesteController.RetornaPaginasUnicas(ProIntegracao.Data.Entidade.Menu)">
+            <summary>Retorno Paginas Unicas
+            </summary>
+            <returns>List Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Controllers.UsuarioController">
+            <summary>UsuarioController
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Index">
+            <summary>INDEX
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Create">
+            <summary> Novo Usuario
+            Utilizando ViewModel como Container
+            </summary>
+            <returns>View</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Create(ProIntegracao.UI.ViewModel.UsuarioViewModel)">
+            <summary> Novo Usuario - POST
+            </summary>
+            <param name="model">Usuario View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Edit(System.Int32)">
+            <summary> Editar Usuario
+            </summary>
+            <param name="id">Id do Usuario</param>
+            <returns>html</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Edit(ProIntegracao.UI.ViewModel.UsuarioViewModel)">
+            <summary>Editar Usuario - POST
+            </summary>
+            <param name="model">Usuario View MODEL</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.Excluir(System.Int32)">
+            <summary> Excluir Usuario
+            </summary>
+            <param name="id">Id do Usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.AlterarSenha">
+            <summary>Alterar Senha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.AlterarSenha(System.String,System.String)">
+            <summary>Alterar Senha
+            </summary>
+            <param name="senhaAtual">Senha Atual</param>
+            <param name="novaSenha">Nova Senha</param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.VerificaUsuario(System.String)">
+            <summary> Verificar se o Usuário já esta cadastrado
+            </summary>
+            <param name="Login">LOGIN do USUÁRIO</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.ListarUsuarios(System.String,System.Boolean)">
+            <summary>Listar Todos os Usuarios por Termo
+            </summary>
+            <param name="termo">Termo de Busca</param>
+            <param name="ativo">Ativo</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.RetornaLista(System.String,System.Boolean)">
+            <summary>
+            Retorna Lista
+            </summary>
+            <param name="termo">Termo</param>
+            <param name="ativo">Ativo</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.EnviarEmailNovoUsuario(System.String,System.String,System.String)">
+            <summary>Enviar Email Novo Usuario
+            </summary>
+            <param name="email">E-mail</param>
+            <param name="usuario">Usuario</param>
+            <param name="password">Senha</param>
+        </member>
+        <member name="M:ProIntegracao.UI.Controllers.UsuarioController.EnviarEmailAlteracaoSenha(System.String)">
+            <summary>Enviar Email Alteração Senha
+            </summary>
+            <param name="email">E-mail</param>
+        </member>
+        <member name="T:ProIntegracao.UI.Enum.Estados">
+            <summary>
+            Estados Brasileiros
+            
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.Enum.LogTipos">
+            <summary>
+            Log Tipos
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.Enum.Permissoes">
+            <summary>
+            Permissões
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.MvcApplication">
+            <summary>
+            Mvc Application
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.MvcApplication.Application_Start">
+            <summary>
+            Application_Start
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.MvcApplication.Application_PostAuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            Application_PostAuthenticateRequest
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProIntegracao.UI.MvcApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary> Application Error
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:ProIntegracao.UI.Helper.Criptografia">
+            <summary>Criptografia
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Helper.Criptografia.Encrypt(System.String)">
+            <summary>Encrypt
+            </summary>
+            <param name="clearText">Texto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Helper.Criptografia.Decrypt(System.String)">
+            <summary>Descriptigrafar
+            </summary>
+            <param name="cipherText">Texto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Helper.EnumHelper.GetItems``1">
+            <summary> Get Items
+            
+            </summary>
+            <typeparam name="TEnum">T ENUM</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.Helper.MyExtension.ToSelectList``1(``0)">
+            <summary>To SelectList Item
+            
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="enumObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.MoreEnumerable.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Returns all distinct elements of the given source, where "distinctness"
+            is determined via a projection and the default equality comparer for the projected type.
+            </summary>
+            <remarks>
+            This operator uses deferred execution and streams the results, although
+            a set of already-seen keys is retained. If a key is seen multiple times,
+            only the first element with that key is returned.
+            </remarks>
+            <typeparam name="TSource">Type of the source sequence</typeparam>
+            <typeparam name="TKey">Type of the projected element</typeparam>
+            <param name="source">Source sequence</param>
+            <param name="keySelector">Projection for determining "distinctness"</param>
+            <returns>A sequence consisting of distinct elements from the source sequence,
+            comparing them by the specified key projection.</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.MoreEnumerable.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
+            <summary>
+            Returns all distinct elements of the given source, where "distinctness"
+            is determined via a projection and the specified comparer for the projected type.
+            </summary>
+            <remarks>
+            This operator uses deferred execution and streams the results, although
+            a set of already-seen keys is retained. If a key is seen multiple times,
+            only the first element with that key is returned.
+            </remarks>
+            <typeparam name="TSource">Type of the source sequence</typeparam>
+            <typeparam name="TKey">Type of the projected element</typeparam>
+            <param name="source">Source sequence</param>
+            <param name="keySelector">Projection for determining "distinctness"</param>
+            <param name="comparer">The equality comparer to use to determine whether or not keys are equal.
+            If null, the default equality comparer for <c>TSource</c> is used.</param>
+            <returns>A sequence consisting of distinct elements from the source sequence,
+            comparing them by the specified key projection.</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.Models.CustomPrincipalSerializeModel">
+            <summary>
+            CustomPrincipalSerializeModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.CustomPrincipalSerializeModel.Usuario">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.Models.CustomPrincipal">
+            <summary>
+            Custom Principal
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Models.CustomPrincipal.#ctor(System.String)">
+            <summary>
+            CustomPrincipal
+            </summary>
+            <param name="login"></param>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.CustomPrincipal.Identity">
+            <summary>
+            Identity
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Models.CustomPrincipal.IsInRole(System.String)">
+            <summary>
+            IsInRole
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.CustomPrincipal.Usuario">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.CustomPrincipal.ListaPerfilPagina">
+            <summary>
+            ListaPerfilPagina
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.CustomPrincipal.Autenticado">
+            <summary>
+            Autenticado
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.Models.MenuNestead">
+            <summary>
+            Menu Nestead
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.MenuNestead.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.MenuNestead.tipo">
+            <summary>
+            Tipo (Menu ou Pagina)
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.MenuNestead.children">
+            <summary>
+            children
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.MenuNestead.Menus">
+            <summary>
+            Lista de Menus
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.Models.MenuNestead.Paginas">
+            <summary>
+            Lista de Páginas
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.Startup">
+            <summary>
+            StartUp
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.AlunoViewModel">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.CpfAluno">
+            <summary>
+            CPF ALUNO
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.Nome">
+            <summary>
+            NOME ALUNO
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.IdSexo">
+            <summary>
+            SEXO ALUNO
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.Renach">
+            <summary>
+            RENACH ALUNO
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.DtNascimento">
+            <summary>
+            DATA NASCIMENTO ALUNO
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AlunoViewModel.ListaAluno">
+            <summary>
+            LISTA DE ALUNO PARA LISTAR ALUNO
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AlunoViewModel.#ctor">
+            <summary>
+            ALUNO VIEW MODEL.
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AlunoViewModel.#ctor(ProIntegracao.Data.Entidade.Aluno)">
+            <summary>
+            aluno view model 
+            </summary>
+            <param name="aluno"></param>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AlunoViewModel.CarregarAluno">
+            <summary>
+            CARREGAR TODOS ALUNOS 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AlunoViewModel.ParseAlunoViewModel(ProIntegracao.UI.ViewModel.AlunoViewModel)">
+            <summary>
+            CONVERTER ALUNO VIEW MODEL PARA ALUNO
+            </summary>
+            <param name="AlunoViewModel"></param>
+            <returns>Objeto ALUNO Populado</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.AulaRealizadaViewModel">
+            <summary>
+            Aula Realizada View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaRealizadaViewModel.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaRealizadaViewModel.ListaEstados">
+            <summary>
+            Lista de Estados
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaRealizadaViewModel.CarregarEstados">
+            <summary> Carregar Estados
+            </summary>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.AulaViewModel">
+            <summary>
+            AulaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.#ctor">
+            <summary>Aula View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.#ctor(System.Int32)">
+            <summary>
+            AulaViewModel
+            </summary>
+            <param name="IdEstado"></param>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.VerificaEdicaoStatus(System.Int32)">
+            <summary>Verifica Edição Status
+            </summary>
+            <param name="idEstado">Id do Estado</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.#ctor(ProIntegracao.Data.Entidade.Aula,System.Int32)">
+            <summary> Aula View Model
+            </summary>
+            <param name="aula">Entidade AULA</param>
+            <param name="idEstado">Id do Estado</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.CodigoCfc">
+            <summary>
+            CodigoCfc
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.IdentificadorAula">
+            <summary>
+            IdentificadorAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.IdAluno">
+            <summary>
+            Id do Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.CpfInstrutor">
+            <summary>
+            CpfInstrutor
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.NomeAluno">
+            <summary>
+            Nome Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.DataInicioAula">
+            <summary>
+            DataInicioAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.DataFimAula">
+            <summary>
+            DataFimAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.TokenInicioAula">
+            <summary>
+            TokenInicioAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.TokenFimAula">
+            <summary>
+            TokenFimAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.IdMatricula">
+            <summary>
+            IdMatricula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.IdStatusSituacaoAula">
+            <summary>
+            IdStatusSituacaoAula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.ListaMatriculas">
+            <summary>
+            Lista de Matrículas
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.ListaStatusSituacaoAula">
+            <summary>
+            Lista Status Situacao Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.AulaViewModel.EditarStatus">
+            <summary>
+            Pode editar ou não status a partir do IdEstado
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.CarregarMatriculas(System.Int32,System.Int32)">
+            <summary>
+            Carregar Matriculas Válidas
+            </summary>
+            <param name="idEstado">Id Estado</param>
+            <param name="id">Id Matricula</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.CarregarStatusSituacaoAula(System.Int32)">
+            <summary> Carrega a lista de Status por Estados
+            </summary>
+            <param name="idEstado">Id do Estado = 0</param>
+            <returns>List SelectListItem </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.AulaViewModel.ParseAulaViewModel(ProIntegracao.UI.ViewModel.AulaViewModel)">
+            <summary> Parse Pagina View Model
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.BaseViewModel">
+            <summary>
+            BaseViewModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.BaseViewModel.Id">
+            <summary> Id
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.BaseViewModel.aluno">
+            <summary>
+            Aluno 
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.BaseViewModel.DtCadastro">
+            <summary> Data Cadastro
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.BaseViewModel.DtExclusao">
+            <summary> Data Exclusao
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel">
+            <summary>
+            ConfiguracaoViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.#ctor">
+            <summary>
+            ConfiguracaoViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.#ctor(System.Int32)">
+            <summary>
+            ConfiguracaoViewModel
+            </summary>
+            <param name="idConfiguracao"></param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.Descricao">
+            <summary>
+            Descricao
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.ConfiguracaoViewModel.ParseConfiguracaoViewModel(ProIntegracao.UI.ViewModel.ConfiguracaoViewModel)">
+            <summary> Parse Pagina View Model
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.LoginViewModel">
+            <summary>
+            LoginViewModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.LoginViewModel.Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.LoginViewModel.usuario">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.LoginViewModel.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.LoginViewModel.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.LoginViewModel.RememberMe">
+            <summary>
+            RememberME
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.MatriculaViewModel">
+            <summary>
+            MatriculaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MatriculaViewModel.#ctor">
+            <summary>
+            MatriculaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MatriculaViewModel.#ctor(ProIntegracao.Data.Entidade.Matricula)">
+            <summary>
+            MatriculaViewModel
+            </summary>
+            <param name="matricula">Matricula</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.IdAluno">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.QtdAula">
+            <summary>
+            Qtd Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.CodigoCfc">
+            <summary>
+            Código CFC
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.IdEstado">
+            <summary>
+            Id Estado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.HoraAula">
+            <summary>
+            Hora Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.NomeAluno">
+            <summary>
+            Hora Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.Cpf">
+            <summary>
+            Cpf do Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.PSA">
+            <summary>
+            PSA
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MatriculaViewModel.ListaEstado">
+            <summary>
+            Lista Estado
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MatriculaViewModel.CarregarEstado(System.Int32)">
+            <summary> Carregar Select List Estado
+            </summary>
+            <param name="id">Id Estado</param>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MatriculaViewModel.ParseMatriculaViewModel(ProIntegracao.UI.ViewModel.MatriculaViewModel)">
+            <summary>Parse Matricula View Model
+            </summary>
+            <param name="model">MatriculaViewModel </param>
+            <returns>Matricula</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.MenuViewModel">
+            <summary>
+            Menu View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.#ctor">
+            <summary>
+            Menu View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.#ctor(System.Int32)">
+            <summary>
+            Construtor para Edição
+            </summary>
+            <param name="idMenu">IdMenu</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.Menus">
+            <summary>
+            Paginas
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.MenuHtml">
+            <summary>
+            Menu Html
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.Principal">
+            <summary>
+            Custom Principal
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.ListaMenuPai">
+            <summary>
+            Lista Menu Pai - Principal
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.IdMenuPai">
+            <summary>
+            Menu Html
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.Ordem">
+            <summary>
+            Ordem
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.MenuNestead">
+            <summary>
+            Menu Nestead representa o retorno do plugin NESTEAD
+            Facilita assim o entendimento e alteração do mesmo
+            Verifique o arquivo  menu.js para entender aplicação
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.MenuViewModel.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.CarregarMenus">
+            <summary> Retorna Menus
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.CarregaMenuPai(System.Int32)">
+            <summary>
+            Carregar Menu Pai
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaMenuHtml">
+            <summary> Retorna o Menu Dinâmico para a Aplicação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaMenuHtmlAdm">
+            <summary>
+            Retorna Menu Html ADM - Superior
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaSubMenu(ProIntegracao.Data.Entidade.Menu,System.Text.StringBuilder)">
+            <summary>Retorna Sub Menu Recursivo
+            </summary>
+            <param name="pai">Item Menu PAI</param>
+            <param name="menu">String Builder retorno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaMenuList">
+            <summary>
+            Retorna Menu para Edição
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaSubMenuLista(ProIntegracao.Data.Entidade.Menu,System.Text.StringBuilder)">
+            <summary>
+            Retorna Sub Menu LIsta
+            </summary>
+            <param name="pai"></param>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaPaginas(ProIntegracao.Data.Entidade.Menu)">
+            <summary>
+            Retorna Páginas lista de Menu
+            </summary>
+            <param name="menu">Menu Item</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.ParseViewModel(ProIntegracao.UI.ViewModel.MenuViewModel)">
+            <summary>
+            Parse View Model
+            </summary>
+            <param name="model">Menu View Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.ParseViewModelCreate(ProIntegracao.UI.ViewModel.MenuViewModel)">
+            <summary>
+            Parse View Model - CREATE
+            </summary>
+            <param name="model">Menu View Model</param>
+            <returns>Menu</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.MenuViewModel.RetornaMenuAjuste(ProIntegracao.UI.Models.MenuNestead,System.Int32)">
+            <summary>
+            Retorna Menu de AJustes
+            </summary>
+            <param name="menunestead">Menu Hierarquia</param>
+            <param name="idPai">id Menu PAI</param>
+            <returns></returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.PaginaViewModel">
+            <summary>
+            PaginaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PaginaViewModel.#ctor">
+            <summary>
+            Pagina View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PaginaViewModel.#ctor(ProIntegracao.Data.Entidade.Pagina)">
+            <summary>
+            Pagina View Model
+            </summary>
+            <param name="pagina"></param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.IdMenu">
+            <summary>
+            Id Menu
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.IdEstado">
+            <summary>
+            Id Estado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.Ordem">
+            <summary>
+            Ordem
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.Icone">
+            <summary>
+            Icone
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.listaMenus">
+            <summary>
+            lista Menus
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.listaEstados">
+            <summary>
+            Lista Estados
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PaginaViewModel.Edicao">
+            <summary>
+            Edicao
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PaginaViewModel.CarregarMenus(System.Int32)">
+            <summary> Carregar Menus
+            </summary>
+            <param name="id">ID Menu</param>
+            <returns>ListSelectListItem </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PaginaViewModel.CarregarEstados">
+            <summary> Carregar Estados
+            </summary>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PaginaViewModel.ParsePaginaViewModel(ProIntegracao.UI.ViewModel.PaginaViewModel)">
+            <summary> Parse Pagina View Model
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel">
+            <summary>
+            PerfilPaginaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.#ctor">
+            <summary>
+            PerfilPaginaViewModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.Id">
+            <summary>
+            IdPerfilPagina
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.IdPerfil">
+            <summary>
+            Perfil
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.IdPagina">
+            <summary>
+            Pagina
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.Inserir">
+            <summary>
+            Inserir
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.Atualizar">
+            <summary>
+            Atualizar
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.Excluir">
+            <summary>
+            Excluir
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilPaginaViewModel.Consultar">
+            <summary>
+            Consultar
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.PerfilViewModel">
+            <summary>
+            PerfilViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.#ctor">
+            <summary>
+            PerfilViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.#ctor(System.String[])">
+            <summary>
+            PerfilViewModel
+            </summary>
+            <param name="IdEstado">Id do Estado</param>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.#ctor(System.Int32,System.String[])">
+            <summary>
+            Perfil View Model
+            </summary>
+            <param name="idPerfil">Id Perfil</param>
+            <param name="idEstados">Id Estados</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.Admin">
+            <summary>Perfil Admin
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.Estados">
+            <summary>
+            Estados
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.ListaEstados">
+            <summary>
+            Lista Estados
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.ListaPerfilPaginas">
+            <summary>
+            Lista Perfil Paginas
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.ListaPerfilPaginasViewModel">
+            <summary>
+            ListaPerfilPaginasViewModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.PerfilViewModel.Edicao">
+            <summary>
+            Edição
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ListadeEstadosPorPefil(System.Int32)">
+            <summary>Listar Estados Por Perfil
+            </summary>
+            <param name="idPerfil">Id do Perfil</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ListarPerfilPagina(System.String,System.Boolean)">
+            <summary>Listar Perfil Pagina
+            
+            </summary>
+            <param name="termo">Termo de Buscao</param>
+            <param name="ativo">Perfil ativo?</param>
+            <returns>List PerfilPaginaViewModel</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ListarEstadosPorPerfil(System.Int32)">
+            <summary>Listar Estados Por Pefil
+            </summary>
+            <param name="idPerfil">Id do Perfil</param>
+            <returns>List Estado </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.RetornaEstadoSelecionado(System.String,System.Collections.Generic.List{ProIntegracao.Data.Entidade.Pagina})">
+            <summary>
+            Retorna Estado Selecionado
+            </summary>
+            <param name="Uf">UF</param>
+            <param name="listaPaginas">Lista de Páginas</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ListarPerfilPaginaPorEstado(System.String[])">
+            <summary>Listar Perfil Pagina Por Estado
+            </summary>
+            <param name="IdEstados">Id Estados</param>
+            <returns>List PerfilPagina </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.RetornaPaginasPorEstado(System.String[],System.Int32)">
+            <summary>
+            Retorna Pagina por Estado
+            </summary>
+            <param name="idEstados">Id Estados</param>
+            <param name="idPerfil">Id Perfil</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.AjusteArrayEstados(System.Collections.Generic.List{System.String})">
+            <summary>
+            Ajuste Array Estados
+            </summary>
+            <param name="estados">Array de Estados</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ListarPerfilPaginaPorEstado(System.Int32,System.String[])">
+            <summary>ListarPerfilPaginaPorEstado
+            </summary>
+            <param name="idPerfil">Id Perfil</param>
+            <param name="IdEstados">Array Id Estado</param>
+            <returns>List PerfilPagina </returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.PerfilViewModel.ParseViewModel(System.Collections.Generic.List{ProIntegracao.UI.ViewModel.PerfilPaginaViewModel})">
+            <summary>Parse View Model
+            </summary>
+            <param name="model">List PerfilPaginaViewModel</param>
+            <returns>List PerfilPagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.SimularErroViewModel">
+            <summary>
+             Simular Erro View Model
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SimularErroViewModel.Cpf">
+            <summary>
+            Cpf do Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SimularErroViewModel.IdMatricula">
+            <summary>
+            Id da Matricula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SimularErroViewModel.IdTipoErro">
+            <summary>
+            Id Tipo Erro
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SimularErroViewModel.Matricula">
+            <summary>
+            Matricula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SimularErroViewModel.ListaTipoErro">
+            <summary>
+            Lista Tipo Erro
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SimularErroViewModel.#ctor">
+            <summary>
+            Forca Erro View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SimularErroViewModel.CarregarTipoErro">
+            <summary>
+            Carrgar Lista de Tipo Erro
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SimularErroViewModel.ObterMatriculaPorCpf(System.String)">
+            <summary>
+            Obeter matricula por CPF
+            </summary>
+            <param name="cpf">cpf do Aluno</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SimularErroViewModel.ParseForcarViewModel(ProIntegracao.UI.ViewModel.SimularErroViewModel)">
+            <summary> Parse Pagina View Model
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel">
+            <summary>
+            Situação Aula View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.#ctor">
+            <summary>
+            Situacao Aula View Model
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.IdSituacaoAula">
+            <summary>
+            Id Situação Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.UF">
+            <summary>
+            Id Estado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Municipo">
+            <summary>
+            Municipio
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.CFC">
+            <summary>
+            CFC
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.DtNascimento">
+            <summary>
+            Data Nascimento
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.DtAula">
+            <summary>
+            Data Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Agendado">
+            <summary>
+            Agendado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Inicio">
+            <summary>
+            Inicio
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Fim">
+            <summary>
+            Fim
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Agenda">
+            <summary>
+            Agenda
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Sequencia">
+            <summary>
+            Sequencia
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Modelo">
+            <summary>
+            Modelo
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.PSA">
+            <summary>
+            PSA
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Cpf">
+            <summary>
+            CPF Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.Renach">
+            <summary>
+            Renach Aluno
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.IdStatus">
+            <summary>
+            Id Status Situacao Aula
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.ListaStatus">
+            <summary>
+            Lista Status
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.IdTipoCurso">
+            <summary>
+            Id Tipo Curso
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.TipoCurso">
+            <summary>
+            Tipo Curso
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.ListaCursos">
+            <summary>
+            Lista Cursos
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.ListaEstados">
+            <summary>
+            Lista Estados
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.IdUF">
+            <summary>
+            ID UF
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.CarregaTipoCursos">
+            <summary>
+            Carrega Lista de Tipo de Cursos
+            </summary>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.CarregaStatus">
+            <summary>
+            Carrega Lista de Tipo de Cursos
+            </summary>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.SituacaoAulaViewModel.CarregarEstados(System.Int32)">
+            <summary> Carregar Estados
+            </summary>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.SituacaoLogAulaViewModel">
+            <summary> Situacao Log Aula ViewModel
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoLogAulaViewModel.Acoes">
+            <summary>Enum de Ações
+            
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.SituacaoLogSimuladorViewModel">
+            <summary> Situacao Log Simulador View Model
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.SituacaoLogSimuladorViewModel.Acoes">
+            <summary>Enum de Ações
+            </summary>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel">
+            <summary>
+            StatusSituacaoAulaViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.#ctor">
+            <summary>Aula View Model
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.#ctor(ProIntegracao.Data.Entidade.StatusSituacaoAula)">
+            <summary>
+            Status Situacao Aula View Model
+            </summary>
+            <param name="model">Status Situacao</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.Nome">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.Identificador">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.IdEstado">
+            <summary>
+            Id Estado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.ListaEstado">
+            <summary>
+            Lista Estado
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.CarregarEstados(System.Int32)">
+            <summary> Carregar Estados
+            </summary>
+            <param name="id">Id do Estado</param>
+            <returns>List SelectListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel.ParseStatusViewModel(ProIntegracao.UI.ViewModel.StatusSituacaoAulaViewModel)">
+            <summary> Parse Status Situacao View Model
+            </summary>
+            <param name="model">Pagina View Model</param>
+            <returns>Pagina</returns>
+        </member>
+        <member name="T:ProIntegracao.UI.ViewModel.UsuarioViewModel">
+            <summary>
+            UsuarioViewModel
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.UsuarioViewModel.#ctor">
+            <summary>Construtor Padrão
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.UsuarioViewModel.#ctor(ProIntegracao.Data.Entidade.Usuario)">
+            <summary>Usuario View Model
+            </summary>
+            <param name="usuario">Entidade Usuario</param>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.Senha">
+            <summary>
+            Senha
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.Bloqueado">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.IdPerfil">
+            <summary>
+            Id Perfil
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.listaPerfis">
+            <summary>
+            Lista Perfis
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.listaBloqueado">
+            <summary>
+            Lista Bloqueado
+            </summary>
+        </member>
+        <member name="P:ProIntegracao.UI.ViewModel.UsuarioViewModel.Edicao">
+            <summary>
+            Edicao
+            </summary>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.UsuarioViewModel.CarregarPerfis(System.Int32)">
+            <summary> Carregar uma SelectLIst para Status
+            </summary>
+            <param name="id">Id Perfil</param>
+            <returns>Select List Item</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.UsuarioViewModel.CarregarBloqueado(System.Boolean)">
+            <summary> Carregar uma SelectLIst para Bloqueado
+            </summary>
+            <param name="bloqueado">True / False</param>
+            <returns>SeletListItem</returns>
+        </member>
+        <member name="M:ProIntegracao.UI.ViewModel.UsuarioViewModel.ParseUsuarioViewModel(ProIntegracao.UI.ViewModel.UsuarioViewModel)">
+            <summary>Parse View Model para Entidade Usuario
+            </summary>
+            <param name="model">Usuario View Model</param>
+            <returns>Usuario</returns>
+        </member>
+        <member name="T:WebAutenticacao.EmailService">
+            <summary>
+            Email Service
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.EmailService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            Send Async
+            </summary>
+            <param name="message">Mensagem </param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAutenticacao.SmsService">
+            <summary>
+            Sms Service
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.SmsService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            Send Async
+            </summary>
+            <param name="message">Mensagem</param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAutenticacao.ApplicationUserManager">
+            <summary>
+             Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.ApplicationUserManager.#ctor(Microsoft.AspNet.Identity.IUserStore{WebAutenticacao.Models.ApplicationUser})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="store">Store</param>
+        </member>
+        <member name="M:WebAutenticacao.ApplicationUserManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{WebAutenticacao.ApplicationUserManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAutenticacao.ApplicationSignInManager">
+            <summary>
+            ApplicationSignInManager
+            Configure the application sign-in manager which is used in this application.
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.ApplicationSignInManager.#ctor(WebAutenticacao.ApplicationUserManager,Microsoft.Owin.Security.IAuthenticationManager)">
+            <summary>
+            ApplicationSignInManager
+            </summary>
+            <param name="userManager">user Manager</param>
+            <param name="authenticationManager">AuthenticationManager</param>
+        </member>
+        <member name="M:WebAutenticacao.ApplicationSignInManager.CreateUserIdentityAsync(WebAutenticacao.Models.ApplicationUser)">
+            <summary>
+            CreateUserIdentityAsync
+            </summary>
+            <param name="user">AplicationUser</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAutenticacao.ApplicationSignInManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{WebAutenticacao.ApplicationSignInManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            Create
+            </summary>
+            <param name="options"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAutenticacao.Startup">
+            <summary>
+            StartUp
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            Configure Auth
+            </summary>
+            <param name="app">IAppBuilder</param>
+        </member>
+        <member name="T:WebAutenticacao.Models.ApplicationUser">
+            <summary>
+            Appliction User
+            You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.Models.ApplicationUser.GenerateUserIdentityAsync(Microsoft.AspNet.Identity.UserManager{WebAutenticacao.Models.ApplicationUser})">
+            <summary>
+            GenerateUserIdentityAsync
+            </summary>
+            <param name="manager"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAutenticacao.Models.ApplicationDbContext">
+            <summary>
+            ApplicationDbContext
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.Models.ApplicationDbContext.#ctor">
+            <summary>
+            ApplicationDbContext
+            </summary>
+        </member>
+        <member name="M:WebAutenticacao.Models.ApplicationDbContext.Create">
+            <summary>
+            Create
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

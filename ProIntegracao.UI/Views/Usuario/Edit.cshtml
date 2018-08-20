@@ -1,0 +1,11 @@
+﻿@model ProIntegracao.UI.ViewModel.UsuarioViewModel
+@using (Html.BeginForm("Edit", "Usuario", FormMethod.Post, new { @class = "form-horizontal", @id = "formUsuario" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-12">
+                @{Html.RenderPartial("~/Views/Usuario/_form.cshtml", Model);}
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ProIntegracao.UI.ViewModel.LogRelatorioViewModel>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="logrelatorios">
+    <thead>
+        <tr>
+            <th>
+                LOCAL
+            </th>
+            <th>
+                TIPO
+            </th>
+            <th>
+                DESCRIÇÃO
+            </th>
+            <th>
+                USUÁRIO
+            </th>
+            <th>
+                DATA
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Local
+                </td>
+                <td>
+                    @item.LogTipo.Tipo
+                </td>
+                <td>
+                    @item.Descricao
+                </td>
+                <td>
+                 @if (item.Usuario != null) {
+                     @item.Usuario.Login
+                 }
+                </td>
+                <td>
+                    @item.DtCadastro
+                </td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

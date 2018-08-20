@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.SituacaoLogSimulador>
+<table class="table table-hover" cellspacing="0" id="tabelasituacaologsimulador">
+    <thead>
+        <tr>
+            <th>UF</th>
+            <th style="padding-left: 10px !important;">ID EMPRESA</th>
+            <th style="padding-left: 10px !important;">CODIGO</th>
+            <th style="padding-left: 10px !important;">RAZÃO SOCIAL</th>
+            <th style="padding-left: 10px !important;">NOME FANTASIA</th>
+            <th style="padding-left: 10px !important;">DATA CADASTRO</th>
+            <th>AÇÃO</th>
+            <th>DETALHES</th>
+            <th>IP</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {   
+            <tr>
+                <td>@item.UF</td>
+                <td>@item.IdEmpresa</td>
+                <td>@item.Codigo</td>
+                <td>@item.RazaoSocial</td>
+                <td>@item.NomeFantasia</td>
+                <td>@item.DataCadastro</td>
+                <td>@item.Acao</td>
+                <td>@item.Detalhes</td>
+                <td>@item.IP</td>
+                <td>
+                    <a href="#" onclick="AbreXMLDetalhe('@item.XmlEntrada', '@item.XmlSaida')">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

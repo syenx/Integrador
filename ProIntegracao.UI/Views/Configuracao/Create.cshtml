@@ -1,0 +1,9 @@
+﻿@model ProIntegracao.UI.ViewModel.ConfiguracaoViewModel
+@using (Html.BeginForm("Create", "Pagina", FormMethod.Post, new { @class = "form-horizontal", @id = "formConfiguracao" }))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            @{Html.RenderPartial("~/Views/Configuracao/_form.cshtml", Model);}
+        </div>
+    </div>
+}

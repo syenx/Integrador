@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55FCC813-FB15-41BA-8346-AD180E1B23B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProIntegracao.Data</RootNamespace>
+    <AssemblyName>ProIntegracao.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TecnoStr">
+      <HintPath>..\LibraryReferences\TecnoStr.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conf\NHibernateSessionManager.cs" />
+    <Compile Include="Conf\NhibernateSessionProsimulador.cs" />
+    <Compile Include="Conf\SessionManager.cs" />
+    <Compile Include="Conf\SessionManagerProSimulador.cs" />
+    <Compile Include="EntidadeProSimulador\Agenda.cs" />
+    <Compile Include="EntidadeProSimulador\Aluno.cs" />
+    <Compile Include="EntidadeProSimulador\AulaRealizada.cs" />
+    <Compile Include="EntidadeProSimulador\AulasPorSimulador.cs" />
+    <Compile Include="EntidadeProSimulador\BiometriaDigital.cs" />
+    <Compile Include="EntidadeProSimulador\ConsultaAulaDetran.cs" />
+    <Compile Include="EntidadeProSimulador\ContratosFirmados.cs" />
+    <Compile Include="EntidadeProSimulador\Erro.cs" />
+    <Compile Include="EntidadeProSimulador\EventosFinalizacao.cs" />
+    <Compile Include="EntidadeProSimulador\FinalizarAula.cs" />
+    <Compile Include="EntidadeProSimulador\HistoricoAula.cs" />
+    <Compile Include="EntidadeProSimulador\Matricula.cs" />
+    <Compile Include="EntidadeProSimulador\Modelo.cs" />
+    <Compile Include="EntidadeProSimulador\Pessoa.cs" />
+    <Compile Include="EntidadeProSimulador\Regiao.cs" />
+    <Compile Include="EntidadeProSimulador\AulaStatus.cs" />
+    <Compile Include="EntidadeProSimulador\SimuladoresAtivos.cs" />
+    <Compile Include="EntidadeProSimulador\UF.cs" />
+    <Compile Include="Entidade\Aluno.cs" />
+    <Compile Include="Entidade\Aula.cs" />
+    <Compile Include="Entidade\Configuracao.cs" />
+    <Compile Include="Entidade\Estado.cs" />
+    <Compile Include="Entidade\ForcarErro.cs" />
+    <Compile Include="EntidadeProSimulador\HistoricoAluno.cs" />
+    <Compile Include="Entidade\Matricula.cs" />
+    <Compile Include="Entidade\Menu.cs" />
+    <Compile Include="Entidade\Pagina.cs" />
+    <Compile Include="Entidade\Perfil.cs" />
+    <Compile Include="Entidade\PerfilEstado.cs" />
+    <Compile Include="Entidade\PerfilPagina.cs" />
+    <Compile Include="Entidade\Sexo.cs" />
+    <Compile Include="Entidade\SituacaoAula.cs" />
+    <Compile Include="Entidade\SituacaoLogSimulador.cs" />
+    <Compile Include="StatusSituacaoAula.cs" />
+    <Compile Include="Entidade\Erro.cs" />
+    <Compile Include="Entidade\Usuario.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Mapping\Aplicativo\ConfiguracaoMap.cs" />
+    <Compile Include="Mapping\EntityMapping.cs" />
+    <Compile Include="Mapping\Erro\ForcarErroMap.cs" />
+    <Compile Include="Mapping\Erro\TipoErroMap.cs" />
+    <Compile Include="Mapping\Matricula\AlunoMap.cs" />
+    <Compile Include="Mapping\Matricula\AulaMap.cs" />
+    <Compile Include="Mapping\Matricula\SexoMap.cs" />
+    <Compile Include="Mapping\Matricula\StatusSituacaoAulaMap.cs" />
+    <Compile Include="Mapping\Perfil\EstadoMap.cs" />
+    <Compile Include="Mapping\Matricula\MatriculaMap.cs" />
+    <Compile Include="Mapping\Perfil\PaginaMap.cs" />
+    <Compile Include="Mapping\Perfil\PerfilEstadoMap.cs" />
+    <Compile Include="Mapping\Perfil\PerfilMap.cs" />
+    <Compile Include="Mapping\Perfil\MenuMap.cs" />
+    <Compile Include="Mapping\Perfil\PerfilPaginaMap.cs" />
+    <Compile Include="Mapping\Perfil\RegiaoMap.cs" />
+    <Compile Include="Mapping\Perfil\UFMap.cs" />
+    <Compile Include="Mapping\Usuario\UsuarioMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\ErroQuery\ForcarErroQuery.cs" />
+    <Compile Include="Queries\ErroQuery\TipoErroQuery.cs" />
+    <Compile Include="Queries\MatriculaQuery\SexoQuery.cs" />
+    <Compile Include="Queries\PerfilQuery\EstadoQuery.cs" />
+    <Compile Include="Queries\MatriculaQuery\MatriculaQuery.cs" />
+    <Compile Include="Queries\UsuarioQuery\MenuQuery.cs" />
+    <Compile Include="Queries\PaginaQuery\PaginaQuery.cs" />
+    <Compile Include="Queries\PerfilQuery\PerfilEstadoQuery.cs" />
+    <Compile Include="Queries\PerfilQuery\PerfilPaginaQuery.cs" />
+    <Compile Include="Queries\PerfilQuery\PerfilQuery.cs" />
+    <Compile Include="Queries\UsuarioQuery\UsuarioQuery.cs" />
+    <Compile Include="RepositorioProSimulador\RepositorioBaseProSimulador.cs" />
+    <Compile Include="Repositorio\RepositorioBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.AulaRealizada>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="aulasrealizadas">
+    <thead>
+        <tr>
+            <th>
+                DATA
+            </th>
+            
+            <th>
+                SMC
+            </th>
+            <th>
+                CNPJ
+            </th>
+            <th>
+                RAZÃO SOCIAL
+            </th>
+            
+            <th style="padding-left: 10px;">
+                UF
+            </th>
+            <th style="padding-left: 10px;">
+                REALIZADAS
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @{
+
+            var last = "";
+            var date = DateTime.Now;
+            var subtotalaulas = 0;
+            var totalaulas = 0;
+
+            foreach (var item in Model)
+            {
+
+                if ((last == item.UF && date == item.Data) || last == "" )
+                {
+                    subtotalaulas   += item.AulasRealizadas;
+                    totalaulas      += item.AulasRealizadas;
+
+                        <tr>
+                            <td>
+                                @item.Data.ToString("dd/MM/yyyy")
+                            </td>
+               
+                            <td>
+                                @item.SMC
+                            </td>
+                            <td>
+                                @item.CNPJ
+                            </td>
+                            <td>
+                                @item.RazaoSocial
+                            </td>
+                            <td>
+                                @item.UF
+                            </td>
+                            <td>
+                                @item.AulasRealizadas
+                            </td>
+                
+                        </tr>
+                }
+                else
+                {
+                        <tr  style="font-weight:bold; background-color:#E5F7FD;">
+                            <td>SUBTOTAL DE AULAS</td>
+                            <td></td><td></td><td></td><td></td>
+                            <td class="text-center">
+                                @(subtotalaulas)
+                            </td>
+
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                @item.Data.ToString("dd/MM/yyyy")
+                            </td>
+
+                            <td>
+                                @item.SMC
+                            </td>
+                            <td>
+                                @item.CNPJ
+                            </td>
+                            <td>
+                                @item.RazaoSocial
+                            </td>
+                            <td>
+                                @item.UF
+                            </td>
+                            <td>
+                                @item.AulasRealizadas
+                            </td>
+
+                        </tr>
+
+                    subtotalaulas = item.AulasRealizadas;
+                    totalaulas += item.AulasRealizadas;
+                }
+
+                last = item.UF;
+                date = item.Data;
+            }
+
+            <tr  style="font-weight:bold; background-color:#E5F7FD;">
+                <td>SUBTOTAL DE AULAS</td>
+                <td></td><td></td><td></td><td></td>
+                <td class="text-center">
+                    @(subtotalaulas)
+                </td>
+
+            </tr>
+
+            <tr  style="font-weight:bold; background-color:#808080;color:#fff;">
+                <td>TOTAL DE AULAS</td>
+                <td></td><td></td><td></td><td></td>
+                <td class="text-center">
+                    @(totalaulas)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+﻿@model ProIntegracao.UI.ViewModel.LogRelatorioViewModel
+
+@{Layout = "~/Views/Shared/_LayoutFluid.cshtml";}
+
+@section style{
+    <link href="@Url.Content("~/Content/jquey-ui/jquery-ui.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/AulaRealizada/logrelatorios.js")"></script>
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("LogRelatorios","AulaRealizada")">Consulta de Log Relatórios</a></li>
+    <li><a href="#">Consulta</a></li>
+</ol>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    <!-- PESQUISA -->
+    <div class="form-horizontal well well-lg">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="dtInicio">Data Início :</label>
+                <input name="dtInicio" id="dtInicio" type="text" class="form-control datepicker data" />
+            </div>
+            <div class="col-sm-2">
+                <label for="dtFim">Data Fim :</label>
+                <input name="dtFim" id="dtFim" type="text" class="form-control datepicker data" />
+            </div>
+            <div class="col-sm-2">
+                <label for="busca">Usuário :</label>
+                @Html.DropDownListFor(model => model.IdUsuario, Model.ListaUsuarios, "Selecione", new { @class = "form-control" })
+            </div>
+            <div class="col-sm-offset-9 form-inline" style="margin-top:22px!important;">
+                <a href="#" id="buscaLogRelatorios" name="buscaLogRelatorios" title="Buscar Log Relatorios" class="btn btn-info btn-md"><i class="fa fa-search"></i> Buscar</a>
+                <a href="#" id="limpaLogRelatorios" name="limpaLogRelatorios" title="Limpar Log Relatorios" class="btn btn-danger btn-md"><i class="fa fa-trash"></i> Limpar</a>
+            </div>
+        </div>
+    </div>
+    <!--Lista Log Realtorios-->
+    <div id="listalogrelatorios"></div>
+</fieldset>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.Estado>
+<label>Escolha seu ESTADO para consulta</label>
+<select class="form-control width400" id="listaCompletaEstados">
+    <option value="">Selecione um Estado</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.Id">@item.Nome</option>
+    }
+</select>  

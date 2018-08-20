@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+}
+
+@section scripts{
+    <script src="~/Scripts/login.js"></script>
+    <script src="~/Scripts/esqueciminhasenha.js"></script>
+}
+<fieldset>
+    <legend>Esqueci Minha Senha</legend>
+    
+    <div id="message"></div>
+    
+    <!-- FORMULÁRIO ENVIO DE SENHA -->
+    <form class="form-inline well" id="formEsqueciSenha">
+        <label for="email">E-mail :</label>
+        <input name="email" id="email" type="text" class="form-control width750" maxlength="255" />
+        <a href="#" id="enviarSenha" name="enviarSenha" title="Enviar Senha" class="btn btn-info btn-lg col-sm-offset-3" onclick="EsqueciMinhaSenha();"><i class="fa fa-send-o"></i> Enviar</a>
+    </form>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <a href="@Url.Action("Index","Login")" id="cancelarEsqueciMinhaSenha" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</a>
+        </div>
+    </div>
+
+</fieldset>
+
+
+

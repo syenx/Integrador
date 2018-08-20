@@ -1,0 +1,56 @@
+﻿@model ProIntegracao.Data.EntidadeProSimulador.ConsultaAulaDetran
+<div class="row">
+    <div class="container">
+
+        @*@{
+            long cpf = (string.IsNullOrEmpty(Model.cpf)) ? 0 : Convert.ToInt64(Model.cpf);
+            var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf)
+         }*@
+
+        <strong>CPF:</strong><span id="nome">@Convert.ToUInt64(Model.cpf).ToString(@"000\.000\.000\-00")</span ><br>
+        <strong>NOME:</strong><span id="nome"> @Model.Nome.ToUpper()</span><br>
+        <strong>STATUS AULA DETRAN:</strong><span id="nome"> @Model.Status</span><br>
+
+        @if (Model.Status.ToUpper() == "CANCELADA")
+        {
+            <strong>STATUS AULA DETRAN:</strong><span class="form-label width250 " style="font-size:12px;" id="ecnhStatusAula">@(Model.ResponsavelPeloCancelamento.ToString() != string.Empty) ? Model.ResponsavelPeloCancelamento.ToString() : string.Empty;</span><br>
+        }
+
+
+    </div>
+   
+    
+    @*<div class="col-lg-12">
+        <label class="control-label" style="font-size:12px !important; ">CPF :</label>
+        <div class="">
+            <label class="form-label width250 " style="font-size:12px !important;"  id="ecnhCPF">@String.Format(@"{0:000\.000\000\-00}", Model.cpf)</label>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label class="control-label col-md-4" style="font-size:12px !important;" >NOME :</label>
+        <div class="col-md-8">
+            <label class="form-label width250 " style="font-size:12px !important;"  id="ecnhNome">@Model.Nome.ToUpper()</label>
+        </div>
+    </div>
+
+    <br/>
+    <div class="form-group">
+        <label class="control-label col-md-4 " style="font-size:12px;" >STATUS AULA DETRAN :</label>
+        <div class="col-md-8">
+            <label class="form-label width250 " style="font-size:12px;"  id="ecnhStatusAula">@Model.Status</label>
+        </div>
+    </div>
+
+    <br/>
+@if (Model.Status.ToUpper() == "CANCELADA")
+{
+    <div class="form-group">
+        <label class="control-label col-md-4 " style="font-size:12px;" >CPF Responsável pelo Cancelamento :</label>
+        <div class="col-md-8">
+            <span class="form-label width250 " style="font-size:12px;"  id="ecnhStatusAula">@(Model.ResponsavelPeloCancelamento.ToString() != string.Empty) ? Model.ResponsavelPeloCancelamento.ToString() : string.Empty;</span>
+        </div>
+    </div>
+}*@
+</div>

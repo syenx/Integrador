@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2bd278cb-b28d-47c4-ae33-c71babe12dee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SimuladorService.xsd" MetadataType="Schema" ID="38df8347-8b4d-4087-9630-bf48c3d9f91c" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SimuladorService.wsdl" MetadataType="Wsdl" ID="38a66f76-f9f2-42b6-af3e-077e24ad8f9e" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?wsdl" />
+    <MetadataFile FileName="SimuladorService1.xsd" MetadataType="Schema" ID="aca9a217-a3f1-4774-952e-25a92fd9d10a" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SimuladorService2.xsd" MetadataType="Schema" ID="8ddd6e61-8e81-4d59-af04-acdc7d6c6f61" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SimuladorService.disco" MetadataType="Disco" ID="91316ed0-b40d-4484-8fd8-51ca185550b8" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?disco" />
+    <MetadataFile FileName="SimuladorService3.xsd" MetadataType="Schema" ID="ed2155f9-c009-4763-9162-ca8d9ff78b2f" SourceId="1" SourceUrl="http://189.36.10.84:8282/SeviceDetran/DetransWSSP/SimuladorService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

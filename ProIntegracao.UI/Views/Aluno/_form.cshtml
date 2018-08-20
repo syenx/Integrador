@@ -1,0 +1,53 @@
+﻿@model ProIntegracao.UI.ViewModel.AlunoViewModel
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.DtCadastro)
+@Html.HiddenFor(model => model.DtExclusao)
+<div class="form-group">
+    @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-4" })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control width250" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.CpfAluno, new { @class = "control-label col-md-4" })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.CpfAluno, new { @class = "form-control width250 cpf" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Renach, new { @class = "control-label col-md-4" })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.Renach, new { @class = "form-control width250" })
+
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.DtNascimento, new { @class = "control-label col-md-4 data" })
+    <div class="col-md-8">
+        <input type="text" id="DtNascimento" name="DtNascimento" value="@if (Model.DtNascimento.ToShortDateString() != "01/01/0001") {
+            @Model.DtNascimento.ToShortDateString()
+        } " class="form-control width250 datepicker data" />
+    </div>
+</div>
+<div class="form-group">
+    
+    <label for="IdMenu" class="control-label col-md-4">Sexo :</label>
+    
+    <div class="col-md-8">
+        <!--Masculino-->
+        <input type="radio" name="sexo" id="masculino" value="true" @if (Model.IdSexo == 1) { @: checked="checked"
+                                                                                                    }>Masculino
+        <!--Feminino-->
+        <input type="radio" name="sexo" id="feminimo" value="false" @if (Model.IdSexo == 2) { @: checked="checked"
+                                                                                                    }> Feminino
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="SalvarAluno" class="btn btn-info btn-lg" onclick="SalvarAluno();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarAluno" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>

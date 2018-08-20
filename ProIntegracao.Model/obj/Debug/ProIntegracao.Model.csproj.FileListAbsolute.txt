@@ -1,0 +1,32 @@
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\ProIntegracao.Model.dll.config
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\NHibernate.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\System.Net.Http.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\NHibernate.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\bin\Debug\System.Net.Http.xml
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Debug\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Nova pasta\Prointegracao.Model\obj\Debug\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\ProIntegracao.Model.dll.config
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\ProIntegracao.Model.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\Iesi.Collections.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\NHibernate.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\ProIntegracao.Data.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\System.Net.Http.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\TecnoStr.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\ProIntegracao.Data.pdb
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\Iesi.Collections.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\NHibernate.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\bin\Debug\System.Net.Http.xml
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\obj\Debug\ProIntegracao.Model.dll
+C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\Prointegracao.Model\obj\Debug\ProIntegracao.Model.pdb

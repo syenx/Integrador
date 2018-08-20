@@ -1,0 +1,103 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.SimuladoresAtivos>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="contratosfirmados">
+    <thead>
+        <tr>
+            <th>
+                ESTADO
+            </th>
+            <th>
+                RAZÃO SOCIAL
+            </th>
+            <th>
+                CNPJ
+            </th>
+            <th>
+                SMC
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var last = "";
+            var subtotalsimulador = 0;
+            var totalsimulador = 0;
+
+            foreach (var item in Model)
+            {
+
+                if (last == item.Estado || last == "")
+                {
+                    subtotalsimulador++;
+                    totalsimulador++;
+
+                    <tr>
+                        <td>
+                            @item.Estado
+                        </td>
+                        <td>
+                            @item.RazaoSocial
+                        </td>
+                        <td>
+                            @item.CNPJ
+                        </td>
+                        <td>
+                            @item.SMC
+                        </td>
+                    </tr>
+                }
+                else {
+
+                    <tr style="font-weight:bold; background-color:#E5F7FD;">
+                        <td>SUBTOTAL DE SIMULADORES</td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center">
+                            @subtotalsimulador
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @item.Estado
+                        </td>
+                        <td>
+                            @item.RazaoSocial
+                        </td>
+                        <td>
+                            @item.CNPJ
+                        </td>
+                        <td>
+                            @item.SMC
+                        </td>
+                    </tr>
+
+                    subtotalsimulador = 1;
+                    totalsimulador++;
+                }
+
+                last = item.Estado;
+            }
+
+            <tr style="font-weight:bold; background-color:#E5F7FD;">
+                <td>SUBTOTAL DE SIMULADORES</td>
+                <td></td>
+                <td></td>
+                <td class="text-center">
+                    @subtotalsimulador
+                </td>
+            </tr>
+
+            <tr style="font-weight:bold; background-color:#808080;color:#fff;">
+                <td>
+                    TOTAL
+                </td>
+                <td class="text-center"></td>
+                <td></td>
+                <td class="text-center">
+                    @totalsimulador
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

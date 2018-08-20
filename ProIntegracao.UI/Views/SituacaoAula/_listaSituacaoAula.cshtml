@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.SituacaoAula>
+<table class="table table-hover" cellspacing="0" id="frmSituacaoAula">
+    <thead>
+        <tr>
+            <th class="text-left">UF</th>
+            <th class="text-left">CFC</th>
+            <th class="text-left">MUNICÍPIO</th>
+            <th class="text-left">CPF</th>
+            <th class="text-left">NASCIMENTO</th>
+            <th class="text-left">RENACH</th>
+            <th class="text-left">ID AULA</th>
+            <th class="text-left">DT AULA</th>
+            <th class="text-left">INÍCIO</th>
+            <th class="text-left">FIM</th>
+            <th class="text-left">STATUS</th>
+            <th class="text-left">AGENDA</th>
+            <th class="text-left">SEQ.</th>
+            <th class="text-left">CURSO</th>
+            <th class="text-left">MODELO</th>
+            <th class="text-left">PSA</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var dtNascimento = (item.DtNascimento != null) ? string.Format("{0:d}", item.DtNascimento) : "";
+
+            <tr>
+                <td class="col-lg-1">@item.UF</td>
+                <td class="col-lg-1">@item.CFC</td>
+                <td>@item.Municipo</td>
+                <td title="@item.Nome">@item.Cpf</td>
+                <td>@dtNascimento</td>
+                <td>@item.Renach</td>
+                <td >@item.IdAula</td>
+                <td>@string.Format("{0:d}",item.DtAula.ToShortDateString())</td>
+                <td>@item.Inicio</td>
+                <td>@item.Fim</td>
+                <td>@item.Status</td>
+                <td>@item.Agenda</td>
+                <td>@item.Sequencia</td>
+                <td>@item.TipoCurso</td>
+                <td title="@item.Modelo">@item.Modelo.Substring(0,10)</td>
+                <td>@item.PSA</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

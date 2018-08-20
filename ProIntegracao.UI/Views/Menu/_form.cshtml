@@ -1,0 +1,61 @@
+﻿@model ProIntegracao.UI.ViewModel.MenuViewModel
+
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.DtCadastro)
+@Html.HiddenFor(model => model.DtExclusao)
+
+<!-- NOME -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", maxlength = "255" })
+    </div>
+</div>
+
+<!-- URL -->
+<div class="form-group">
+    @Html.LabelFor(model => model.Url, new { @class = "control-label col-md-2 " })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Url, new { @class = "form-control", maxlength = "255" })
+    </div>
+</div>
+
+<!-- MENU  PAI-->
+<div class="form-group">
+    <label for="IdMenu" class="control-label col-md-2">Menu Pai :</label>
+    <div class="col-md-10">
+        @Html.DropDownListFor(model =>model.IdMenuPai, new SelectList(Model.ListaMenuPai, "Value", "Text", Model.IdMenuPai), new { @class = "form-control" })
+    </div>
+</div>
+
+
+<!-- ORDEM-->
+<div class="form-group">
+    <label for="IdMenu" class="control-label col-md-2">Ordem :</label>
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.Ordem, new { @class = "form-control" })
+    </div>
+</div>
+
+
+
+<!-- ATIVO -->
+<div class="form-group">
+    <label for="PerfilId" class="control-label col-md-2"></label>
+    <div class="col-md-10" style="margin-top: 5px;">
+        <!--ATIVO-->
+        <input type="radio" name="ativo" id="ativo" value="true" @if (Model.DtExclusao == null) { @: checked="checked"
+                                                                                                    }>ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativo" id="inativo" value="false" @if (Model.DtExclusao != null) { @: checked="checked"
+                                                                                                    }> INATIVO
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="salvarMenu" class="btn btn-info btn-lg" onclick="SalvarMenu();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarMenu" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>

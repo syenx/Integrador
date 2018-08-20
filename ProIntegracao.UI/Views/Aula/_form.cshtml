@@ -1,0 +1,108 @@
+﻿@model ProIntegracao.UI.ViewModel.AulaViewModel
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.DtCadastro)
+@Html.HiddenFor(model => model.DtExclusao)
+@Html.HiddenFor(model => model.IdAluno)
+
+
+<!-- MATRICULA -->
+<div class="form-group">
+    <label class="control-label col-md-4">Matrícula :</label>
+    <div class="col-md-8">
+        @Html.DropDownListFor(model => model.IdMatricula, new SelectList(Model.ListaMatriculas, "Value", "Text", Model.IdMatricula), "Selecione", new { @class = "form-control width250" })
+    </div>
+</div>
+<!-- ALUNO -->
+<div class="form-group">
+    <label for="Aluno" class="control-label col-md-4">Aluno :</label>
+    <div class="col-md-8">
+        <input type="text" id="NomeAluno" name="NomeAluno" readonly="readonly" class="form-control width250" />
+    </div>
+</div>
+<!-- Codigo CFC -->
+<div class="form-group">
+    @Html.LabelFor(model => model.CodigoCfc, new { @class = "control-label col-md-4 " })
+    <div class="col-md-8">
+        <input type="text" id="CodigoCfc" name="CodigoCfc" readonly="readonly" class="form-control width250" onkeypress="return soNum(event);"/>
+    </div>
+</div>
+<!-- Identificado Aula -->
+<div class="form-group">
+    @Html.LabelFor(model => model.IdentificadorAula, new { @class = "control-label col-md-4 " })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.IdentificadorAula, new { @class = "form-control width250 ", maxlength = "255" })
+    </div>
+</div>
+<!-- CPF Instrutor -->
+<div class="form-group">
+    @Html.LabelFor(model => model.CpfInstrutor, new { @class = "control-label col-md-4" })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.CpfInstrutor, new { @class = "form-control width250 cpf" })
+    </div>
+</div>
+
+<!-- Data Inicio Aula -->
+<div class="form-group">
+    @Html.LabelFor(model => model.DataInicioAula, new { @class = "control-label col-md-4 " })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.DataInicioAula, new { @class = "form-control width250 datetime", maxlength = "255" })
+    </div>
+</div>
+<!-- Data Fim Aula -->
+<div class="form-group">
+    @Html.LabelFor(model => model.DataFimAula, new { @class = "control-label col-md-4 " })
+    <div class="col-md-8">
+        @Html.TextBoxFor(model => model.DataFimAula, new { @class = "form-control width250 datetime", maxlength = "255" })
+    </div>
+</div>
+
+@if (Model.EditarStatus)
+{
+    <!-- MATRICULA -->
+    <div class="form-group">
+        <label class="control-label col-md-4">Status :</label>
+        <div class="col-md-8">
+            @Html.DropDownListFor(model => model.IdStatusSituacaoAula, new SelectList(Model.ListaStatusSituacaoAula, "Value", "Text", Model.IdStatusSituacaoAula), new { @class = "form-control width250" })
+        </div>
+    </div>
+}
+else {  
+    <input type="hidden" value="0" id="IdStatusSituacaoAula" />
+}
+
+<div style="display:none;">
+    <!-- Token Inicio Aula -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.TokenInicioAula, new { @class = "control-label col-md-4 " })
+        <div class="col-md-8">
+            @Html.TextBoxFor(model => model.TokenInicioAula, new { @class = "form-control width250 ", maxlength = "255" })
+        </div>
+    </div>
+    <!-- Token Fim Aula -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.TokenFimAula, new { @class = "control-label col-md-4 " })
+        <div class="col-md-8">
+            @Html.TextBoxFor(model => model.TokenFimAula, new { @class = "form-control width250 ", maxlength = "255" })
+        </div>
+    </div>
+</div>
+
+<!--ATIVO-->
+<div class="form-group">
+    <label for="PerfilId" class="control-label col-md-4"></label>
+    <div class="col-md-8">
+        <!--ATIVO-->
+        <input type="radio" name="ativo" id="ativo" value="true" @if (Model.DtExclusao == null) { @: checked="checked"
+                                                                                                    }>ATIVO
+
+        <!--INATIVO-->
+        <input type="radio" name="ativo" id="inativo" value="false" @if (Model.DtExclusao != null) { @: checked="checked"
+                                                                                                    }> INATIVO
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-6 col-md-10">
+        <a href="#" id="salvarAula" class="btn btn-info btn-lg" onclick="SalvarAula();"><span class="glyphicon glyphicon-floppy-disk"></span> Salvar</a>
+        <a href="#" id="cancelarAula" data-dismiss="modal" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Cancelar</a>
+    </div>
+</div>

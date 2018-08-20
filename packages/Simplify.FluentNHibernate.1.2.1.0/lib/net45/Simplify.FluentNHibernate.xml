@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simplify.FluentNHibernate</name>
+    </assembly>
+    <members>
+        <member name="T:Simplify.FluentNHibernate.ConfigurationExtensions">
+            <summary>
+            FluentNHibernate.Cfg.FluentConfiguration extensions
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigOracleClient(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize Oracle connection using Oracle10 client configuration and using oracle client to connect to database
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigOracleOdpNetNative(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize Oracle connection using Oracle10 client configuration and using Oracle.DataAccess.dll to connect to database
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigOracleOdpNet(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize Oracle connection using Oracle10 client configuration and using Oracle.ManagedDataAccess.dll to connect to database
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigMySql(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize MySQL connection using Standard client configuration
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigMsSql(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize MsSQL connection using MsSql2008 client configuration
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigPostgreSql(FluentNHibernate.Cfg.FluentConfiguration,System.String)">
+            <summary>
+            Initialize PostgreSQL connection using PostgreSQL82 client configuration
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="configSectionName">Configuration section name in App.config or Web.config file</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigSqLite(FluentNHibernate.Cfg.FluentConfiguration,System.String,System.Boolean)">
+            <summary>
+            Initialize SqLite connection using Standard client configuration
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="fileName">Name of the SqLite database file.</param>
+            <param name="showSql">if set to <c>true</c> then all executed SQL queries will be shown in trace window.</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.InitializeFromConfigSqLiteInMemory(FluentNHibernate.Cfg.FluentConfiguration,System.Boolean)">
+            <summary>
+            Initialize SqLite connection using in memory database
+            </summary>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="showSql">if set to <c>true</c> then all executed SQL queries will be shown in trace window.</param>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.ConfigurationExtensions.AddMappingsFromAssemblyOf``1(FluentNHibernate.Cfg.FluentConfiguration,FluentNHibernate.Conventions.IConvention[])">
+            <summary>
+            Adds the mappings from assembly of specified type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="configuration">The fluentNHibernate configuration.</param>
+            <param name="conventions">The conventions.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">configuration</exception>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.ConfigurationExtensions.SqlStatementInterceptor">
+            <summary>
+            Executed SQL code tracer
+            </summary>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.DatabaseConnectionConfigurationException">
+            <summary>
+            The exception class using for Database connection configuration exceptions
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.DatabaseConnectionConfigurationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplify.FluentNHibernate.DatabaseConnectionConfigurationException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.DbConnectionSettings">
+            <summary>
+            FluentNHibernate.Extender data-base connection settings class
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.DbConnectionSettings.#ctor(System.String)">
+            <summary>
+            Loads the specified configuration section name containing data-base connection settings.
+            </summary>
+            <param name="configSectionName">Name of the configuration section.</param>
+            <exception cref="T:Simplify.FluentNHibernate.DatabaseConnectionConfigurationException"></exception>
+        </member>
+        <member name="P:Simplify.FluentNHibernate.DbConnectionSettings.ServerName">
+            <summary>
+            Gets the name of the server.
+            </summary>
+            <value>
+            The name of the server.
+            </value>
+        </member>
+        <member name="P:Simplify.FluentNHibernate.DbConnectionSettings.DataBaseName">
+            <summary>
+            Gets the name of the data base.
+            </summary>
+            <value>
+            The name of the data base.
+            </value>
+        </member>
+        <member name="P:Simplify.FluentNHibernate.DbConnectionSettings.UserName">
+            <summary>
+            Gets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Simplify.FluentNHibernate.DbConnectionSettings.UserPassword">
+            <summary>
+            Gets the user password.
+            </summary>
+            <value>
+            The user password.
+            </value>
+        </member>
+        <member name="P:Simplify.FluentNHibernate.DbConnectionSettings.ShowSql">
+            <summary>
+            Gets a value indicating whether all executed SQL request should be shown in trace window
+            </summary>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.Drivers.OracleDataClientDriverFix">
+            <summary>
+            OracleDataClientDriver with NCLOB/CLOBs IDbDataParameter.Value = (string whose length: 4000 > length > 2000 ) bug fix
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.Drivers.OracleDataClientDriverFix.InitializeParameter(System.Data.IDbDataParameter,System.String,NHibernate.SqlTypes.SqlType)">
+            <summary>
+             Initializes the parameter.
+            </summary>
+            <param name="dbParam">The db param.</param>
+            <param name="name">The name.</param>
+            <param name="sqlType">Type of the SQL.</param>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.SchemaExporter">
+            <summary>
+            Entities to database exporter
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SchemaExporter.Export(FluentNHibernate.Cfg.FluentConfiguration)">
+            <summary>
+            Create database structure from entities
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="T:Simplify.FluentNHibernate.SessionExtensions">
+            <summary>
+            NHibernate.ISession extensions
+            </summary>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetSingleObject``1(NHibernate.ISession)">
+            <summary>
+            Get object from single item table
+            </summary>
+            <typeparam name="T">Object type to get</typeparam>
+            <param name="session">The session.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetSingleObject``1(NHibernate.ISession,NHibernate.LockMode)">
+            <summary>
+            Get object from single item table
+            </summary>
+            <typeparam name="T">Object type to get</typeparam>
+            <param name="session">The session.</param>
+            <param name="lockMode">The lock mode.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetObject``1(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Get object from database by filter (in case of several objects returned exception will be thrown)
+            </summary>
+            <typeparam name="T">The type of object</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="filterFunc">Filtering function</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetFirstObject``1(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Get first object from database by filter
+            </summary>
+            <typeparam name="T">The type of object</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="filterFunc">Filtering function</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetObjectCacheable``1(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Get and cache object from database by filter (in case of several objects returned exception will be thrown)
+            </summary>
+            <typeparam name="T">The type of object</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="filterFunc">Filtering function</param>
+            <returns></returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetSortedList``2(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+            <summary>
+            Get list of sorted objects
+            </summary>
+            <typeparam name="T">The type of elements</typeparam>
+            <typeparam name="TOrder">Order comparing value type</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="orderFunc">Ordering function</param>
+            <param name="orderDescending">Descending sorting</param>
+            <returns>List of objects</returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetList``1(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Get list of objects
+            </summary>
+            <typeparam name="T">The type of elements</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="filterFunc">Filtering function</param>
+            <returns>List of objects</returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetList``2(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+            <summary>
+            Get list of objects
+            </summary>
+            <typeparam name="T">The type of elements</typeparam>
+            <typeparam name="TOrder">Order comparing value type</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="filterFunc">Filtering function</param>
+            <param name="orderFunc">Ordering function</param>
+            <param name="orderDescending">Descending sorting</param>
+            <returns>List of objects</returns>
+        </member>
+        <member name="M:Simplify.FluentNHibernate.SessionExtensions.GetListSorted``2(NHibernate.ISession,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+            <summary>
+            Get sorted list of objects
+            </summary>
+            <typeparam name="T">The type of elements</typeparam>
+            <typeparam name="TOrder">Order comparing value type</typeparam>
+            <param name="session">The nhibernate session.</param>
+            <param name="orderFunc">Ordering function</param>
+            <param name="orderDescending">Descending sorting</param>
+            <returns>Sorted list of objects</returns>
+        </member>
+    </members>
+</doc>

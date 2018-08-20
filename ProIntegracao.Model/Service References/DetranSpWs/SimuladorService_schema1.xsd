@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.gefor.detran.prodesp.sp.gov.br/" targetNamespace="http://ws.gefor.detran.prodesp.sp.gov.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AppException" nillable="true" type="xs:string" />
+  <xs:element name="abrirAula" type="tns:abrirAula" />
+  <xs:element name="abrirAulaResponse" type="tns:abrirAulaResponse" />
+  <xs:element name="consultarAula" type="tns:consultarAula" />
+  <xs:element name="consultarAulaResponse" type="tns:consultarAulaResponse" />
+  <xs:element name="consultarDadosAgendamento" type="tns:consultarDadosAgendamento" />
+  <xs:element name="consultarDadosAgendamentoResponse" type="tns:consultarDadosAgendamentoResponse" />
+  <xs:element name="fecharAula" type="tns:fecharAula" />
+  <xs:element name="fecharAulaResponse" type="tns:fecharAulaResponse" />
+  <xs:complexType name="consultarAula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:string" />
+      <xs:element minOccurs="0" name="idAula" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarAulaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:statusAulaSimulador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="statusAulaSimulador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:long" />
+      <xs:element minOccurs="0" name="idAula" type="xs:long" />
+      <xs:element minOccurs="0" name="statusAula" type="xs:string" />
+      <xs:element minOccurs="0" name="horarioInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horarioTermino" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cpfCancelamentoAula" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fecharAula">
+    <xs:sequence>
+      <xs:element name="idAula" type="xs:long" />
+      <xs:element minOccurs="0" name="renach" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tipoAulas" type="tns:tipoAulaEnum" />
+      <xs:element name="totalInfracoesCometidas" type="xs:int" />
+      <xs:element name="totalErrosCometidos" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="colErrosDirecao" type="tns:erroDirecao" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="colInfracoes" type="tns:infracao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="erroDirecao">
+    <xs:sequence>
+      <xs:element name="codErro" type="xs:int" />
+      <xs:element name="quantidade" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infracao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="artigo" type="xs:string" />
+      <xs:element name="desdobramento" type="xs:long" />
+      <xs:element name="quantidade" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fecharAulaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechamentoAula" type="tns:fechamentoAula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fechamentoAula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numeroSerie" type="xs:string" />
+      <xs:element minOccurs="0" name="cpfInstrutor" type="xs:string" />
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:string" />
+      <xs:element name="idAula" type="xs:long" />
+      <xs:element name="erroCod" type="xs:int" />
+      <xs:element minOccurs="0" name="erroDesc" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="abrirAula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="abrirAulaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AberturaAula" type="tns:aberturaAula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aberturaAula">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aulasRealizadas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codCfc" type="xs:long" />
+      <xs:element minOccurs="0" name="codCiretran" type="xs:long" />
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:string" />
+      <xs:element minOccurs="0" name="cpfInstrutor" type="xs:string" />
+      <xs:element minOccurs="0" name="data" type="xs:dateTime" />
+      <xs:element name="erroCod" type="xs:int" />
+      <xs:element minOccurs="0" name="erroDesc" type="xs:string" />
+      <xs:element minOccurs="0" name="hora" type="xs:string" />
+      <xs:element minOccurs="0" name="idAula" type="xs:long" />
+      <xs:element minOccurs="0" name="nomeCandidato" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroSerie" type="xs:string" />
+      <xs:element name="qtdAulasAberta" type="xs:int" />
+      <xs:element minOccurs="0" name="renach" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="restricoesMedicas" nillable="true" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarDadosAgendamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpfAluno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarDadosAgendamentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="candidato" type="tns:candidatoAulaSimulador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="candidatoAulaSimulador">
+    <xs:sequence>
+      <xs:element name="cpfAluno" type="xs:long" />
+      <xs:element minOccurs="0" name="renach" type="xs:string" />
+      <xs:element minOccurs="0" name="processo" type="xs:string" />
+      <xs:element minOccurs="0" name="categoria" type="xs:string" />
+      <xs:element minOccurs="0" name="nomeAluno" type="xs:string" />
+      <xs:element name="codCiretran" type="xs:int" />
+      <xs:element name="codCfc" type="xs:int" />
+      <xs:element name="erro" type="xs:int" />
+      <xs:element minOccurs="0" name="descErro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoAulaEnum">
+    <xs:restriction base="xs:int">
+      <xs:enumeration value="9" />
+      <xs:enumeration value="8" />
+      <xs:enumeration value="7" />
+      <xs:enumeration value="6" />
+      <xs:enumeration value="5" />
+      <xs:enumeration value="4" />
+      <xs:enumeration value="3" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

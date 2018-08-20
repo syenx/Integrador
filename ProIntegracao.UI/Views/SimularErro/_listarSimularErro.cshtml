@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProIntegracao.Data.Entidade.ForcarErro>
+    <table id="SimularErro">
+        <thead>
+            <tr>
+                <th class="text-left">NOME</th>
+                <th class="text-left">CPF</th>
+                <th class="text-left">TIPO ERRO</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                long cpf = (string.IsNullOrEmpty(item.Aluno.CpfAluno)) ? 0 : Convert.ToInt64(item.Aluno.CpfAluno);
+                var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf);
+                <tr>
+                    <td>@item.Aluno.Nome</td>
+                    <td>@docCpf</td>
+                    <td>@item.Erro.Nome</td>
+                    <td>
+                        <a href="#" onclick="AbrirModalExcluir(@item.Id, 'SimularErro');" title="Excluir registro" >
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

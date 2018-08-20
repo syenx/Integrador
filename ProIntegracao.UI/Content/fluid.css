@@ -1,0 +1,13 @@
+﻿.menuAdm li a {
+    color: #ffffff !important;
+}
+.menuAdm li a:hover {
+    color: #E88F41 !important;
+    background-color: transparent;
+}
+.menuAdm .dropdown-menu {
+    background-color: #10305D;
+}
+.menuAdm .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #10305D;
+}

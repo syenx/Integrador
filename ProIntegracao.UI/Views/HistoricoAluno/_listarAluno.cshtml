@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProIntegracao.Data.EntidadeProSimulador.HistoricoAluno>
+<table class="table table-hover dt-responsive nowrap" cellspacing="0" id="historico">
+    <thead>
+        <tr>
+            <th>NOME</th>
+            <th style="padding-left:10px !important;">DATA NASCIMENTO</th>
+            <th>CPF</th>
+            <th>RENACH</th>
+            <th>CURSO</th>
+            <th>STATUS</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("pt-BR");
+            var dataNascimento = (item.DataNascimento != null)
+                                        ?Convert.ToDateTime(item.DataNascimento).ToShortDateString()
+                                        : "";
+
+            long cpf = (string.IsNullOrEmpty(item.CPF)) ? 0 : Convert.ToInt64(item.CPF);
+            var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf);
+            <tr>
+                <td>@item.Nome</td>
+                <td>@dataNascimento</td>
+                <td>@docCpf</td>
+                <td>@item.Renach</td>
+                <td>@item.Curso</td>
+                <td>@item.Status</td>
+                <td>
+                    <a href='@Url.Action("Consulta","HistoricoAluno", new { @idAluno = item.IdAluno })'>
+                        <i class="fa fa-search"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

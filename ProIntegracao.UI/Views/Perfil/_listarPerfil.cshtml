@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProIntegracao.UI.ViewModel.PerfilViewModel>
+<table class="table table-hover" cellspacing="0" id="perfilpagina">
+    <thead>
+        <tr>
+            <th class="text-left">NOME</th>
+            <th class="text-left" style="padding-left: 10px;">ESTADOS</th>
+            <th class="col-sm-1 text-center">ATIVO</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+            {
+                var ico = (item.DtExclusao == null)? "fa fa-check" :"fa fa-times";
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Estados</td>
+                    <td class="text-center"><i class="@ico"></i></td>
+                    <td class="text-left">
+                        <a href="@Url.Action("Edit","Perfil", new{@idPerfil = item.Id})" onclick="" title="Editar registro">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
