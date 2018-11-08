@@ -11,8 +11,8 @@ namespace ProIntegracao.Data.Entidade
         public virtual string Nome { get; set; }
         public virtual Sexo Sexo { get; set; }
         public virtual string Renach { get; set; }
-        public virtual DateTime DtNascimento{ get; set; }
-        public virtual DateTime DtCadastro { get; set; }
+        public virtual string DtNascimento{ get; set; }
+        public virtual string DtCadastro { get; set; }
         public virtual DateTime? DtExclusao { get; set; }
     }
 }

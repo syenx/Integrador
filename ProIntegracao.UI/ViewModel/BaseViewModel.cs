@@ -27,7 +27,7 @@ namespace ProIntegracao.UI.ViewModel
 
         /// <summary> Data Cadastro
         /// </summary>
-        public DateTime DtCadastro { get; set; }
+        public string DtCadastro { get; set; }
 
         /// <summary> Data Exclusao
         /// </summary>

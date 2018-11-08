@@ -44,7 +44,7 @@ namespace ProIntegracao.UI.ViewModel
             Nome                = model.Nome;
             IdEstado            = model.Estado.Id;
             ListaEstado         = CarregarEstados();
-            DtCadastro          = model.DtCadastro;
+        //    DtCadastro          = model.DtCadastro;
             DtExclusao          = model.DtExclusao;
         }
 
@@ -117,7 +117,7 @@ namespace ProIntegracao.UI.ViewModel
             status.Identificador    = model.Identificador;
             status.Nome             = model.Nome;
             status.Estado           = _repoEstado.Obter<Estado>(model.IdEstado);
-            status.DtCadastro       = model.DtCadastro;
+       //     status.DtCadastro       = model.DtCadastro;
             status.DtExclusao       = model.DtExclusao;
             
             return status;

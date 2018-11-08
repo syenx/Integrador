@@ -63,9 +63,9 @@ function Excluir(id, controller) {
         , type: 'POST'
         , data: { id: id }
         , success: function (data) {
-            
+
             if (data.Resultado) {
-                
+
                 FecharModalExcluir('myModal');
 
                 switch (controller) {
@@ -107,22 +107,22 @@ function Excluir(id, controller) {
             else {
                 Message('Erro ao excluir registro, verifique os dados e tente novamente', 'erro');
             }
-            
+
         }
         , beforeSend: function () {
-            
+
         }
         , complete: function () {
-            
+
         }
         , error: function (jqXHR, exception) {
             var msg = '';
             var tipo = '';
             if (jqXHR.status === 0) {
                 msg = 'Sem Conexão.\n Verifique rede.';
-            } else if (jqXHR.status == 404) {
+            } else if (jqXHR.status === 404) {
                 msg = 'Página não encontrada. [404]';
-            } else if (jqXHR.status == 500) {
+            } else if (jqXHR.status === 500) {
                 msg = 'Internal Server Error [500].';
             } else if (exception === 'parsererror') {
                 msg = 'Requested JSON parse failed.';
@@ -133,9 +133,8 @@ function Excluir(id, controller) {
             } else {
                 msg = 'Erro desconhecido.\n' + jqXHR.responseText;
             }
-            
-        },
-    })
+        }
+    });
 }
 
 // Abri Modal para Exclusão
@@ -178,7 +177,7 @@ function AplicarDataTable(nomeTabela) {
 
     $("#"+ nomeTabela +" thead th").each(function (index) {
 
-        if ($(this).text().toString().toUpperCase() == "CPF")
+        if ($(this).text().toString().toUpperCase() === "CPF")
         {
             cpfColumn = index;
         }
@@ -278,7 +277,7 @@ function AplicarDataTableCustom(nomeTabela, paging) {
 
     $("#" + nomeTabela + " thead th").each(function (index) {
 
-        if ($(this).text().toString().toUpperCase() == "CPF") {
+        if ($(this).text().toString().toUpperCase() === "CPF") {
             cpfColumn = index;
         }
 
@@ -353,8 +352,8 @@ function AplicarDataTableCustom(nomeTabela, paging) {
                         $(win.document.body).find('table')
                             .addClass('compact')
                             .css('font-size', '10px !important')
-                            .css('filter','alpha(opacity=60)')
-                            .css('opacity','0.6')
+                            .css('filter', 'alpha(opacity=60)')
+                            .css('opacity', '0.6');
                     }
                 }
         ]
@@ -378,7 +377,7 @@ function verificaImagemAtivo(data, columnIndex, cpfColumn) {
         returnData = data;
     }
 
-    if (columnIndex == cpfColumn)
+    if (columnIndex === cpfColumn)
     {
         returnData = mascaraCpf(returnData);
     }
@@ -400,11 +399,11 @@ function DefinirEstadoConsulta(funcao)
 
 // So Num
 function soNum(obj) {
-    var tecla = (window.event) ? event.keyCode : obj.which;
-    if ((tecla > 47 && tecla < 58)) {
+    var tecla = window.event ? event.keyCode : obj.which;
+    if (tecla > 47 && tecla < 58) {
         return true;
     } else {
-        if (tecla != 8) {
+        if (tecla !== 8) {
             return false;
         } else {
             return true;
@@ -426,8 +425,7 @@ function ValidaCpfExistente(cpf)
         , type: "POST"
         , datatype: "json"
         , data: data
-        , success: function (data)
-        {
+        , success: function (data) {
             if (data.Resultado) {
                 $("#FormCpf").append("<i id='ok' class='glyphicon glyphicon-edit'></i>");
             }
@@ -437,19 +435,19 @@ function ValidaCpfExistente(cpf)
             }
         }
         , beforeSend: function () {
-            
+
         }
         , complete: function () {
-            
+
         }
         , error: function (jqXHR, exception) {
             var msg = '';
             var tipo = '';
             if (jqXHR.status === 0) {
                 msg = 'Sem Conexão.\n Verifique rede.';
-            } else if (jqXHR.status == 404) {
+            } else if (jqXHR.status === 404) {
                 msg = 'Página não encontrada. [404]';
-            } else if (jqXHR.status == 500) {
+            } else if (jqXHR.status === 500) {
                 msg = 'Internal Server Error [500].';
             } else if (exception === 'parsererror') {
                 msg = 'Requested JSON parse failed.';
@@ -462,7 +460,7 @@ function ValidaCpfExistente(cpf)
             }
             Message(msg, 'erro', 'messageModal');
         }
-    })
+    });
 
 
 }
@@ -493,9 +491,9 @@ function AutoComplete(component)
             var tipo = '';
             if (jqXHR.status === 0) {
                 msg = 'Sem Conexão.\n Verifique rede.';
-            } else if (jqXHR.status == 404) {
+            } else if (jqXHR.status === 404) {
                 msg = 'Página não encontrada. [404]';
-            } else if (jqXHR.status == 500) {
+            } else if (jqXHR.status === 500) {
                 msg = 'Internal Server Error [500].';
             } else if (exception === 'parsererror') {
                 msg = 'Requested JSON parse failed.';
@@ -523,7 +521,7 @@ function RetornaDataNowToString() {
     var d = new Date();
 
     var ano = d.getFullYear();
-    var mes = (d.getMonth() + 1);
+    var mes = d.getMonth() + 1;
     var dia = d.getDate();
 
 
@@ -566,20 +564,20 @@ console.log( now.customFormat( "#DD#/#MM#/#YYYY# #hh#:#mm#:#ss#" ) );
 Date.prototype.customFormat = function (formatString) {
     var YYYY, YY, MMMM, MMM, MM, M, DDDD, DDD, DD, D, hhhh, hhh, hh, h, mm, m, ss, s, ampm, AMPM, dMod, th;
     YY = ((YYYY = this.getFullYear()) + "").slice(-2);
-    MM = (M = this.getMonth() + 1) < 10 ? ('0' + M) : M;
+    MM = (M = this.getMonth() + 1) < 10 ? '0' + M : M;
     MMM = (MMMM = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'][M - 1]).substring(0, 3);
-    DD = (D = this.getDate()) < 10 ? ('0' + D) : D;
+    DD = (D = this.getDate()) < 10 ? '0' + D : D;
     DDD = (DDDD = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][this.getDay()]).substring(0, 3);
-    th = (D >= 10 && D <= 20) ? 'th' : ((dMod = D % 10) == 1) ? 'st' : (dMod == 2) ? 'nd' : (dMod == 3) ? 'rd' : 'th';
+    th = D >= 10 && D <= 20 ? 'th' : (dMod = D % 10) === 1 ? 'st' : dMod === 2 ? 'nd' : dMod === 3 ? 'rd' : 'th';
     formatString = formatString.replace("#YYYY#", YYYY).replace("#YY#", YY).replace("#MMMM#", MMMM).replace("#MMM#", MMM).replace("#MM#", MM).replace("#M#", M).replace("#DDDD#", DDDD).replace("#DDD#", DDD).replace("#DD#", DD).replace("#D#", D).replace("#th#", th);
-    h = (hhh = this.getHours());
-    if (h == 0) h = 24;
+    h = hhh = this.getHours();
+    if (h === 0) h = 24;
     if (h > 12) h -= 12;
-    hh = h < 10 ? ('0' + h) : h;
-    hhhh = h < 10 ? ('0' + hhh) : hhh;
+    hh = h < 10 ? '0' + h : h;
+    hhhh = h < 10 ? '0' + hhh : hhh;
     AMPM = (ampm = hhh < 12 ? 'am' : 'pm').toUpperCase();
-    mm = (m = this.getMinutes()) < 10 ? ('0' + m) : m;
-    ss = (s = this.getSeconds()) < 10 ? ('0' + s) : s;
+    mm = (m = this.getMinutes()) < 10 ? '0' + m : m;
+    ss = (s = this.getSeconds()) < 10 ? '0' + s : s;
     return formatString.replace("#hhhh#", hhhh).replace("#hhh#", hhh).replace("#hh#", hh).replace("#h#", h).replace("#mm#", mm).replace("#m#", m).replace("#ss#", ss).replace("#s#", s).replace("#ampm#", ampm).replace("#AMPM#", AMPM);
 };
 
@@ -598,7 +596,7 @@ function CheatSheet() {
             });
             $("#ModalBodyFont").html(data);
         }
-    })
+    });
 }
 
 // Validar Data
@@ -606,14 +604,14 @@ function isDate(date) {
 
     var currVal = date;
 
-    if (currVal == '')
+    if (currVal === '')
         return false;
 
     //Declare Regex  
     var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/;
     var dtArray = currVal.match(rxDatePattern); // is format OK?
 
-    if (dtArray == null)
+    if (dtArray === null)
         return false;
 
     //Checks for mm/dd/yyyy format.
@@ -625,11 +623,11 @@ function isDate(date) {
         return false;
     else if (dtDay < 1 || dtDay > 31)
         return false;
-    else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+    else if ((dtMonth === 4 || dtMonth === 6 || dtMonth === 9 || dtMonth === 11) && dtDay === 31)
         return false;
-    else if (dtMonth == 2) {
-        var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
-        if (dtDay > 29 || (dtDay == 29 && !isleap))
+    else if (dtMonth === 2) {
+        var isleap = dtYear % 4 === 0 && (dtYear % 100 !== 0 || dtYear % 400 === 0);
+        if (dtDay > 29 || dtDay === 29 && !isleap)
             return false;
     }
     return true;
@@ -643,7 +641,7 @@ function RetornaDataBR(date)
     var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1,2})(\/|-)(\d{4})$/;
     var dtArray = currVal.match(rxDatePattern); // is format OK?
 
-    if (dtArray == null)
+    if (dtArray === null)
         return false;
 
     //Checks for mm/dd/yyyy format.
@@ -651,7 +649,7 @@ function RetornaDataBR(date)
     dtDay = dtArray[1];
     dtYear = dtArray[5];
 
-    return new Date(dtYear, (dtMonth)-1, dtDay);
+    return new Date(dtYear, dtMonth-1, dtDay);
 }
 
 
@@ -667,7 +665,7 @@ function RetornaNewDate(value)
     var horas = second[1].split(':');
     var hour = horas[0];
     var minute = horas[1];
-    var second = horas[2];
+   
     //new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
     return new Date(year,month,day,hour,minute,second);
 }
@@ -682,7 +680,7 @@ function TratamendodeErro(jqXHR, exception)
 
     if (jqXHR.status === 0) {
         msg = 'Sem Conexão.\n Verifique rede.';
-    } else if (jqXHR.status == 500) {
+    } else if (jqXHR.status === 500) {
         msg = 'Erro ao gravar registro, verifique os dados e tente novamente.';
     } else if (exception === 'timeout') {
         msg = 'Time out error.';
@@ -711,10 +709,10 @@ function validarCPF(cpf) {
     cpf = remove(cpf, ".");
     cpf = remove(cpf, "-");
 
-    if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" ||
-        cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" ||
-        cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" ||
-        cpf == "88888888888" || cpf == "99999999999") {
+    if (cpf.length !== 11 || cpf === "00000000000" || cpf === "11111111111" ||
+        cpf === "22222222222" || cpf === "33333333333" || cpf === "44444444444" ||
+        cpf === "55555555555" || cpf === "66666666666" || cpf === "77777777777" ||
+        cpf === "88888888888" || cpf === "99999999999") {
         //window.alert("CPF inválido. Tente novamente.");
         return false;
     }
@@ -724,11 +722,11 @@ function validarCPF(cpf) {
         soma += parseInt(cpf.charAt(i)) * (10 - i);
     }
 
-    resto = 11 - (soma % 11);
-    if (resto == 10 || resto == 11) {
+    resto = 11 - soma % 11;
+    if (resto === 10 || resto === 11) {
         resto = 0;
     }
-    if (resto != parseInt(cpf.charAt(9))) {
+    if (resto !== parseInt(cpf.charAt(9))) {
         //window.alert("CPF inválido. Tente novamente.");
         return false;
     }
@@ -737,12 +735,12 @@ function validarCPF(cpf) {
     for (i = 0; i < 10; i++) {
         soma += parseInt(cpf.charAt(i)) * (11 - i);
     }
-    resto = 11 - (soma % 11);
-    if (resto == 10 || resto == 11) {
+    resto = 11 - soma % 11;
+    if (resto === 10 || resto === 11) {
         resto = 0;
     }
 
-    if (resto != parseInt(cpf.charAt(10))) {
+    if (resto !== parseInt(cpf.charAt(10))) {
         // window.alert("CPF inválido. Tente novamente.");
         return false;
     }
@@ -784,9 +782,9 @@ function RetornaMenuPrincipal() {
             var tipo = '';
             if (jqXHR.status === 0) {
                 msg = 'Sem Conexão.\n Verifique rede.';
-            } else if (jqXHR.status == 404) {
+            } else if (jqXHR.status === 404) {
                 msg = 'Página não encontrada. [404]';
-            } else if (jqXHR.status == 500) {
+            } else if (jqXHR.status === 500) {
                 msg = 'Internal Server Error [500].';
             } else if (exception === 'parsererror') {
                 msg = 'Requested JSON parse failed.';
@@ -798,12 +796,12 @@ function RetornaMenuPrincipal() {
                 msg = 'Erro desconhecido.\n' + jqXHR.responseText;
             }
         }
-    })
+    });
 }
 
 // Funcão de Random Minímo, Maximo com Randomico
 function rand(min, max, interval) {
-    if (typeof (interval) === 'undefined') interval = 1;
+    if (typeof interval === 'undefined') interval = 1;
     var r = Math.floor(Math.random() * (max - min + interval) / interval);
     return r * interval + min;
 }

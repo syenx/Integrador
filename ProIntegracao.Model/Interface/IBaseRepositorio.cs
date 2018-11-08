@@ -10,13 +10,15 @@ namespace ProIntegracao.Model.Interface
         /// <returns></returns>
         IList<T> Listar();
 
-        /// <summary>
-        /// Obter
-        /// </summary>
-        /// <typeparam name="T">Entidade</typeparam>
-        /// <param name="Id">Id</param>
-        /// <returns></returns>
+#pragma warning disable CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
+                              /// <summary>
+                              /// 
+                              /// </summary>
+                              /// <typeparam name="T"></typeparam>
+                              /// <param name="Id"></param>
+                              /// <returns></returns>
         T Obter<T>(int Id);
+#pragma warning restore CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
 
         /// <summary>
         /// Atualizar

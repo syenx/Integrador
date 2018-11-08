@@ -68,7 +68,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
             
             return lista;

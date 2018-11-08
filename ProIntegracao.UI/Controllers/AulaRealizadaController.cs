@@ -89,9 +89,7 @@ namespace ProIntegracao.UI.Controllers
         /// <param name="dtInicio">DtInicio</param>
         /// <param name="dtFim">DtFim</param>
         /// <param name="idEstado">Id Estado</param>
-        /// <param name="PSA">PSA</param>
-        /// <param name="SMC">SMC</param>
-        /// <param name="CNPJ">CNPJ</param>
+      
         /// <returns></returns>
         public ActionResult ListarMetodos(string dtInicio, string dtFim, string idEstado)
         {
@@ -220,11 +218,11 @@ namespace ProIntegracao.UI.Controllers
 
         }
 
-        public void ExportarContratos(string dtInicio, string idEstado)
-        {
-            var lista = _repo.ListarContratosFirmados(dtInicio, idEstado);
-            if (lista.Count() > 0) ExportarResultadoContratos(Response, lista);
-        }
+        //public void ExportarContratos(string dtInicio, string idEstado)
+        //{
+        //    var lista = _repo.ListarContratosFirmados(dtInicio, idEstado);
+        //    if (lista.Count() > 0) ExportarResultadoContratos(Response, lista);
+        //}
 
         /// <summary>
         /// Exportar Simuladores Ativos

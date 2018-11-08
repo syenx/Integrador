@@ -29,7 +29,7 @@ namespace ProIntegracao.Model.Repositorio
 
             } catch (Exception ex){
                 user = null;
-                
+                var msgErro = ex.Message;
             }
             return user;
         }

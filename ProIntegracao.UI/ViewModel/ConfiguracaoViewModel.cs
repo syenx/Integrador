@@ -40,7 +40,7 @@ namespace ProIntegracao.UI.ViewModel
             Nome            = config.Nome;
             Descricao       = config.Descricao;
             Valor           = config.Valor;
-            DtCadastro      = config.DtCadastro;
+          //  DtCadastro      = config.DtCadastro;
             DtExclusao      = config.DtExclusao;
         }
 
@@ -84,7 +84,7 @@ namespace ProIntegracao.UI.ViewModel
             config.Nome         = model.Nome;
             config.Descricao    = model.Descricao;
             config.Valor        = model.Valor;
-            config.DtCadastro   = (model.Id > 0)?model.DtCadastro:DateTime.Now;
+          //  config.DtCadastro   = (model.Id > 0)?model.DtCadastro:DateTime.Now;
             config.DtExclusao   = model.DtExclusao;
             
             return config;

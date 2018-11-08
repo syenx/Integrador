@@ -5,6 +5,21 @@
     /// </summary>
     public enum LogTipos
     {
-        INFO,AVISO,ERRO,SUCESSO 
+        /// <summary>
+        /// 
+        /// </summary>
+        INFO,
+        /// <summary>
+        /// 
+        /// </summary>
+        AVISO,
+        /// <summary>
+        /// 
+        /// </summary>
+        ERRO,
+        /// <summary>
+        /// 
+        /// </summary>
+        SUCESSO
     }
 }

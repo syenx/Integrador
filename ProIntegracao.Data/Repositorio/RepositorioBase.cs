@@ -137,7 +137,7 @@ namespace ProIntegracao.Data
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
                 return 0;
             }
 
@@ -158,6 +158,7 @@ namespace ProIntegracao.Data
             }
             catch(Exception ex)
             {
+                var msgErro = ex.Message;
                 RollBackTransaction();
                 throw;
             }

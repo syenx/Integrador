@@ -17,9 +17,9 @@ namespace ProIntegracao.Model.Repositorio.Base
     public class BaseRepositorio<T> : IBaseRepositorio<T>
     {
         #region Variáveis
-        
-        public static NHibernateSessionManager Session { get {return NHibernateSessionManager.Instance;}}
-     
+
+        public static NHibernateSessionManager Session { get { return NHibernateSessionManager.Instance; } }
+
         #endregion
 
         #region Métodos Públicos
@@ -44,8 +44,9 @@ namespace ProIntegracao.Model.Repositorio.Base
                 CommitTransaction();
                 return true;
             }
-            catch (Exception ex){
-
+            catch (Exception ex)
+            {
+                var msgErro = ex.Message;
                 RollBackTransaction();
                 //TODO : log
                 return false;
@@ -70,6 +71,7 @@ namespace ProIntegracao.Model.Repositorio.Base
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 return false;
             }
 
@@ -92,10 +94,11 @@ namespace ProIntegracao.Model.Repositorio.Base
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 Session.RollbackTransaction();
             }
 
-            
+
         }
 
         /// <summary>Salvar
@@ -103,7 +106,7 @@ namespace ProIntegracao.Model.Repositorio.Base
         /// <param name="entidade">Entitdade T</param>
         /// <returns></returns>
         public int Salvar(T entidade)
-        {   
+        {
             try
             {
                 Session.BeginTransaction();
@@ -112,18 +115,21 @@ namespace ProIntegracao.Model.Repositorio.Base
 
                 if (retorno != null)
                 {
-                   
+
                     return (int)retorno;
-                 
+
                 }
                 else
                 {
                     return 0;
                 }
             }
-            catch (Exception rx)
+            catch (Exception ex)
             {
-                return 0 ;
+                
+                Session.RollbackTransaction();
+                var msgErro = ex.Message;
+                return 0;
             }
 
         }
@@ -168,18 +174,21 @@ namespace ProIntegracao.Model.Repositorio.Base
             Session.CommitTransaction();
         }
 
-        /// <summary>
-        /// Obter Entidade
-        /// </summary>
-        /// <typeparam name="T">Entidade</typeparam>
-        /// <param name="Id">IdEnitdade</param>
-        /// <returns></returns>
+#pragma warning disable CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
+                              /// <summary>
+                              /// Obter Entidade
+                              /// </summary>
+                              /// <typeparam name="T">Entidade</typeparam>
+                              /// <param name="Id">IdEnitdade</param>
+                              /// <returns></returns>
         public T Obter<T>(int Id)
+#pragma warning restore CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
         {
             return ProcurarUm<T>(new { Id = Id });
 
         }
-        
+
+#pragma warning disable CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
         /// <summary>
         /// Procurar por Um
         /// </summary>
@@ -187,6 +196,7 @@ namespace ProIntegracao.Model.Repositorio.Base
         /// <param name="parametros">Parametros</param>
         /// <returns></returns>
         public T ProcurarUm<T>(object parametros)
+#pragma warning restore CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
         {
             ICriteria criteria = AdicionaRestricoes(parametros, typeof(T), false);
             return criteria.UniqueResult<T>();
@@ -239,7 +249,7 @@ namespace ProIntegracao.Model.Repositorio.Base
 
             return criteria;
         }
-        
+
         /// <summary>
         /// Parametros Para Dicionário
         /// </summary>
@@ -251,9 +261,9 @@ namespace ProIntegracao.Model.Repositorio.Base
             if (parametros is IDictionary<string, object>) return (IDictionary<string, object>)parametros;
             return parametros.GetType().GetProperties().ToDictionary(p => p.Name, p => p.GetValue(parametros, null));
         }
-       
-        
-      
+
+
+
         #endregion
     }
 }

@@ -64,13 +64,14 @@ namespace ProIntegracao.UI.Controllers
                 if (aula != null)
                 {
                     var teste  = _repo.Listar().Count(x => x.Id <= 5);
-                    AulaViewModel.DtCadastro = DateTime.Now;
+                   // AulaViewModel.DtCadastro = DateTime.Now;
                     resultado = (_repo.Salvar(aula) > 0);
                     //InserirLog("AULA", "CREATE", aula.Matricula.Aluno.CpfAluno, aula.Id, aula.Matricula.Aluno.Id,0, aula.Matricula.Id);
                 }
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("Pagina", ex.Message);
             }
 
@@ -109,6 +110,8 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
+              
                 //InserirLog("AULA", ex.Message);
             }
             return Json(new { Resultado = resultado }, JsonRequestBehavior.AllowGet);
@@ -133,6 +136,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("AULA", ex.Message);
             }
 
@@ -259,6 +263,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 result = "*Aula já existe.";
             }
             

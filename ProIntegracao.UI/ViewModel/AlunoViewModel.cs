@@ -46,7 +46,7 @@ namespace ProIntegracao.UI.ViewModel
         /// DATA NASCIMENTO ALUNO
         /// </summary>
         [DisplayName("Data Nascimento:")]
-        public DateTime DtNascimento { get; set; }
+        public string DtNascimento { get; set; }
 
         /// <summary>
         /// LISTA DE ALUNO PARA LISTAR ALUNO
@@ -82,7 +82,7 @@ namespace ProIntegracao.UI.ViewModel
             Nome            = aluno.Nome;
             IdSexo          = aluno.Sexo.Id;
             Renach          = aluno.Renach;
-            DtNascimento    = aluno.DtNascimento;
+            DtNascimento    =  aluno.DtNascimento.ToString();
             DtCadastro      = aluno.DtCadastro;
             DtExclusao      = aluno.DtExclusao;
             ListaAluno      = CarregarAluno().AsEnumerable();
@@ -131,12 +131,12 @@ namespace ProIntegracao.UI.ViewModel
                 var sexo = _repoSexo.Listar().Where(x => x.Id == IdSexo).FirstOrDefault();
                 if (novoAluno != null)
                 {
-                    novoAluno.DtCadastro = DateTime.Now;
+                  //  novoAluno.DtCadastro = DateTime.Now;
                     novoAluno.CpfAluno = AlunoViewModel.CpfAluno;
                     novoAluno.Nome = AlunoViewModel.Nome;
                     novoAluno.Renach = AlunoViewModel.Renach;
                     novoAluno.DtNascimento = AlunoViewModel.DtNascimento;
-                    novoAluno.DtCadastro = AlunoViewModel.DtCadastro;
+                  //  novoAluno.DtCadastro = AlunoViewModel.DtCadastro;
                     novoAluno.Sexo = sexo;
                 }
                 else
@@ -144,11 +144,11 @@ namespace ProIntegracao.UI.ViewModel
                     var aluno = new Aluno()
                     {
 
-                    DtCadastro = DateTime.Now,
+                //    DtCadastro = DateTime.Now,
                     CpfAluno = AlunoViewModel.CpfAluno,
                     Nome = AlunoViewModel.Nome,
                     Renach = AlunoViewModel.Renach,
-                    DtNascimento = AlunoViewModel.DtNascimento,
+                    DtNascimento =  AlunoViewModel.DtNascimento,
                     Sexo = sexo,
 
                 };
@@ -157,7 +157,7 @@ namespace ProIntegracao.UI.ViewModel
             }
             catch (Exception ex)
             {
-                
+                var msg = ex.Message;
             }
 
             return novoAluno;

@@ -316,11 +316,11 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (FaultException ex)
             {
-             
+                var msgErro = ex.Message;
             }
             catch (Exception ex)
             {
-              
+                var msgErro = ex.Message;
             }
             
             return result;

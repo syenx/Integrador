@@ -52,7 +52,7 @@ namespace ProIntegracao.UI.ViewModel
             IdEstado        = pagina.IdEstado.Split(',').ToArray();
             listaEstados    = CarregarEstados();
             DtExclusao      = pagina.DtExclusao;
-            DtCadastro      = pagina.DtCadastro;
+       //     DtCadastro      = pagina.DtCadastro;
 
             Edicao = true;
         }
@@ -188,7 +188,7 @@ namespace ProIntegracao.UI.ViewModel
             pagina.Ordem        = model.Ordem;
             pagina.Menu         = _repoMenu.Obter<Menu>(model.IdMenu);
             pagina.IdEstado     = String.Join(",",model.IdEstado);
-            pagina.DtCadastro   = model.DtCadastro;
+          //  pagina.DtCadastro   = model.DtCadastro;
             pagina.DtExclusao   = model.DtExclusao;
             pagina.Id           = model.Id;
            

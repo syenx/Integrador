@@ -63,14 +63,14 @@ namespace ProIntegracao.UI.Controllers
                
                 try
                 {
-                    model.DtCadastro = DateTime.Now;
+                  //  model.DtCadastro = DateTime.Now;
                     var status = model.ParseStatusViewModel(model);
                     resultado = (_repo.Salvar(status) > 0);
                     
                 }
                 catch (Exception ex)
                 {
-                 
+                    var msgErro = ex.Message;
 
                 }
             }
@@ -129,6 +129,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msg = ex.Message;
                 //InserirLog("STATUS SITUACAO AULA", "ERRO EDIT | MESSAGE : " + ex.Message);
             }
             return Json(new { Resultado = resultado }, JsonRequestBehavior.AllowGet);
@@ -154,7 +155,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-              
+                var msg = ex.Message;
             }
 
             return Json(new { Resultado = result }, JsonRequestBehavior.AllowGet);

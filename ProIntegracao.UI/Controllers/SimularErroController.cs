@@ -68,7 +68,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
 
             return Json(new { Resultado = resultado }, JsonRequestBehavior.AllowGet);
@@ -91,6 +91,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 
             }
 

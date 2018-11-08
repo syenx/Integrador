@@ -31,6 +31,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIOESTADO","ERRO AO LISTAR ESTADOS POR USUARIO | Message : " + ex.Message, "Erro");                           
             }
 

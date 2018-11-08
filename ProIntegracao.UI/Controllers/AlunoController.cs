@@ -101,6 +101,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("Aluno ", ex.Message);
             }
 
@@ -137,6 +138,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("Aluno", ex.Message);
             }
             return Json(new { Resultado = resultado }, JsonRequestBehavior.AllowGet);
@@ -161,6 +163,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("ALUNO", "Erro Excluir registro | Message :" + ex.Message);
             }
             return Json(new { Resultado = result }, JsonRequestBehavior.AllowGet);
@@ -217,9 +220,11 @@ namespace ProIntegracao.UI.Controllers
 
                 if (aluno == null)
                 {
-                    aluno = new Aluno();
-                    aluno.Nome = string.Empty;
-                    aluno.Id = 0;
+                    aluno = new Aluno
+                    {
+                        Nome = string.Empty,
+                        Id = 0
+                    };
                 }
                 
             }

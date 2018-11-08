@@ -85,6 +85,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO SITUACAO LOG SIMULADOR", "Erro de Consulta | Messagem : " + ex.Message);
             }
             

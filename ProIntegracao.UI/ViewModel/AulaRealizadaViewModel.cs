@@ -37,7 +37,10 @@ namespace ProIntegracao.UI.ViewModel
         /// </summary>
         public List<SelectListItem> ListaEstados { get; set; }
 
-        public int idEstado { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int IdEstado { get; set; }
 
         #endregion
 

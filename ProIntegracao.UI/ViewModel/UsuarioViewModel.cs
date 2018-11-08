@@ -45,7 +45,7 @@ namespace ProIntegracao.UI.ViewModel
             Email           = usuario.Email;
             IdPerfil        = usuario.Perfil.Id;
             Bloqueado       = usuario.Bloqueado;
-            DtCadastro      = usuario.DtCadastro;
+         //   DtCadastro      = usuario.DtCadastro;
             DtExclusao      = usuario.DtExclusao;
 
             listaPerfis     = CarregarPerfis(usuario.Perfil.Id);
@@ -181,7 +181,7 @@ namespace ProIntegracao.UI.ViewModel
             usuario.Bloqueado       = model.Bloqueado;
             usuario.Perfil          = _repoPerfil.Obter<Perfil>(model.IdPerfil);
             usuario.DtExclusao      = model.DtExclusao;
-            usuario.DtCadastro      = (model.Edicao) ? model.DtCadastro : DateTime.Now;
+            //usuario.DtCadastro      = (model.Edicao) ? model.DtCadastro : DateTime.Now;
             usuario.Hash            = Guid.NewGuid().ToString();
             return usuario;
         }

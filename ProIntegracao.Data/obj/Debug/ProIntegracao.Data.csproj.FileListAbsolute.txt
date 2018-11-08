@@ -24,3 +24,17 @@ C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\
 C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.CoreCompileInputs.cache
 C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.dll
 C:\Users\Marcelo\Desktop\Git Projetos Pessoais\ProIntegracao\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.pdb
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.dll
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\ProIntegracao.Data.pdb
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\Iesi.Collections.dll
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\NHibernate.dll
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\TecnoStr.dll
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\Iesi.Collections.xml
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\bin\Debug\NHibernate.xml
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csprojAssemblyReference.cache
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.Properties.Resources.resources
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.GenerateResource.cache
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.CoreCompileInputs.cache
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.csproj.CopyComplete
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.dll
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Data\obj\Debug\ProIntegracao.Data.pdb

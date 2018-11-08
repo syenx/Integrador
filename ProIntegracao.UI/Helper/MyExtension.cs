@@ -5,6 +5,9 @@ using System.Web.Mvc;
 
 namespace ProIntegracao.UI.Helper
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class MyExtension
     {
         /// <summary>To SelectList Item
@@ -22,7 +25,9 @@ namespace ProIntegracao.UI.Helper
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public static string UppercaseFirst(string s)
         {
             // Check for empty string.

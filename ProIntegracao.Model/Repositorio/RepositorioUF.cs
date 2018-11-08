@@ -48,6 +48,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO SITUACAO AULA", ex.Message);
             }
 

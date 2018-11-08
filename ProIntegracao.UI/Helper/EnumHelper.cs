@@ -6,6 +6,9 @@ using System.Web;
 
 namespace ProIntegracao.UI.Helper
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class EnumHelper
     {
         /// <summary> Get Items

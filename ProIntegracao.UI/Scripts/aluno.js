@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $("#buscaAluno").click(function () {
         var cpf = $("#cpf").val();
-         if (cpf == "") {
+         if (cpf === "") {
              ListarAlunos();
         }
         else {
@@ -26,7 +26,7 @@ $(document).ready(function () {
     // Button Listar DEFAULT
     $(document).keypress(function (e) {
         var key = e.which;
-        if (key == 13) {
+        if (key === 13) {
             $('#buscaAluno').click();
             return false;
         }
@@ -58,7 +58,7 @@ function ListarAlunos(cpf) {
         , error: function (jqXHR, exception) {
             TratamendodeErro(jqXHR, exception);
         }
-    })
+    });
 }
 
 // Novo AlunoIntegracao
@@ -91,31 +91,30 @@ function SalvarAluno() {
 
         var AlunoViewModel =
         {
-            Id : $("#Id").val()
-            ,CpfAluno: $('#CpfAluno').val().replace(".", "").replace(".", "").replace("-", "")
+            Id: $("#Id").val()
+            , CpfAluno: $('#CpfAluno').val().replace(".", "").replace(".", "").replace("-", "")
             , Nome: $("#Nome").val()
             , Renach: $("#Renach").val()
             , IdSexo: $("#Sexo").val()
             , DtNascimento: $("#DtNascimento").val()
             , ListaAluno: null
-           
             , DtCadastro: $("#DtCadastro").val()
-      
-        }
+
+        };
 
         
         var masculino = $("#masculino").is(':checked');
 
         if (masculino) {
-            AlunoViewModel.IdSexo = 1
+            AlunoViewModel.IdSexo = 1;
         } else {
-            AlunoViewModel.IdSexo = 2
+            AlunoViewModel.IdSexo = 2;
         }
 
 
         var url = "/Aluno/Create";
 
-        if ($("#Id").val() != "" && $("#Id").val() != "0") {
+        if ($("#Id").val() !== "0") {
             url = "/Aluno/Edit";
         }
 
@@ -165,16 +164,16 @@ function ValidarFormulario() {
         var c = 11;
         for (i = 0; i < 11; i++) {
             a[i] = cpf.charAt(i);
-            if (i < 9) b += (a[i] * --c);
+            if (i < 9) b += a[i] * --c;
         }
-        if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11 - x }
+        if ((x = b % 11) < 2) { a[9] = 0; } else { a[9] = 11 - x; }
         b = 0;
         c = 11;
-        for (y = 0; y < 10; y++) b += (a[y] * c--);
+        for (y = 0; y < 10; y++) b += a[y] * c--;
         if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11 - x; }
 
         var retorno = true;
-        if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10]) || cpf.match(expReg)) retorno = false;
+        if (cpf.charAt(9) !== a[9] || cpf.charAt(10) !== a[10] || cpf.match(expReg)) retorno = false;
 
         return this.optional(element) || retorno;
 

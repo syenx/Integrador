@@ -59,7 +59,7 @@ namespace ProIntegracao.UI
             }
             catch (Exception ex)
             {
-              
+                var msgErro = ex.Message;
             }
         }
 
@@ -75,6 +75,7 @@ namespace ProIntegracao.UI
             Response.Clear();
 
             HttpException httpException = exception as HttpException;
+
             RouteData routeData = new RouteData();
             routeData.Values.Add("controller", "Error");
 

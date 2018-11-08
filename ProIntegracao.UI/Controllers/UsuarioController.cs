@@ -18,18 +18,12 @@ namespace ProIntegracao.UI.Controllers
     /// </summary>
     public class UsuarioController : BaseController
     {
-        #region Variaveis
-
+      
         private static readonly RepositorioUsuario _repo = new RepositorioUsuario();
-        private string controllername = "Usuário";
 
-        #endregion
-
-        #region Actions
-
-        /// <summary>INDEX
+        /// <summary>
+        /// 
         /// </summary>
-        /// <returns></returns>
         [Permission(Permissoes.Admin)]
         public ActionResult Index()
         {
@@ -66,9 +60,9 @@ namespace ProIntegracao.UI.Controllers
 
                 //Ajustes
                 var usuario = model.ParseUsuarioViewModel(model);
-                
+
                 // Criar Usuario
-                usuario.Senha = Criptografia.Encrypt(senha);
+                usuario.Senha = senha;// Criptografia.Encrypt(senha);
                 resultado = (_repo.Salvar(usuario) > 0);
 
                 //E-mail
@@ -80,7 +74,7 @@ namespace ProIntegracao.UI.Controllers
             catch (Exception ex)
             {
                 //Log de Erro
-                
+                var msgErro = ex.Message;
             }
 
             //Retorno
@@ -115,6 +109,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog(controllername, ex.Message);
             }
 
@@ -141,6 +136,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog(controllername, ex.Message);
             }
             return Json(new { Resultado = result }, JsonRequestBehavior.AllowGet);
@@ -167,9 +163,9 @@ namespace ProIntegracao.UI.Controllers
             var mensagem = string.Empty;
             var usuario = _repo.Obter<Usuario>(User.Usuario.Id);
 
-            if (Criptografia.Encrypt(senhaAtual) == usuario.Senha)
+            if (/*Criptografia.Encrypt(senhaAtual)*/senhaAtual == usuario.Senha)
             {
-                usuario.Senha = Criptografia.Encrypt(novaSenha);
+                usuario.Senha = novaSenha;//Criptografia.Encrypt(novaSenha);
                 usuario.Hash = null;
                 resultado = _repo.Atualizar(usuario);
 
@@ -181,7 +177,7 @@ namespace ProIntegracao.UI.Controllers
             return Json(new { Resultado = resultado, Mensagem = mensagem }, JsonRequestBehavior.AllowGet);
         }
 
-        #endregion
+
 
         #region Métodos
 
@@ -202,7 +198,8 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
+
             }
 
             return Json(result, JsonRequestBehavior.AllowGet);

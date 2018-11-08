@@ -20,8 +20,7 @@ namespace ProIntegracao.UI.Controllers
 
         private static readonly RepositorioPerfilPagina _repoPerfilPagina = new RepositorioPerfilPagina();
         private static readonly RepositorioPerfil _repoPerfil = new RepositorioPerfil();
-        private static readonly RepositorioPagina _repoPagina = new RepositorioPagina();
-
+     
         #endregion
 
         #region Actions
@@ -155,7 +154,8 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-              
+                var msgErro = ex.Message;
+
             }
 
             return Json(new { Resultado = result }, JsonRequestBehavior.AllowGet);

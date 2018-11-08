@@ -63,7 +63,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
             
             return lista.OrderBy(m=>m.UF).OrderBy(m => m.Data).ToList();
@@ -121,7 +121,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
 
             return lista.OrderBy(m => m.Data).ToList();
@@ -181,7 +181,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
 
             return lista.OrderBy(m => m.Data).ToList();
@@ -243,7 +243,8 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
+
             }
 
             return lista.OrderBy(m => m.Mes).ToList();

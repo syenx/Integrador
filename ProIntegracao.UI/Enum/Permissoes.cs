@@ -4,11 +4,27 @@
     /// Permissões
     /// </summary>
     public enum Permissoes
-    {
-        Consultar
-        , Inserir
-        , Atualizar
-        , Excluir
-        , Admin
+    { 
+        /// <summary>
+        /// 
+        /// </summary>
+        Consultar ,
+       
+        /// <summary>
+        /// 
+        /// </summary>
+        Inserir,
+        /// <summary>
+        /// 
+        /// </summary>
+        Atualizar ,
+        /// <summary>
+        /// 
+        /// </summary>
+        Excluir,
+        /// <summary>
+        /// 
+        /// </summary>
+        Admin
     }
 }

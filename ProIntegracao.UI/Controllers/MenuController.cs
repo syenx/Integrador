@@ -85,12 +85,13 @@ namespace ProIntegracao.UI.Controllers
 
             try
             {
-                model.DtCadastro = DateTime.Now;
+               // model.DtCadastro = DateTime.Now;
                 var menu = model.ParseViewModelCreate(model);
                 resultado = (_repo.Salvar(menu)>0);
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("MENU", ex.Message);
             }
 
@@ -120,13 +121,14 @@ namespace ProIntegracao.UI.Controllers
 
             try
             {
-                model.DtCadastro = DateTime.Now;
+                //  model.DtCadastro = DateTime.Now;
                 var menu = model.ParseViewModelCreate(model);
                 resultado = _repo.Atualizar(menu);
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
+
             }
 
             return Json(new { Resultado = resultado }, JsonRequestBehavior.AllowGet);
@@ -163,6 +165,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("MENU", "Erro ao Excluir registro | Mensagem : " + ex.Message);
             }
 

@@ -16,18 +16,13 @@ namespace ProIntegracao.UI.Controllers
     
     public class MatriculaController : BaseController
     {
-        #region Variáveis
-
+       
         private static readonly RepositorioMatricula _repo = new RepositorioMatricula();
         private static readonly RepositorioStatusSituacaoAula _repoStatus = new RepositorioStatusSituacaoAula();
         private static readonly RepositorioAula _repoAula = new RepositorioAula();
         private static readonly RepositorioAluno _repoAluno = new RepositorioAluno();
-        private string controllername = "MATRICULA";
+         
 
-        #endregion
-
-        #region Actions
-        
         /// <summary> Index
         /// 
         /// </summary>
@@ -138,7 +133,7 @@ namespace ProIntegracao.UI.Controllers
             return Json(new { Resultado = result }, JsonRequestBehavior.AllowGet);
         }
 
-        #endregion
+ 
 
         #region Métodos
 
@@ -238,7 +233,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-              
+                var msgErro = ex.Message;
             }
 
         }
@@ -280,7 +275,7 @@ namespace ProIntegracao.UI.Controllers
         /// <param name="cpf">Termo Busca</param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult ValidaCpfExistente(string cpf, int Id = 0)
+        public ActionResult ValidaCpfExistente(string cpf)
         {
             // variavel
             var resultado = "true";
@@ -297,7 +292,7 @@ namespace ProIntegracao.UI.Controllers
 
             if (model != null)
             {
-                if (Id == 0) {
+                if (model.Id == 0) {
                     resultado = "*CPF já existe";
                 }
             }
@@ -346,7 +341,7 @@ namespace ProIntegracao.UI.Controllers
             }
             catch (Exception ex)
             {
-                
+                var msgErro = ex.Message;
             }
 
             return Json (new { Resultado = result},JsonRequestBehavior.AllowGet);

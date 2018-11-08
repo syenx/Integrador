@@ -11,12 +11,10 @@ namespace ProIntegracao.UI.Controllers
     public class HomeController : BaseController
     {
 
-        #region Variáveis
 
-        public static readonly RepositorioMenu _repo = new RepositorioMenu();
-        public static readonly RepositorioPerfilPagina _repoPerfilPagina = new RepositorioPerfilPagina();
+        private static RepositorioMenu _repo = new RepositorioMenu();
+        private static RepositorioPerfilPagina _repoPerfilPagina = new RepositorioPerfilPagina();
 
-        #endregion
 
         #region Actions
 
@@ -52,41 +50,7 @@ namespace ProIntegracao.UI.Controllers
 
         #region Métodos
 
-        /// <summary>Retorno Paginas Unicas
-        /// </summary>
-        /// <returns>List Pagina</returns>
-        //public List<Pagina> RetornaPaginasUnicas()
-        //{
-        //    var lista = new List<Pagina>();
-
-        //    //Página HOME
-        //    lista.Add(new Pagina()
-        //    {
-        //        Id = 0
-        //        , Nome = "Home"
-        //        , Url = "Home"
-        //        , Icone = "fa fa-home"
-        //        , Menu = new Menu() {
-        //            Id = 0
-        //            , Nome = "Home"
-        //            , Ordem = 1
-        //        }
-        //    });
-
-
-        //    try
-        //    {
-        //        lista.AddRange(Menu);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //InserirLog("HOME", "Erro Distinct MENU - Erro :" + ex.Message);
-        //    }
-
-        //    return lista.OrderBy(m => m.Menu.Ordem).ToList();
-        //}
-
-
+   
         /// <summary>Retorno Paginas Unicas
         /// </summary>
         /// <returns>List Pagina</returns>

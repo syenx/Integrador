@@ -17,14 +17,14 @@
             {
 
                 System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("pt-BR");
-                var dataNascimento = item.DtNascimento.ToString("dd/MM/yyyy", culture);
+                var dataNascimento = item.DtNascimento;
                 long cpf = (string.IsNullOrEmpty(item.CpfAluno)) ? 0 : Convert.ToInt64(item.CpfAluno);
                 var docCpf = String.Format(@"{0:000\.000\.000\-00}", cpf);
                 
                 <tr>
                     <td>@item.Nome</td>
                     <td>@docCpf</td>
-                    <td>@dataNascimento</td>
+                    <td>@dataNascimento </td>
                     <td>@item.Renach</td>
                     <td>@item.Sexo.Nome.Substring(0,1)</td>
                     <td>

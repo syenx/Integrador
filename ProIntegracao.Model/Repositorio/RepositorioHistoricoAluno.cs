@@ -47,8 +47,10 @@ namespace ProIntegracao.Model.Repositorio
                 {
                     conn.Open();
 
-                    command = new SqlCommand("pr_selecionar_historico_aluno", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_historico_aluno", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@CPF", cpf);
                     command.Parameters.AddWithValue("@RENACH", renach);
                     command.Parameters.AddWithValue("@NOME", nome);
@@ -83,6 +85,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
 
@@ -109,8 +112,10 @@ namespace ProIntegracao.Model.Repositorio
                 {
                     conn.Open();
 
-                    command = new SqlCommand("pr_selecionar_historico_aluno_individual", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_historico_aluno_individual", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@ID_ALUNO", idAluno);
 
                     dr = command.ExecuteReader();
@@ -142,6 +147,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
 
@@ -166,8 +172,10 @@ namespace ProIntegracao.Model.Repositorio
                 using (conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    command = new SqlCommand("pr_selecionar_matriculas_historico_aluno", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_matriculas_historico_aluno", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@IDALUNO", idAluno);
 
                     dr = command.ExecuteReader();
@@ -202,6 +210,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
             return lista;
@@ -226,8 +235,10 @@ namespace ProIntegracao.Model.Repositorio
                 {
                     conn.Open();
 
-                    command = new SqlCommand("pr_selecionar_agendas_historico_aluno", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_agendas_historico_aluno", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@ID_MATRICULA", idMatricula);
 
                     dr = command.ExecuteReader();
@@ -253,6 +264,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
 
@@ -278,8 +290,10 @@ namespace ProIntegracao.Model.Repositorio
                 using (conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    command = new SqlCommand("pr_selecionar_aulas_historico_aluno", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_aulas_historico_aluno", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@ID_MATRICULA", idMatricula);
 
                     dr = command.ExecuteReader();
@@ -321,6 +335,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
             return lista;
@@ -482,8 +497,10 @@ namespace ProIntegracao.Model.Repositorio
                 using (conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    command = new SqlCommand("pr_selecionar_historico_aluno_detalhe_aula", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_selecionar_historico_aluno_detalhe_aula", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@ID_ALUNO", idAluno);
                     command.Parameters.AddWithValue("@ID_AULA", idAula);
 
@@ -541,6 +558,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO", ex.Message);
             }
 
@@ -574,8 +592,10 @@ namespace ProIntegracao.Model.Repositorio
                     query.Append(" ORDER BY M.ID_MODELO");
                     
                     conn.Open();
-                    command = new SqlCommand(query.ToString(), conn);
-                    command.CommandType = CommandType.Text;
+                    command = new SqlCommand(query.ToString(), conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
                     dr = command.ExecuteReader();
                     while (dr.Read())
                     {
@@ -592,6 +612,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO MODELO AULA", ex.Message);
             }
 
@@ -616,8 +637,10 @@ namespace ProIntegracao.Model.Repositorio
                 using (conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    command = new SqlCommand("pr_inserir_aula_reenvio", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_inserir_aula_reenvio", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
                     command.Parameters.AddWithValue("@ID_AULA", idAula);
                     command.ExecuteNonQuery();
                     result = true;
@@ -625,6 +648,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO INSERIR AULA REENVIO", ex.Message);
             }
             return result;
@@ -725,8 +749,10 @@ namespace ProIntegracao.Model.Repositorio
                     conn.Open();
                     string query = string.Format("SELECT TOP 1 * FROM TB_AGENDA A WITH (NOLOCK) WHERE ID_AGENDA = {0}", idAgenda);
 
-                    command = new SqlCommand(query, conn);
-                    command.CommandType = CommandType.Text;
+                    command = new SqlCommand(query, conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
                     dr = command.ExecuteReader();
 
                     while (dr.Read())
@@ -742,6 +768,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO ALUNO - RECUPERA AGENDA PARA ENVIO DE AULA", ex.Message);
             }
 
@@ -771,8 +798,10 @@ namespace ProIntegracao.Model.Repositorio
                 {
                     conn.Open();
 
-                    command = new SqlCommand("pr_atualizar_status_modelo_aula", conn);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command = new SqlCommand("pr_atualizar_status_modelo_aula", conn)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
 
                     command.Parameters.AddWithValue("@ID_AULA", idAula);
                     command.Parameters.AddWithValue("@ID_STATUS", idStatus);
@@ -823,7 +852,7 @@ namespace ProIntegracao.Model.Repositorio
                 }
                 return retorno;
             }
-            return null;
+           
         }
         
         /// <summary>
@@ -916,8 +945,10 @@ namespace ProIntegracao.Model.Repositorio
                     query.Append("	ORDER BY A.ID_AULA ");
 
                     conn.Open();
-                    command = new SqlCommand(query.ToString(), conn);
-                    command.CommandType = CommandType.Text;
+                    command = new SqlCommand(query.ToString(), conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
                     dr = command.ExecuteReader();
 
                    
@@ -947,6 +978,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO MODELO AULA", ex.Message);
             }
 
@@ -991,8 +1023,10 @@ namespace ProIntegracao.Model.Repositorio
                     query.AppendFormat(" WHERE Aula{0} = 1", idModelo);
                     
                     conn.Open();
-                    command = new SqlCommand(query.ToString(), conn);
-                    command.CommandType = CommandType.Text;
+                    command = new SqlCommand(query.ToString(), conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
                     dr = command.ExecuteReader();
                     
                     while (dr.Read())
@@ -1016,6 +1050,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO HISTORICO AULA - EVENTO FINALIZACAO", ex.Message);
             }
             return lista;
@@ -1037,8 +1072,10 @@ namespace ProIntegracao.Model.Repositorio
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                command = new SqlCommand("pr_atualiza_finalizacao_aula", conn);
-                command.CommandType = CommandType.StoredProcedure;
+                command = new SqlCommand("pr_atualiza_finalizacao_aula", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 SqlTransaction transaction;
                 transaction = conn.BeginTransaction("SampleTransaction");
@@ -1072,9 +1109,11 @@ namespace ProIntegracao.Model.Repositorio
 
                         // Atualizar tabela com Total de Infracoes e Erros
                         string query = string.Format("UPDATE TB_AULA SET TOTAL_INFRACOES = {0}, TOTAL_ERROS = {1} WHERE ID_AULA = {2}", totalInfracao, totalerros, item.ID_AULA);
-                        command = new SqlCommand(query, conn);
-                        command.CommandType = CommandType.Text;
-                        command.Transaction = transaction;
+                        command = new SqlCommand(query, conn)
+                        {
+                            CommandType = CommandType.Text,
+                            Transaction = transaction
+                        };
                         command.ExecuteNonQuery();
                         
                         //Limpa Totalinfracoes e erros
@@ -1092,8 +1131,9 @@ namespace ProIntegracao.Model.Repositorio
                     {
                         transaction.Rollback();
                     }
-                    catch (Exception ex2)
+                    catch 
                     {
+                        var msgErro = ex.Message;
                         //InserirLog("RPOSITORIO HITORICO ALUNO", string.Format("Rollback Exception Type: {0} | Message : {1}" + ex2.GetType(), ex2.Message));
                     }
                     result = false;
@@ -1115,8 +1155,10 @@ namespace ProIntegracao.Model.Repositorio
             {
                 conn.Open();
                 string query = "UDPATE TB_AGENDA SET REENVIO = 0  WHERE ID_AGENDA = " + idAgenda;
-                command = new SqlCommand(query, conn);
-                command.CommandType = CommandType.Text;
+                command = new SqlCommand(query, conn)
+                {
+                    CommandType = CommandType.Text
+                };
 
                 SqlTransaction transaction;
                 transaction = conn.BeginTransaction("SampleTransaction");
@@ -1135,8 +1177,9 @@ namespace ProIntegracao.Model.Repositorio
                     {
                         transaction.Rollback();
                     }
-                    catch (Exception ex2)
+                    catch
                     {
+                        var msgErro = ex.Message;
                         //InserirLog("RPOSITORIO HITORICO ALUNO", string.Format("Rollback Exception Type: {0} | Message : {1}" + ex2.GetType(), ex2.Message));
                     }
                     result = false;

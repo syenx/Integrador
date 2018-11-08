@@ -58,6 +58,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 //InserirLog("REPOSITORIO ALUNO DUPLICADO", ex.Message);
             }
 

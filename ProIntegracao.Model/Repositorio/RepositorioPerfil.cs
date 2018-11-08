@@ -54,6 +54,7 @@ namespace ProIntegracao.Model.Repositorio
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 repo.RollBackTransaction();
                 result = false;
             }

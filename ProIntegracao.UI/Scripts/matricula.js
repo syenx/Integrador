@@ -28,7 +28,7 @@ $(document).ready(function () {
     // Button Listar DEFAULT
     $(document).keypress(function (e) {
         var key = e.which;
-        if (key == 13) {
+        if (key === 13) {
             $('#buscaMatricula').click();
             return false;
         }
@@ -60,10 +60,10 @@ function ListarMatricula(termo) {
             div.html(data);
             AplicarDataTable('matriculas');
         }
-         , error: function (jqXHR, exception) {
-             TratamendodeErro(jqXHR, exception)
-         }
-    })
+        , error: function (jqXHR, exception) {
+            TratamendodeErro(jqXHR, exception);
+        }
+    });
 
 
 }
@@ -84,7 +84,7 @@ function EditarMatricula(Id) {
             FocusNomeAluno();
         }
          , error: function (jqXHR, exception) {
-             TratamendodeErro(jqXHR, exception)
+             TratamendodeErro(jqXHR, exception);
          }
     });
 }
@@ -104,7 +104,7 @@ function NovaMatricula() {
             FocusNomeAluno();
         }
         , error: function (jqXHR, exception) {
-             TratamendodeErro(jqXHR, exception)
+            TratamendodeErro(jqXHR, exception);
         }
     });
 }
@@ -116,8 +116,8 @@ function FocusNomeAluno()
 
         var cpf = RetornaCPFSemPontos($("#Cpf").val());
 
-        if (cpf != "") {
-            var url = "/Aluno/RetornaNomePorCpf"
+        if (cpf !== "") {
+            var url = "/Aluno/RetornaNomePorCpf";
             cpf = cpf.replace(".", "").replace(".", "").replace("-", "");
             $.ajax({
                 url: url
@@ -127,12 +127,12 @@ function FocusNomeAluno()
                 , success: function (data) {
                     $("#NomeAluno").val(data.NomeAluno);
                     $("#IdAluno").val(data.IdAluno);
-                    if (data.IdAluno == "0" || data.IdAluno == 0)
+                    if (data.IdAluno === "0" || data.IdAluno === 0)
                         Message("Nenhum registro encontrado", "aviso");
 
                 }
                 , error: function (jqXHR, exception) {
-                    TratamendodeErro(jqXHR, exception)
+                    TratamendodeErro(jqXHR, exception);
                 }
             });
         }
@@ -158,7 +158,7 @@ function SalvarMatricula() {
 
         var url = "/Matricula/Create";
 
-        if ($("#Id").val() != "" && $("#Id").val() != "0") {
+        if ($("#Id").val() !== "" && $("#Id").val() !== "0") {
             url = "/Matricula/Edit";
         }
 
@@ -179,7 +179,7 @@ function SalvarMatricula() {
                 ListarMatricula();
             }
             ,error: function(jqXHR, exception){
-                TratamendodeErro(jqXHR, exception)
+                TratamendodeErro(jqXHR, exception);
             }
         });
     }
@@ -189,7 +189,7 @@ function SalvarMatricula() {
 function ValidarFormulario() {
 
     jQuery.validator.addMethod("notEqual", function (value, element, param) {
-        return this.optional(element) || value != "00:00";
+        return this.optional(element) || value !== "00:00";
     }, "*Hora Aula deve ser maior que ZERO");
 
     jQuery.validator.addMethod("cpfvalido", function (value, element, param) {
@@ -263,7 +263,7 @@ function dois_pontos(tempo) {
         event.returnValue = false;
     }
 
-    if (tempo.value.length == 2 || tempo.value.length == 5) {
+    if (tempo.value.length === 2 || tempo.value.length === 5) {
         tempo.value += ":";
     }
 }
@@ -280,38 +280,38 @@ function valida_horas(tempo) {
 
     if (horas > 24) { //para relógio de 12 horas altere o valor aqui
 
-        Message("Horas inválidas",erro); event.returnValue = false; relogio.focus()
+        Message("Horas inválidas", erro); event.returnValue = false; relogio.focus();
     }
 
     if (minutos > 59) {
 
-        Message("MINUTOS inválidos"); event.returnValue = false; relogio.focus()
+        Message("MINUTOS inválidos"); event.returnValue = false; relogio.focus();
     }
 
     if (segundos > 59) {
 
-        Message("Segundos inválidos"); event.returnValue = false; relogio.focus()
+        Message("Segundos inválidos"); event.returnValue = false; relogio.focus();
     }
 }
 
 function dataAtualFormatada() {
     var data = new Date();
     var dia = data.getDate();
-    if (dia.toString().length == 1)
+    if (dia.toString().length === 1)
         dia = "0" + dia;
     var mes = data.getMonth() + 1;
-    if (mes.toString().length == 1)
+    if (mes.toString().length === 1)
         mes = "0" + mes;
     var ano = data.getFullYear();
     return dia + "/" + mes + "/" + ano;
 }
 
 function soLetras(obj) {
-    var tecla = (window.event) ? event.keyCode : obj.which;
-    if ((tecla > 65 && tecla < 90) || (tecla > 97 && tecla < 122))
+    var tecla = window.event? event.keyCode : obj.which;
+    if (tecla > 65 && tecla < 90 || tecla > 97 && tecla < 122)
         return true;
     else {
-        if (tecla != 8) return false;
+        if (tecla !== 8) return false;
         else return true;
     }
 }
@@ -319,7 +319,7 @@ function soLetras(obj) {
 function remove(str, sub) {
     i = str.indexOf(sub);
     r = "";
-    if (i == -1) return str;
+    if (i === -1) return str;
     {
         r += str.substring(0, i) + remove(str.substring(i + sub.length), sub);
     }
@@ -328,20 +328,20 @@ function remove(str, sub) {
 }
 
 function mascara(o, f) {
-    v_obj = o
-    v_fun = f
-    setTimeout("execmascara()", 1)
+    v_obj = o;
+    v_fun = f;
+    setTimeout("execmascara()", 1);
 }
 
 function execmascara() {
-    v_obj.value = v_fun(v_obj.value)
+    v_obj.value = v_fun(v_obj.value);
 }
 
 function cpf_mask(v) {
-    v = v.replace(/\D/g, "")                 //Remove tudo o que não é dígito
-    v = v.replace(/(\d{3})(\d)/, "$1.$2")    //Coloca ponto entre o terceiro e o quarto dígitos
-    v = v.replace(/(\d{3})(\d)/, "$1.$2")    //Coloca ponto entre o setimo e o oitava dígitos
-    v = v.replace(/(\d{3})(\d)/, "$1-$2")   //Coloca ponto entre o decimoprimeiro e o decimosegundo dígitos
-    return v
+    v = v.replace(/\D/g, "");        //Remove tudo o que não é dígito
+    v = v.replace(/(\d{3})(\d)/, "$1.$2");  //Coloca ponto entre o terceiro e o quarto dígitos
+    v = v.replace(/(\d{3})(\d)/, "$1.$2");   //Coloca ponto entre o setimo e o oitava dígitos
+    v = v.replace(/(\d{3})(\d)/, "$1-$2");  //Coloca ponto entre o decimoprimeiro e o decimosegundo dígitos
+    return v;
 }
 

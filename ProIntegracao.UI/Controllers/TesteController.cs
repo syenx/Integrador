@@ -11,7 +11,7 @@ namespace ProIntegracao.UI.Controllers
     /// </summary>
     public class TesteController : BaseController
     {
-        public static readonly RepositorioMenu _repo = new RepositorioMenu();
+        private static readonly RepositorioMenu _repo = new RepositorioMenu();
 
 
         #region Actions
@@ -52,7 +52,9 @@ namespace ProIntegracao.UI.Controllers
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public ActionResult ServerSide()
         {
             return View();

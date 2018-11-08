@@ -3,7 +3,7 @@
 });
 
 function AplicarMascara()
-{fun
+{
     $(".cpf").mask("999.999.999-99");
     //$(".cfc").mask("999999");
     $(".hora").mask("99:99");

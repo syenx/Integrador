@@ -112,12 +112,11 @@ namespace ProIntegracao.UI.Controllers
             try
             {
                 var pagina = _repoPagina.Listar().Where(m => m.Url.ToUpper().Equals(controllerName.ToUpper())).FirstOrDefault();
-
                 if (pagina != null) result = pagina.Nome;
             }
             catch (Exception ex)
             {
-              
+                var msgErro = ex.Message;
             }
 
             return result;

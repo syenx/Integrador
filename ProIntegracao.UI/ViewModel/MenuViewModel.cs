@@ -51,7 +51,7 @@ namespace ProIntegracao.UI.ViewModel
             Url         = menu.Url;
             Ordem       = menu.Ordem;
             DtExclusao  = menu.DtExclusao;
-            DtCadastro  = menu.DtCadastro;
+          //  DtCadastro  = menu.DtCadastro;
 
             if (menu.MenuPai != null)
                 IdMenuPai = menu.MenuPai.Id;
@@ -72,6 +72,9 @@ namespace ProIntegracao.UI.ViewModel
         /// </summary>
         public string MenuHtml { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string MenuHtmlAdm { get; set; }
 
         /// <summary>
@@ -134,7 +137,8 @@ namespace ProIntegracao.UI.ViewModel
             }
             catch (Exception ex)
             {
-                
+
+                var msg = ex.Message;
             }
 
             return lista.ToList();
@@ -151,13 +155,16 @@ namespace ProIntegracao.UI.ViewModel
             if (idMenu > 0)
                 model = model.Where(m => m.Id != idMenu).ToList();
 
-            var lista = new List<SelectListItem>();
-            
-            lista.Add(new SelectListItem() {
-                Text = "Menu Principal"
-                ,Value = "0"
-            });
-            
+            var lista = new List<SelectListItem>
+            {
+                new SelectListItem()
+                {
+                    Text = "Menu Principal"
+                ,
+                    Value = "0"
+                }
+            };
+
             foreach (var item in model)
             {
                 var slitem = new SelectListItem()
@@ -556,7 +563,7 @@ namespace ProIntegracao.UI.ViewModel
 
             menu.Ordem = (menu.Id > 0)? ordem : (_repo.Listar().OrderByDescending(m => m.Ordem).First().Ordem + 1);
             
-            menu.DtCadastro = model.DtCadastro;
+         //   menu.DtCadastro = model.DtCadastro;
             menu.DtExclusao = model.DtExclusao;
 
             return menu;

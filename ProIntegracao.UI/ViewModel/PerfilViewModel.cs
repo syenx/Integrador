@@ -55,7 +55,7 @@ namespace ProIntegracao.UI.ViewModel
             Id                  = perfil.Id;
             Nome                = perfil.Nome;
             Admin               = perfil.Admin;
-            DtCadastro          = perfil.DtCadastro;
+        //    DtCadastro          = perfil.DtCadastro;
             DtExclusao          = perfil.DtExclusao;
             Estados             = ListadeEstadosPorPefil(idPerfil);
             ListaEstados        = ListarEstadosPorPerfil(perfil.Id);
@@ -403,12 +403,12 @@ namespace ProIntegracao.UI.ViewModel
                 
                     var perfilpagina = new PerfilPagina();
 
-                    if (item.Id > 0) perfilpagina = _repo.Obter<PerfilPagina>(item.Id);
+                    if (item.GetId() > 0) perfilpagina = _repo.Obter<PerfilPagina>(item.GetId());
 
                     var perfil = new Perfil();
                     var pagina = new Pagina();
                 
-                    perfilpagina.Id = (perfilpagina == null) ? item.Id : perfilpagina.Id;
+                    perfilpagina.Id = (perfilpagina == null) ? item.GetId() : perfilpagina.Id;
                     perfilpagina.Inserir = item.Inserir;
                     perfilpagina.Atualizar = item.Atualizar;
                     perfilpagina.Excluir = item.Excluir;

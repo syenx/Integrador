@@ -53,7 +53,7 @@ namespace ProIntegracao.UI.Controllers
 
             try
             {
-                model.DtCadastro = DateTime.Now;
+              //  model.DtCadastro = DateTime.Now;
                 var pagina = model.ParsePaginaViewModel(model);
                 resultado = (_repo.Salvar(pagina) > 0);
              

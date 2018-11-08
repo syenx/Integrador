@@ -92,7 +92,7 @@ namespace ProIntegracao.UI.ViewModel
             TokenInicioAula = aula.TokenInicioAula;
             TokenFimAula = aula.TokenFimAula;
             IdMatricula = aula.Matricula.Id;
-            DtCadastro = aula.DtCadastro;
+         //   DtCadastro = aula.DtCadastro;
             DtExclusao = aula.DtExclusao;
             EditarStatus = VerificaEdicaoStatus(aula.Matricula.Estado.Id);
 

@@ -19,13 +19,32 @@ namespace ProIntegracao.UI.ViewModel
         }
 
         #endregion
+        #region Propriedades
+        private int id;
+
+        #endregion
 
         #region Propriedades
 
         /// <summary>
         /// IdPerfilPagina
         /// </summary>
-        public int Id { get; set; }
+        public int GetId()
+        {
+            return id;
+        }
+
+        #endregion
+
+        #region Propriedades
+
+        /// <summary>
+        /// IdPerfilPagina
+        /// </summary>
+        public void SetId(int value)
+        {
+            id = value;
+        }
 
         /// <summary>
         /// Perfil

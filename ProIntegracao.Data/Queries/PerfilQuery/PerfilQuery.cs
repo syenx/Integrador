@@ -74,6 +74,7 @@ namespace ProIntegracao.Data
             }
             catch (Exception ex)
             {
+                var msgErro = ex.Message;
                 repo.RollBackTransaction();
                 result = false;
             }

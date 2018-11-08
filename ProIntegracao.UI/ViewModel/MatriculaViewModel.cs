@@ -31,7 +31,7 @@ namespace ProIntegracao.UI.ViewModel
         public MatriculaViewModel()
         {
             ListaEstado = CarregarEstado().AsEnumerable();
-            DtCadastro = DateTime.Now;
+      //      DtCadastro = DateTime.Now;
             HoraAula = "00:00";
         }
 
@@ -45,7 +45,7 @@ namespace ProIntegracao.UI.ViewModel
             Id = matricula.Id;
             NomeAluno = matricula.Aluno.Nome;
             IdAluno = matricula.Aluno.Id;
-            DtCadastro = matricula.DtCadastro;
+          //  DtCadastro = matricula.DtCadastro;
             DtExclusao = matricula.DtExclusao;
             QtdAula = matricula.QtdAula;
             IdEstado = matricula.Estado.Id;
@@ -171,7 +171,7 @@ namespace ProIntegracao.UI.ViewModel
             matricula.HoraAula      = model.HoraAula;
             matricula.Psa           = model.PSA;
             matricula.CodigoCfc     = model.CodigoCfc;
-            matricula.DtCadastro    = model.DtCadastro;
+          //  matricula.DtCadastro    = model.DtCadastro;
             matricula.DtExclusao    = model.DtExclusao;
 
             return matricula;

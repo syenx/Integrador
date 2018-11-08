@@ -139,7 +139,7 @@ namespace ProIntegracao.UI.Controllers
         /// 
         /// </summary>
         /// <param name="email">Email de Envio</param>
-        /// <param name="usuario">Nome Usuario</param>
+        
         /// <param name="hash">Hash de Verificação</param>
         public void EnviarEmailEsqueciMinhaSenha(string email, string hash)
         {
@@ -229,7 +229,7 @@ namespace ProIntegracao.UI.Controllers
 
             if (usuario != null)
             {
-                usuario.Senha = Criptografia.Encrypt(novaSenha);
+                usuario.Senha = novaSenha;//Criptografia.Encrypt(novaSenha);
                 usuario.Hash = null;
                 resultado = _repo.Atualizar(usuario);
 
