@@ -696,59 +696,40 @@ function TratamendodeErro(jqXHR, exception)
 }
 
 //Validar CPF
-function validarCPF(cpf) {
-    
+//function validarCPF(cpf) {
+//        //get input
+//    if (cpf) {
+//        var input = cpf.toString();
 
-    var filtro = /^\d{3}.\d{3}.\d{3}-\d{2}$/i;
+//        var numeros = [];
+//        var pesos_A = [10, 9, 8, 7, 6, 5, 4, 3, 2];
+//        var pesos_B = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
+//        var sum = 0;
+//        var x1 = 0;
+//        var x2 = 0;
 
-    if (!filtro.test(cpf)) {
-        //window.alert("CPF inválido. Tente novamente.");
-        return false;
-    }
+//        for (var i = 0; i = 2) {
+//            x1 = 11 - mod;
+//        }
 
-    cpf = remove(cpf, ".");
-    cpf = remove(cpf, "-");
+//        //calcula digito 2
+//        sum = 0;
+//        for (var i = 0; i = 2) {
+//            x2 = 11 - mod;
+//        }
 
-    if (cpf.length !== 11 || cpf === "00000000000" || cpf === "11111111111" ||
-        cpf === "22222222222" || cpf === "33333333333" || cpf === "44444444444" ||
-        cpf === "55555555555" || cpf === "66666666666" || cpf === "77777777777" ||
-        cpf === "88888888888" || cpf === "99999999999") {
-        //window.alert("CPF inválido. Tente novamente.");
-        return false;
-    }
-
-    soma = 0;
-    for (i = 0; i < 9; i++) {
-        soma += parseInt(cpf.charAt(i)) * (10 - i);
-    }
-
-    resto = 11 - soma % 11;
-    if (resto === 10 || resto === 11) {
-        resto = 0;
-    }
-    if (resto !== parseInt(cpf.charAt(9))) {
-        //window.alert("CPF inválido. Tente novamente.");
-        return false;
-    }
-
-    soma = 0;
-    for (i = 0; i < 10; i++) {
-        soma += parseInt(cpf.charAt(i)) * (11 - i);
-    }
-    resto = 11 - soma % 11;
-    if (resto === 10 || resto === 11) {
-        resto = 0;
-    }
-
-    if (resto !== parseInt(cpf.charAt(10))) {
-        // window.alert("CPF inválido. Tente novamente.");
-        return false;
-    }
-
-    return true;
-}
+//        if (x1 == input[9] && x2 == input[10]) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    } else {
+//        return false;
+//    }
+//}
 
 // Aplicar DatePicker
+
 function AplicarDatePicker() {
 
     $(".datepicker").datepicker({

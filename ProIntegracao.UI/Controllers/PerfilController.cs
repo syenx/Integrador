@@ -57,7 +57,7 @@ namespace ProIntegracao.UI.Controllers
                 Id              = 0
                 , Nome          = model.Nome
                 , Admin         = model.Admin
-                , DtCadastro    = DateTime.Now
+           //     , DtCadastro    = DateTime.Now
                 , DtExclusao    = null
             };
             

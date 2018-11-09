@@ -5,9 +5,10 @@
             <th class="text-left">NOME</th>
             <th class="text-left">CPF</th>
             <th class="text-left">DATA NASCIMENTO</th>
-            <th class="text-left">RENACH</th>
+
             <th class="text-left">SEXO</th>
-            <th></th>
+            <th class="text-left">AÇÕES</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -25,7 +26,7 @@
                     <td>@item.Nome</td>
                     <td>@docCpf</td>
                     <td>@dataNascimento </td>
-                    <td>@item.Renach</td>
+                 
                     <td>@item.Sexo.Nome.Substring(0,1)</td>
                     <td>
                         <a href="#" onclick="EditarAluno(@item.Id);" title="Editar registro">

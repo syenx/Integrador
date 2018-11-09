@@ -302,12 +302,9 @@
     <Content Include="Content\images\2e83ff_256x240_icons_icons.png" />
     <Content Include="Content\images\454545_256x240_icons_icons.png" />
     <Content Include="Content\images\888888_256x240_icons_icons.png" />
-    <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\background_old.jpg" />
+    <Content Include="Content\images\background.png" />
     <Content Include="Content\images\bg-banner-sistema.jpg" />
-    <Content Include="Content\images\bg_1.jpg" />
-    <Content Include="Content\images\bg_2.png" />
-    <Content Include="Content\images\bg_3.png" />
-    <Content Include="Content\images\bg_4.png" />
     <Content Include="Content\images\bg_5.png" />
     <Content Include="Content\images\cccccc_40x100_textures_03_highlight_soft_75.png" />
     <Content Include="Content\images\cd0a0a_256x240_icons_icons.png" />

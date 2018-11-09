@@ -44,6 +44,6 @@ C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\bin\Debug\NHibernat
 C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\bin\Debug\System.Net.Http.xml
 C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csprojAssemblyReference.cache
 C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csproj.CoreCompileInputs.cache
-C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\obj\Debug\ProIntegracao.Model.csproj.CopyComplete
+C:\Users\MARCELO\Source\Repos\Integrador\ProIntegracao.Model\obj\Debug\ProIntegracao.Model.csproj.CopyComplete
 C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\obj\Debug\ProIntegracao.Model.dll
 C:\Users\MARCELO\Source\Repos\Integrador\Prointegracao.Model\obj\Debug\ProIntegracao.Model.pdb

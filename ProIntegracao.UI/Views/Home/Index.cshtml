@@ -2,47 +2,7 @@
 @section style{
   <link href="~/Content/home.css" rel="stylesheet" />  
 }
-@*<fieldset>
-    @{
-        <legend>@ViewBag.Title</legend>
-    }
 
-    @{
-        var count = 1;
-    }
-
-    @foreach (var item in Model)
-    {
-        var ico = "fa fa-asterisk";
-        var url = (item.Url.ToUpper().Contains("HOME")) ? "/Home" : item.Url;
-
-
-        if (!string.IsNullOrEmpty(item.Icone))
-        {
-            ico = item.Icone;
-        }
-
-        if (count == 1)
-        {
-            @:<div class="row">
-    }
-
-        @:<div class="col-sm-4"><div class="well"><a href="@url"><span class="@ico fa-4x"></span><span class="input-lg">@item.Nome</span></a></div></div>
-
-
-
-
-        if (count < 3)
-        {
-            count++;
-        }
-        else {
-            @:</div>
-            count = 1;
-        }
-    }
-    </div>
-</fieldset>*@
 
 
 <div class="col-lg-12 text-center">

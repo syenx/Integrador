@@ -109,9 +109,7 @@ namespace ProIntegracao.Model.Repositorio.Base
         {
             try
             {
-                Session.BeginTransaction();
                 var retorno = Session.GetSession().Save(entidade);
-                Session.CommitTransaction();
 
                 if (retorno != null)
                 {
@@ -127,7 +125,7 @@ namespace ProIntegracao.Model.Repositorio.Base
             catch (Exception ex)
             {
                 
-                Session.RollbackTransaction();
+              
                 var msgErro = ex.Message;
                 return 0;
             }

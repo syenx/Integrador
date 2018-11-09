@@ -9,7 +9,7 @@ namespace Prointegracao.Data.Entidade
 
         public virtual bool Admin { get; set; }
 
-        public virtual DateTime DtCadastro { get; set; }
+        public virtual string DtCadastro { get; set; }
 
         public virtual DateTime? DtExclusao { get; set; }
     }
